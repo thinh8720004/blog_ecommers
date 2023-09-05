@@ -7,9 +7,6 @@
     <script defer src="https://use.fontawesome.com/releases/v6.0.0/js/all.js" integrity="your-integrity-hash-here" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/header.css">
     <title>Document</title>
-    <style>
-      
-    </style>
 </head>
 <body>
     <header>
@@ -31,8 +28,13 @@
 
             <div class="input">
             <div>
-            <input name="ctl00$key" type="text" id="key" class="txt" placeholder="Nhập từ khóa tìm kiếm"></div>
-            <input type="image" name="ctl00$iSear" id="iSear" class="s" src="https://i.gifer.com/7jM3.gif">
+            <form action="search.php" method="GET">
+    <!-- Các trường nhập thông tin tìm kiếm -->
+    <input type="text" name="query" placeholder="Tìm kiếm...">
+    <!-- Input kiểu hình ảnh cho nút tìm kiếm -->
+    <input type="image" id="iSear" class="s"  name="search" src="https://i.gifer.com/7jM3.gif" alt="Tìm kiếm">
+</form>
+
 
             <div class="r">
             <span>Hotline hỗ trợ</span>
