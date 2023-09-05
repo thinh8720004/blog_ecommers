@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding-top: 10px;
+}
+.container-footer {
+  background-color: #414143;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 8%;
+}
+
+.top-container-footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 40px;
+  border-bottom: #828284 1px dashed;
+}
+
+.top-container-footer ul li {
+  list-style: none;
+  color: white;
+  padding: 5px;
+}
+
+.top-container-footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.top-container-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.connect {
+  padding-right: 5px;
+}
+
+.img-fanpage {
+  width: 200px;
+  object-fit: cover;
+}
+
+i {
+  font-size: 10px;
+}
+
+.img-DMCA {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.img-logo-gov {
+  margin-top: 10px;
+  width: 180px;
+  height: 70px;
+  object-fit: cover;
+  float: right;
+  margin-right: 100px;
+}
