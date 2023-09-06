@@ -23,7 +23,7 @@
         </header>
         <div class="search">
             <div class="logo">
-                <img src="image/logo.jpg" alt="">
+                <img src="https://noithatgiaphong.vn/img/bg/logo.jpg" alt="">
             </div>
 
             <div class="input">
