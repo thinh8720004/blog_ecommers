@@ -40,7 +40,7 @@
   object-fit: cover;
 }
 
-.top-container-footer ul li i {
+.fa-chevron-right {
   font-size: 10px;
 }
 
@@ -72,7 +72,7 @@
     padding: 5px;
 }
 
-.between-container-footer ul li i {
+#location {
     font-size: 18px;
     color: red;
 }

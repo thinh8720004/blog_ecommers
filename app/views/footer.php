@@ -70,16 +70,16 @@
         <ul class="connect">
             <li class="main-content">KẾT NỐI VỚI THỊNH TÚ</li>
             <li>
-                <img class="img-fanpage" src="https://ngaocontent.com/wp-content/uploads/2020/08/fanpage.jpg" alt="Fanpage Thịnh Tú">
+                <a href="#"><img class="img-fanpage" src="https://ngaocontent.com/wp-content/uploads/2020/08/fanpage.jpg" alt="Fanpage Thịnh Tú"></a>
             </li>
         </ul>
     </div>
-    <a href="https://www.dmca.com/"><img class="img-DMCA" src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=9137689d-841a-40a4-b6e9-331d575d6ec7" alt="Image DMCA"></a> 
-    <a href="http://online.gov.vn/Home/WebDetails/71155"><img class="img-logo-gov" src="https://sabohome.vn/wp-content/uploads/2021/04/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="Image Logo GOV"></a> 
+    <a href="#"><img class="img-DMCA" src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=9137689d-841a-40a4-b6e9-331d575d6ec7" alt="Image DMCA"></a>
+    <a href="#"><img class="img-logo-gov" src="https://sabohome.vn/wp-content/uploads/2021/04/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="Image Logo GOV"></a>
     <div class="between-container-footer">
         <ul class="branch-1">
             <li>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i>
                 <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 1</strong>
             </li>
             <li>Địa chỉ: TP. ĐÀ Nẵng</li>
@@ -88,7 +88,7 @@
         </ul>
         <ul class="branch-2">
             <li>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i>
                 <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 2</strong>
             </li>
             <li>Địa chỉ: TP. ĐÀ Nẵng</li>
@@ -97,7 +97,7 @@
         </ul>
         <ul class="branch-3">
             <li>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i>
                 <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 3</strong>
             </li>
             <li>Địa chỉ: TP. ĐÀ Nẵng</li>
@@ -106,7 +106,7 @@
         </ul>
         <ul class="branch-4">
             <li>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i>
                 <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 4</strong>
             </li>
             <li>Địa chỉ: TP. ĐÀ Nẵng</li>
@@ -115,7 +115,7 @@
         </ul>
         <ul class="branch-5">
             <li>
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-location-dot" id="location"></i>
                 <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 5</strong>
             </li>
             <li>Địa chỉ: TP. ĐÀ Nẵng</li>
