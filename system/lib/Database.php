@@ -35,4 +35,8 @@ return $statement->execute();
 
   }
 
+  public function update($table,$data,$cond){
+    $sql = "UPDATE $table SET title_category_product=:title_category_product,dect_category_product=:dect_category_product ";
+  }
+
 }
