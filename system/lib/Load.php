@@ -5,8 +5,8 @@ class Load {
   
     }
 
-    public function view($fileName, $data = false){
-        if ($data == true){
+    public function view($fileName, $data = false) {
+        if ($data == true) {
             extract($data);
         }
         include('app/views/'.$fileName.'.php');
