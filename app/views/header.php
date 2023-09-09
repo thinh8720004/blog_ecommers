@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v6.0.0/js/all.js" integrity="your-integrity-hash-here" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/header.css">
-    <title>Document</title>
-    <style>
-      
-    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>public/css/header.css">
+    <title>Blog Ecommers</title>
 </head>
 <body>
     <header>
@@ -31,12 +27,18 @@
 
             <div class="input">
             <div>
-            <input name="ctl00$key" type="text" id="key" class="txt" placeholder="Nhập từ khóa tìm kiếm"></div>
-            <input type="image" name="ctl00$iSear" id="iSear" class="s" src="https://i.gifer.com/7jM3.gif">
+            <input name="ctl00$key" type="text " id="key" class="txt" placeholder="Nhập từ khóa tìm kiếm">
+           <button class="btn"> <i class="fas fa-search" id="" class="s"></i></button>
+        </div>
+            <!-- <input type="su" name="ctl00$iSear" id="iSear" class="s" src="https://i.gifer.com/7jM3.gif"> -->
+            <!-- <button type="image" src="https://i.gifer.com/7jM3.gif"></button> -->
+            <img class="image"src="https://noithatgiaphong.vn/img/bg/d.gif" alt="">
 
             <div class="r">
+            <!-- <img src="https://noithatgiaphong.vn/img/bg/d.gif" alt=""> -->
             <span>Hotline hỗ trợ</span>
-            <br>
+<br>
+          
             <b>0935.194.469 - 0901.945.455</b>
             </div>
             </div>

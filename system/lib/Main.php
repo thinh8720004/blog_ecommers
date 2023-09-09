@@ -47,13 +47,14 @@ class Main
     }
 
     public function callMethod()
-    {
+{
+    if ($this->controller !== null) { // Kiểm tra xem $this->controller đã được khởi tạo chưa
         if (isset($this->url[2])) {
             $this->methodName = $this->url[1];
             if (method_exists($this->controller, $this->methodName)) {
                 $this->controller->{$this->methodName}($this->url[2]);
             } else {
-                header("Location:".BASE_URL."/index/notFound");
+                header("Location:".BASE_URL."index/notFound");
             }
         } else {
             if (isset($this->url[1])) {
@@ -61,16 +62,18 @@ class Main
                 if (method_exists($this->controller, $this->methodName)) {
                     $this->controller->{$this->methodName}();
                 } else {
-                    header("Location:".BASE_URL."/index/notFound");
+                    header("Location:".BASE_URL."index/notFound");
                 }
             } else {
                 if (method_exists($this->controller, $this->methodName)) {
                     $this->controller->{$this->methodName}();
                 } else {
-                    header("Location:".BASE_URL."/index/notFound");
+                    header("Location:".BASE_URL."index/notFound");
                 }
-                
             }
         }
+    } else {
+        header("Location:".BASE_URL."index/notFound");
     }
+}
 }

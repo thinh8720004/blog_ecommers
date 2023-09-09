@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding-top: 10px;
-}
+
 .container-footer {
+  padding-top: 20px;
   background-color: #414143;
   box-sizing: border-box;
   padding-left: 5%;
