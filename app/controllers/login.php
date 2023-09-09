@@ -3,6 +3,7 @@ class login  extends Dcontrollers
 {
     public function __construct()
     {
+        Session::checkSession();
         $message = array();
         $data = array();
         parent::__construct();
@@ -14,23 +15,23 @@ class login  extends Dcontrollers
 
     public function login()
     {
-        // $this->load->view('header');
         Session::init();
         if (Session::get('login') == true){
             header("Location:".BASE_URL."login/dashboard");
         }
         $this->load->view('panel/login');
-        // $this->load->view('footer');
     }
 
     public function dashboard(){
-        Session::checkSession();
+        $this->load->view('panel/header');
+        $this->load->view('panel/menu');
         $this->load->view('panel/dashboard');
+        $this->load->view('panel/footer');
     }
 
     public function loginAuthentication(){
-        $email = $_POST['email'];
-        $password = md5($_POST['password']);
+        $email = $_POST['admin_email'];
+        $password = md5($_POST['admin_password']);
         $tab_admin = 'tab_admin';
         $loginModel = $this->load->model('loginmodel');
 
