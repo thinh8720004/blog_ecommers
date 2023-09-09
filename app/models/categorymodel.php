@@ -16,9 +16,17 @@
 
         public function insertcategory($table_category_product,$data) {
 
-return $this->db->insert($table_category_product,$data);
+            return $this->db->insert($table_category_product,$data);
 
         }
+        public function updatecategory($table_category_product,$data,$cond){
+            return $this->db->update($table_category_product,$data,$cond);
+        }
+
+        public function datelecategory($table_category_product,$cond){
+        return $this->db->delete($table_category_product,$cond);
+
+    }
        
     }
 ?>
