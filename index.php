@@ -10,43 +10,16 @@
 
 <body>
 
-    <h1>
-        <?php
-        include_once('system/lib/Main.php');
-        include_once('system/lib/Dcontrollers.php');
-        include_once('system/lib/Load.php');
-        include_once('system/lib/Dmodels.php');
-        include_once('system/lib/Database.php');
+    <?php
 
-        //$main = new Main();
+    spl_autoload_register(function ($class) {
+        include_once 'system/lib/' . $class . '.php';
+    });
+    include_once 'app/config/config.php';
 
-        $url = isset($_GET['url']) ? $_GET['url'] : NULL;
-        if ($url != NULL) {
-            $url = rtrim($url, '/');
-            $url = explode('/', filter_var($url, FILTER_SANITIZE_URL));
-        } else {
-            unset($url);
-        }
+    $main = new Main();
 
-        if (isset($url[0])) {
-            include_once('app/controllers/' . $url[0] . '.php');
-            $strler = new $url[0]();
-            if (isset($url[2])) {
-                $strler->{$url[2]};
-            } else {
-                if (isset($url[1])) {
-                    $strler->{$url[1]}();
-                } else {
-                }
-            }
-        } else {
-            include_once('app/controllers/index.php');
-            $index = new index();
-            $index->homepage();
-        }
-
-        ?>
-    </h1>
+    ?>
 
 </body>
 

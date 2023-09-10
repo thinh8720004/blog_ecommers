@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding-top: 10px;
-}
+
 .container-footer {
+  padding-top: 20px;
   background-color: #414143;
   box-sizing: border-box;
   padding-left: 5%;
@@ -12,7 +10,6 @@
 .top-container-footer {
   display: flex;
   justify-content: space-between;
-
   padding-bottom: 40px;
   border-bottom: #828284 1px dashed;
 }
@@ -41,20 +38,46 @@
   object-fit: cover;
 }
 
-i {
+.fa-chevron-right {
   font-size: 10px;
 }
 
 .img-DMCA {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-left: 100px;
 }
 
 .img-logo-gov {
   margin-top: 10px;
   width: 180px;
-  height: 70px;
+  height: 69px;
   object-fit: cover;
   float: right;
   margin-right: 100px;
+}
+
+.between-container-footer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-bottom: 30px;
+}
+
+.between-container-footer ul li {
+    list-style: none;
+    color: white;
+    padding: 5px;
+}
+
+#location {
+    font-size: 18px;
+    color: red;
+}
+
+.bottom-container-footer {
+    background-color: #231F20;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
