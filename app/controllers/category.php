@@ -36,7 +36,7 @@ class category  extends Dcontrollers
         $table_category_product = 'tbl_category_product';
         $data = array (
             'title_category_product' => 'Đồng hồ thời trang',
-            'dect_category_product' => 'Đồng hồ thời trang giá rẻ'
+            'desc_category_product' => 'Đồng hồ thời trang giá rẻ'
 
         );
       $categorymodel->insertcategory($table_category_product,$data);

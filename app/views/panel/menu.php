@@ -12,8 +12,8 @@
                         Bài viết
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post">Thêm sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post/list_category">Liệt kê sản phẩm</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -25,8 +25,8 @@
                         Sản Phẩm
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL?>/product/add_product">Thêm sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL?>/product/list_product">Liệt kê sản phẩm</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

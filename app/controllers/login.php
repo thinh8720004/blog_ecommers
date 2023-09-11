@@ -3,7 +3,7 @@ class login  extends Dcontrollers
 {
     public function __construct()
     {
-        Session::checkSession();
+        // Session::checkSession();
         $message = array();
         $data = array();
         parent::__construct();
