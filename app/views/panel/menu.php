@@ -14,10 +14,24 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
                         <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Danh mục bài viết
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Thêm bài viết</a></li>
+                        <li><a class="dropdown-item" href="#">Liệt kê bài viết</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Danh mục sản phẩm
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL;?>product">Thêm sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -27,10 +41,6 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
                         <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -40,10 +50,6 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order/addorder">Thêm đơn hàng</a></li>
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order">Liệt kê đơn hàng</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
