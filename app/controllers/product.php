@@ -32,11 +32,24 @@ class product  extends Dcontrollers
     $desc =  $_POST['desc_product'];
     $quantity =  $_POST['quantity_product']; 
     $image = $_FILES['image_product']['name'];
-        $tmp_image = $_FILES['image_product']['tmp_name'];
         $div= explode('.', $image);
         $file_ext = strtolower(end($div));
         $unique_image = $div[0].time().'.'.$file_ext;
-        $path_uploads= "public/uploads/product/".$unique_image;
+  //   if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
+  //     $image = $_FILES['image_product']['name'];
+  //     $image_tmp = $_FILES['image_product']['tmp_name'];
+
+  //     if (!is_dir("images")) {
+  //         mkdir("images");
+  //         chmod("images", 0777);
+  //     }
+
+  //     move_uploaded_file($image_tmp, "images/$image");
+
+  // } else {
+  //     echo "Vui lòng chọn một tệp hình ảnh để tải lên.";
+  // }
+
     $category = $_POST['id_category_product'] ;
 
       $table = 'tbl_product';
@@ -46,7 +59,7 @@ class product  extends Dcontrollers
  'price_product'  => $price,
  'quantity_product' => $quantity, 
  'desc_product'  => $desc, 
- 'image_product' => $unique_image, 
+ 'image_product' => $unique_image,
  'id_category_product'  => $category
 );
     $categorymodel = $this->load->model('categorymodel'); 

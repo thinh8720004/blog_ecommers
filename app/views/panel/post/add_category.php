@@ -6,8 +6,8 @@
             background-color: #f2f2f2;
         }
         
-        .container {
-            max-width: 100%;
+        .container1 {
+            max-width: 70%;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -21,6 +21,7 @@
         label {
             display: block;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         input[type="text"],
@@ -42,6 +43,30 @@
         button:hover {
             background-color: #0056b3;
         }
+        textarea {
+            width: 100%;
+        }
+
+        select {
+            width: 60%;
+            
+display: block;
+margin-bottom: 15px;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+span{
+    text-align: center;
+}
+select {
+height: 40px;
+}
+        .option{
+            height: 310px;
+        }
     </style>
 <?php
 if(isset($_GET['msg']) && !empty($_GET['msg'])){
@@ -54,8 +79,8 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
     }
 
 ?>
- <div class="container">
-        <h1>Thêm danh mục bài viết</h1>
+ <div class="container1">
+        <h1>Thêm danh mục sản phẩm</h1>
         <form action="<?php echo BASE_URL ?>/post/insert_category" method="POST">
             <label for="email">tên danh mục:</label>
             <input type="text" name="title_category_post" class="form-control" >
@@ -66,18 +91,3 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
             <button type="submit">Thêm Danh Mục</button>
         </form>
     </div>
-<!-- 
-di style "text-align: center;">Thêm danh mục bài viết /h)
-<div class="col-md-6">
-<form action="<?php echo BASE_URL ?>/product/insert_category" method="POST">
-<div class="form-group">
-elibel for "email">Tên danh mục /
-<input type="text" name="title_category_product" class="form-control" >
-</itiv>
-<div class="form-group">
-elibel for "pwd">Miêu tả danh mục</label>
-<input type="text" name="desc_category_product" class="form-control">
-</div>
-Cotton type="submit" class="btn btn-default">Thêm danh mục /uttons
-</form>
-</div> -->

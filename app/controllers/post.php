@@ -76,7 +76,7 @@ public function edit_category($id){
     $data['categorybyid'] = $categorymodel->categorybyid_post($table, $cond);
     $this->load->view('panel/header');
     $this->load->view('panel/menu');
-    $this->load->view('panel/product/edit_category', $data);
+    $this->load->view('panel/post/edit_category', $data);
     $this->load->view('panel/footer');
     }
 

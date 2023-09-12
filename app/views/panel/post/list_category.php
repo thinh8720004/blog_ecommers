@@ -1,11 +1,11 @@
-<h3 style="text-align: center;">Liệt kê danh mục bài viết</h3>
-<?php if(empty($_GET['msg'])){
-    $msg = unserialize(urldecode($_GET['msg']));
-    foreach ($msg as $key => $value) {
-        echo '<span style="color: blue; font-weight:bold">'.$value. '</span>';
+<style>
+   td a {
+        text-decoration: nones;
     }
- }
-?>
+</style>
+
+<h3 style="text-align: center;">Liệt kê danh mục bài viết</h3>
+
 
 <table class="table table-striped">
     <thead>
@@ -27,8 +27,8 @@
         <td><?php echo $i ?></td>
         <td><?php echo $cate['title_category_post'] ?></td> 
         <td><?php echo $cate['desc_category_post'] ?></td>
-        <td><a href="<?php echo BASE_URL ?>/post/delete_category/<?php echo $cate['id_category_post'] ?>">Xóa</> || 
-        <a href="<?php echo BASE_URL ?>/post/edit_category/<?php echo $cate['id_category_post'] ?>">Cập nhật</a></td>
+        <td><a style="text-decoration: none;color:red;"href="<?php echo BASE_URL ?>/post/delete_category/<?php echo $cate['id_category_post'] ?>">Xóa</> || 
+        <a style="text-decoration: none; color:red;"href="<?php echo BASE_URL ?>/post/edit_category/<?php echo $cate['id_category_post'] ?>">Cập nhật</a></td>
     </tr>
 <?php
 } ?>

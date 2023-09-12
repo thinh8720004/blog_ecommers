@@ -12,8 +12,8 @@
                         Bài viết
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post/list_category">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post">Thêm bài viết</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>/post/list_category">Liệt kê bài viết</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -6,8 +6,8 @@
             background-color: #f2f2f2;
         }
         
-        .container {
-            max-width: 100%;
+        .container1 {
+            max-width: 70%;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -21,6 +21,7 @@
         label {
             display: block;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         input[type="text"],
@@ -42,6 +43,30 @@
         button:hover {
             background-color: #0056b3;
         }
+        textarea {
+            width: 100%;
+        }
+
+        select {
+            width: 60%;
+            
+display: block;
+margin-bottom: 15px;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+span{
+    text-align: center;
+}
+select {
+height: 40px;
+}
+        .option{
+            height: 310px;
+        }
     </style>
 <?php
 if(isset($_GET['msg']) && !empty($_GET['msg'])){
@@ -54,7 +79,7 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
     }
 
 ?>
- <div class="container">
+ <div class="container1">
         <h1>Thêm sản phẩm</h1>
         <form action="<?php echo BASE_URL ?>/product/insert_product" method="POST" enctype="multipart/form-data">
             <label >Tên sản phẩm :</label>
@@ -70,7 +95,7 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
             <input type="text" name="quantity_product" class="form-control" >
             
             <label>Miêu tả danh mục</label>
-            <textarea name="desc_product" name="" id="" rows="5" style="resize: none;"></textarea>
+            <textarea name="desc_product" name="" id="" rows="5" colums="12"></textarea>
 
             <label >Danh mục sản phẩm :</label>
             <select name="id_category_product" id="">
@@ -78,7 +103,7 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
                 foreach ($category as $key => $cate) {
                     
                 ?>
-                <option value="<?php echo $cate['id_category_product']?>">
+                <option class="option" value="<?php echo $cate['id_category_product']?>">
             <?php echo $cate['title_category_product']?> </option>
 
                     <?php }?>

@@ -29,9 +29,19 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+            form-group {
+                margin: 0 auto;
+            }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
         button {
-            background-color: #007bff;
+            background-color: red;
             color: #fff;
             border: none;
             cursor: pointer;
@@ -40,14 +50,25 @@
         button:hover {
             background-color: #0056b3;
         }
+        textarea {
+            width: 100%;
+        }
+        .btn-default {
+            background-color: red;
+        }
+
+    
 </style>
 <?php
-    if(empty($_GET['msg'])){ 
+    if(isset($_GET['msg']) && !empty($_GET['msg'])){
         $msg = unserialize(urldecode($_GET['msg']));
-foreach ($msg as $key => $value){
-echo '<span style="color: blue; font-weight:bold">'.$value. '</span>';
-}
-    }
+     
+            foreach ($msg as $key => $value){
+                echo '<span style="color:blue; font-weight:bold">'.$value.'</span>';
+            }
+        
+        }
+    
     ?>
 
     <h3 style="text-align: center;">Cập nhật danh mục Bài viết</h3>
@@ -65,8 +86,8 @@ echo '<span style="color: blue; font-weight:bold">'.$value. '</span>';
 
         <div class="form-group">
             <label for="pwd">Miêu tả danh mục</label>
-            <textarea name="desc_category_post" style="resize: none;" rows="5" class="form-control">
-            <?php echo $cate['desc_category_post'] ?></textarea>
+            <input type="text" value="<?php echo $cate['desc_category_post'] ?>" name="desc_category_post" class=" form-control" >
+
 </div>
             <button type="submit" class="btn btn-default"> Cập nhật danh mục</button>
 </form>

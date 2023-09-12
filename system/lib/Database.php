@@ -29,7 +29,7 @@ class Database extends PDO
     $sql = "INSERT INTO $table($keys)VALUES($values)";
     $statement = $this->prepare($sql);
 
-    foreach ($data as $key => $value) {
+    foreach ($data as $key => &$value) {
       $statement->bindParam(":$key", $value);
     }
     return $statement->execute();
