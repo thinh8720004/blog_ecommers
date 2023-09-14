@@ -54,5 +54,21 @@
         public function insertproduct($table,$data){
             return $this->db->insert($table,$data);
         }
+        public function deleteproduct($table,$cond){
+            return $this->db->delete($table,$cond);
+    
+        }
+        public function product($table_product,$table_category){
+            $sql = "SELECT * FROM $table_product,$table_category WHERE $table_product.id_category_product = $table_category.id_category_product
+            order by $table_product.id_product DESC  ";
+            return $this->db->SELECT($sql);
+        }
+
+        public function productbyid($table_category_product,$id){
+            $sql = "SELECT * FROM $table_category_product WHERE id_category_product=:id";
+            $data = array(':id' => $id);
+            return $this->db->select($sql,$data);
+        }
+
     }
 ?>
