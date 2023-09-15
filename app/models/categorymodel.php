@@ -3,15 +3,14 @@
         public function __construct(){
             parent::__construct();
         }
-        public function category($table_category_product){
-            $sql = "SELECT * FROM $table_category_product ";
-            return $this->db->SELECT($sql);
+        public function category($table){
+            $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
+            return $this->db->select($sql);
         }
 
-        public function categorybyid($table_category_product,$id){
-            $sql = "SELECT * FROM $table_category_product WHERE id_category_product=:id";
-            $data = array(':id' => $id);
-            return $this->db->select($sql,$data);
+        public function categorybyid($table,$id){
+            $sql = "SELECT * FROM $table WHERE $id ";
+            return $this->db->select($sql);
         }
 
         public function insertcategory($table_category_product,$data) {
@@ -20,6 +19,10 @@
 
         }
         public function updatecategory($table_category_product,$data,$cond){
+            return $this->db->update($table_category_product,$data,$cond);
+        }
+
+        public function updatepost($table_category_product,$data,$cond){
             return $this->db->update($table_category_product,$data,$cond);
         }
 
@@ -33,7 +36,7 @@
             return $this->db->insert($table,$data);
         }
         public function post_category($table){
-            $sql = "SELECT * FROM $table ";
+            $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
             return $this->db->SELECT($sql);
         }
 
@@ -42,7 +45,7 @@
         }
 
         public function categorybyid_post($table,$cond){
-            $sql = "SELECT * FROM $table WHERE $cond";
+            $sql = "SELECT * FROM $table WHERE $cond ORDER BY id_category_post DESC";
             return $this->db->SELECT($sql);
         }
 
@@ -51,6 +54,23 @@
         }
 
         // product
+        public function deletecategory_product($table, $cond){
+            return $this->db->delete($table,$cond);
+        }
+        public function updatecategory_product($table_category_post,$data,$cond){
+            return $this->db->update($table_category_post,$data,$cond);
+        }
+        public function update_product($table_category_product,$data,$cond){
+            return $this->db->update($table_category_product,$data,$cond);
+        }
+
+        public function updateproduct($table,$data,$cond){
+            return $this->db->update($table,$data,$cond);
+        }
+   
+        public function insertcategory_product($table,$data){
+            return $this->db->insert($table,$data);
+        }
         public function insertproduct($table,$data){
             return $this->db->insert($table,$data);
         }
@@ -64,10 +84,9 @@
             return $this->db->SELECT($sql);
         }
 
-        public function productbyid($table_category_product,$id){
-            $sql = "SELECT * FROM $table_category_product WHERE id_category_product=:id";
-            $data = array(':id' => $id);
-            return $this->db->select($sql,$data);
+        public function productbyid($table,$cond){
+            $sql = "SELECT * FROM $table WHERE $cond";
+            return $this->db->select($sql);
         }
 
     }

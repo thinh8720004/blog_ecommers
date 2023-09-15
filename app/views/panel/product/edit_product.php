@@ -82,37 +82,38 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
  <div class="container1">
         <h1>Cập nhật sản phẩm</h1>
      <?php
-        foreach ($productbyid1 as $key => $pro){
+        foreach ($productbyid as $key => $pro){
      ?>
 
      
 
-<form action="<?php echo BASE_URL ?>/product/update_product" method="POST" enctype="multipart/form-data">
+<form action="<?php echo BASE_URL ?>/product/update_product/<?php echo $pro['id_product']?>" method="POST" enctype="multipart/form-data">
 
             <label >Tên sản phẩm :</label>
-            <input value="" type="text" name="title_product" class="form-control" >
+            <input value="<?php echo $pro['title_product']?>" type="text" name="title_product" class="form-control" >
 
             <label >Hình ảnh sản phẩm :</label>
             <input type="file" name="image_product" class="form-control" >
-
+           <p> <img src="<?php echo BASE_URL?>/public/uploads/product/image_product/<?php echo $pro['image_product'] ?>" height="100px" width="100px"></p>
             <label >Giá sản phẩm :</label>
-            <input type="text" name="price_product" class="form-control" >
+            <input value="<?php echo $pro['price_product']?>" type="text" name="price_product" class="form-control" >
 
             <label >Số lượng sản phẩm :</label>
-            <input type="text" name="quantity_product" class="form-control" >
+            <input value="<?php echo $pro['quantity_product']?>" type="text" name="quantity_product" class="form-control" >
             
             <label>Miêu tả danh mục</label>
-            <textarea name="desc_product" name="" id="" rows="5" colums="12"></textarea>
+            <textarea name="desc_product" name="" id="" rows="5" colums="12"><?php echo $pro['price_product']?></textarea>
 
             <label >Danh mục sản phẩm :</label>
-            <select name="id_category_product" id="">
+            <select name="category_product" id="">
                 <?php 
                 foreach ($category as $key => $cate) {
                     
                 ?>
-                <option class="option" value="<?php echo $cate['id_category_product']?>">
-            <?php echo $cate['title_category_product']?> </option>
-
+                <option  <?php 
+                 if($cate['id_category_product'] == $pro['id_category_product']){ echo 'selected';}
+                ?>
+                value="<?php echo $cate['id_category_product']?>"><?php echo $cate['title_category_product'] ?></option>
             <?php }?>
 
             </select>

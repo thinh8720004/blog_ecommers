@@ -15,18 +15,29 @@ class product  extends Dcontrollers
     $this->load->view('panel/footer');
     } 
 
-    public function add_product(){ 
-      $this->load->view('panel/header');
-      $this->load->view('panel/menu');
-    $table = "tbl_category_product";
-    $categorymodel = $this->load->model('categorymodel');
-    $data['category'] = $categorymodel->category($table);
-      $this->load->view('panel/product/add_product',$data);
-      $this->load->view('panel/footer');
-      } 
+    public function insert_category(){
+      $title = $_POST['title_category_product'];
+      $desc = $_POST['desc_category_product'];
+      $table = 'tbl_category_product';
+      $data = array(
+          'title_category_product' => $title,
+          'desc_category_product' => $desc
+      );
+      $categorymodel =$this->load->model('categorymodel');
+      $result = $categorymodel->insertcategory_product($table,$data);
 
-      
-   
+      if($result ==1){
+          $message['msg'] = "Thêm Danh Mục Bài Viết Thành Công:";
+          header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+      }else {
+          $message['msg'] = "Thêm Danh Mục Bài Viết Thành Công:";
+          header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+
+      }
+
+
+   }
+  
 
   public function list_category(){
     $this->load->view('panel/header'); 
@@ -56,10 +67,10 @@ class product  extends Dcontrollers
     $table = "tbl_category_product"; 
     $cond = "id_category_product='$id'"; 
     $categorymodel = $this->load->model('categorymodel');
-    $result = $categorymodel->deletecategory($table, $cond); 
+    $result = $categorymodel->deletecategory_product($table, $cond); 
     if($result ==1){
     $message['msg'] = "Xóa danh mục sản phẩm thành công" ; 
-    header('Location:'.BASE_URL."/post/list_category?msg=".urlencode(serialize($message)));
+    header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
     }else{
     $message['msg']= "Xóa danh mục sản phẩm thất bại";
     header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
@@ -95,13 +106,22 @@ class product  extends Dcontrollers
     $this->load->view('panel/footer');
     } 
     // product
+    public function add_product(){ 
+      $this->load->view('panel/header');
+      $this->load->view('panel/menu');
+    $table = "tbl_category_product";
+    $categorymodel = $this->load->model('categorymodel');
+    $data['category'] = $categorymodel->category($table);
+      $this->load->view('panel/product/add_product',$data);
+      $this->load->view('panel/footer');
+      } 
     public function edit_product($id){
     $table = "tbl_product";
     $table_category = "tbl_category_product";
     $cond = "id_product='$id'";
     $categorymodel = $this->load->model('categorymodel');
 
-    $data['productbyid1'] = $categorymodel->productbyid($table, $cond);
+    $data['productbyid'] = $categorymodel->productbyid($table, $cond);
     $data['category'] = $categorymodel->category($table_category);
   
       $this->load->view('panel/header'); 
@@ -115,14 +135,7 @@ class product  extends Dcontrollers
       $desc =  $_POST['desc_product'];
       $quantity =  $_POST['quantity_product']; 
       $image = $_FILES['image_product']['name'];
-      // $tmp_image =  $_FILES['image_product']['tmp_image'];
-          // $div= explode('.', $image);
-          // $file_ext = strtolower(end($div));
-          // $unique_image = $div[0].time().'.'.$file_ext;
-  
-          // $path_upload = "public/uploads/product/".$unique_image;
-     // Kiểm tra tệp hình ảnh và di chuyển nó vào thư mục "images"
-  // Kiểm tra tệp hình ảnh và di chuyển nó đến thư mục "public/uploads/product"
+
   if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
     $image = $_FILES['image_product']['name'];
     $image_tmp = $_FILES['image_product']['tmp_name'];
@@ -163,42 +176,98 @@ class product  extends Dcontrollers
         header('Location:'.BASE_URL."/product/add_product?msg=".urlencode(serialize($message)));
       }
     }
-    // public function delete_product($id){ 
-    //   $table = "tbl_product"; 
-    //   $cond = "id_product='$id'"; 
-    //   $categorymodel = $this->load->model('categorymodel');
-    //   $result = $categorymodel->deleteproduct($table, $cond); 
-    //   if($result ==1){
-    //   $message['msg'] = "Xóa sản phẩm thành công" ; 
-    //   header('Location:'.BASE_URL."/post/list_product?msg=".urlencode(serialize($message)));
-    //   }else{
-    //   $message['msg']= "Xóa sản phẩm thất bại";
-    //   header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
-  
-    //   }
-    // }
+
   
     public function update_product($id){
-    $table = "tbl_category_product";
-    $cond = "id_category_product='$id'";
+    $table = "tbl_product";
+    $cond = "id_product='$id'";
+    $categorymodel = $this->load->model('categorymodel'); 
+    
 
-    $title = $_POST['title_category_product'];
-    $desc = $_POST['desc_category_product'];
+      $title = $_POST['title_product']; 
+      $image = $_FILES['image_product']['name'];
+      $desc =  $_POST['desc_product'];
+      $price = $_POST['price_product']; 
+      $quantity =  $_POST['quantity_product'];
+      $category = $_POST['category_product'] ;
 
+      if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
+        $image = $_FILES['image_product']['name'];
+        $image_tmp = $_FILES['image_product']['tmp_name'];
+      
+        $target_directory = "public/uploads/product/image_product"; // Đường dẫn đến thư mục mục tiêu
+      
+        if (!is_dir($target_directory)) {
+            mkdir($target_directory, 0777, true); // Tạo thư mục và tạo các thư mục cha nếu chưa tồn tại
+        }
+      
+        move_uploaded_file($image_tmp, $target_directory . "/" . $image);
+      } else {
+        echo "Vui lòng chọn một tệp hình ảnh để tải lên.";
+      }
+  if($image) {
+    $data['categorybyid'] = $categorymodel->categorybyid($table,$cond);
+    unlink("public/uploads/product/image_product/" . $data['categorybyid'][0]['image_product']);
     $data = array(
-    'title_category_product' => $title, 
-    'desc_category_product' => $desc
-    );
-    $categorymodel = $this->load->model('categorymodel');
-    $result = $categorymodel->updatecategory($table, $data, $cond);
+      'title_product' => $title,
+     'image_product' => $image,
+  
+      'desc_product' => $desc,
+      'price_product' => $price,
+      'quantity_product' => $quantity, 
+      'id_category_product' => $category,
+  
+      );
+  }    else {
+    $data = array(
+      'title_product' => $title,
+  
+      'desc_product' => $desc,
+      'price_product' => $price,
+      'quantity_product' => $quantity, 
+      'id_category_product' => $category,
+  
+      );
+  }
 
-    if($result==1){
-    $message['msg'] = "Cập nhật danh mục sản phẩm thành công"; 
-    header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+ 
+
+    
+  $result = $categorymodel->updateproduct($table, $data, $cond);
+  if($result==1){
+    $message['msg'] = "Cập nhật sản phẩm thành công"; 
+    header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
     }else {
-      $message['msg'] = "Cập nhật danh mục sản phẩm thất bại"; 
-      header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+      $message['msg'] = "Cập nhật sản phẩm sản phẩm thất bại"; 
+      header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
     }
+
+
+    }
+
+
+
+public function update_category_product($id){
+  $table = "tbl_category_product";
+  $cond = "id_category_product='$id'";
+
+  $title = $_POST['title_category_product'];
+  $desc = $_POST['desc_category_product'];
+
+  $data = array(
+  'title_category_product' => $title, 
+  'desc_category_product' => $desc
+  );
+  $categorymodel = $this->load->model('categorymodel');
+  $result = $categorymodel->updatecategory($table, $data, $cond);
+
+  if($result==1){
+  $message['msg'] = "Cập nhật danh mục sản phẩm thành công"; 
+  header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+  }else {
+    $message['msg'] = "Cập nhật danh mục sản phẩm thất bại"; 
+    header('Location:'.BASE_URL."/product/list_category?msg=".urlencode(serialize($message)));
+  }
 
 }
 }

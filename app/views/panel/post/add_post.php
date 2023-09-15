@@ -80,14 +80,28 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
 
 ?>
  <div class="container1">
-        <h1>Thêm Danh Mục Bài Viết</h1>
-        <form action="<?php echo BASE_URL ?>/post/insert_category" method="POST">
-            <label for="email">Tên Danh Mục Bài Viết:</label>
-            <input type="text" name="title_category_post" class="form-control" >
-            
-            <label for="pwd">Miêu Tả Danh Mục Bài Viết</label>
-            <input type="text" name="desc_category_post" >
+        <h1>Thêm Bài Viết</h1>
+        <form action="<?php echo BASE_URL ?>/post/insert_post" method="POST" enctype="multipart/form-data">
+            <label >Tên Bài Viết :</label>
+            <input type="text" name="title_post" class="form-control" >
 
-            <button type="submit">Thêm Danh Mục Bài Viết</button>
+            <label >Hình Bài Viết :</label>
+            <input type="file" name="image_post" class="form-control" >
+
+            <label>Chi Tiết Bài Viết</label>
+            <textarea name="content_post" name="" id="" rows="5" colums="12"></textarea>
+
+            <label >Danh Mục Bài Viết :</label>
+            <select name="category_post" id="">
+                <?php 
+                foreach ($category as $key => $cate) {
+                    
+                ?>
+                <option class="option" value="<?php echo $cate['id_category_post']?>">
+            <?php echo $cate['title_category_post']?> </option>
+
+                    <?php }?>
+            </select>
+            <button type="submit">Thêm Bài Viết</button>
         </form>
     </div>

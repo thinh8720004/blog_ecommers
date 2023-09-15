@@ -80,14 +80,14 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
 
 ?>
  <div class="container1">
-        <h1>Thêm Danh Mục Bài Viết</h1>
-        <form action="<?php echo BASE_URL ?>/post/insert_category" method="POST">
-            <label for="email">Tên Danh Mục Bài Viết:</label>
-            <input type="text" name="title_category_post" class="form-control" >
+        <h1>Thêm danh mục sản phẩm</h1>
+        <form action="<?php echo BASE_URL ?>/product/insert_category" method="POST">
+            <label for="email">Tên Danh Mục Sản Phẩm:</label>
+            <input type="text" name="title_category_product" class="form-control" >
             
-            <label for="pwd">Miêu Tả Danh Mục Bài Viết</label>
-            <input type="text" name="desc_category_post" >
+            <label for="pwd">Miêu Tả Danh Mục Sản Phẩm</label>
+            <input type="text" name="desc_category_product" >
 
-            <button type="submit">Thêm Danh Mục Bài Viết</button>
+            <button type="submit">Thêm Danh Mục Sản Phẩm</button>
         </form>
     </div>
