@@ -34,7 +34,7 @@ if (!empty($_GET['msg'])) {
 ?>
 
 <div class="container-form-add-category">
-    <h4>Add new Category</h4>
+    <h4>Add new Article</h4>
     <form action="<?php echo BASE_URL; ?>post/insertPost" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="nameCategory">Name Article:</label>
@@ -64,7 +64,7 @@ if (!empty($_GET['msg'])) {
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Add new category</button>
+        <button type="submit" class="btn btn-primary">Add new article</button>
     </form>
 </div>
 

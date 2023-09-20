@@ -60,7 +60,7 @@ if (!empty($_GET['msg'])) {
             <p><img class="image" src="<?php echo BASE_URL?>public/uploads/post/imagepost/<?php echo $post['image_post'] ?>" height="100px" width="100px"></p>
         </div>
         <div class="form-group">
-            <label for="describeArticle">Describe category</label>
+            <label for="describeArticle">Describe Article</label>
             <input type="textarea" class="form-control" value="<?php echo $post['content_post'] ?>" name="content_post">
         </div>
         <div class="form-group">

@@ -18,11 +18,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Category
+                    Article
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/addPost">Add Category</a></li>
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/listPost">List Category</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/addPost">Add Article</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/listPost">List Article</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

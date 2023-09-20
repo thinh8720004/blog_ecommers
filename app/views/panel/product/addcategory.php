@@ -35,7 +35,7 @@ if (!empty($_GET['msg'])) {
 ?>
 
 <div class="container-form-add-category-product">
-    <h4>Add New Article Category</h4>
+    <h4>Add New Category Product</h4>
     <form action="<?php echo BASE_URL; ?>product/insertCategory" method="post">
         <div class="form-group">
             <label for="nameCategory">Name Category Product</label>
@@ -43,12 +43,12 @@ if (!empty($_GET['msg'])) {
         </div>
         <div class="form-group">
             <label for="describeCategory">Describe Category Product</label>
-            <input type="textarea" class="form-control" placeholder="Enter describe category product here ..." name="describe_category_product" required>
+            <input type="textarea" class="form-control" placeholder="Enter describe category product here ..." name="desc_category_product" required>
         </div>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Add new article category</button>
+        <button type="submit" class="btn btn-primary">Add new category product</button>
     </form>
 </div>

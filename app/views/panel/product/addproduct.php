@@ -28,12 +28,6 @@ if (!empty($_GET['msg'])) {
         } else if ($value == "Add product failed!") {
             echo '<div class="alert alert-danger" id="danger-alert">';
         }
-        else if ($value == "Update product successfully!") {
-            echo '<div class="alert alert-success" id="success-alert">';
-        }
-        else if ($value == "Update product failed!") {
-            echo '<div class="alert alert-danger" id="danger-alert">';
-        }
         echo '<strong>' . $value . '</strong>';
         echo '</div>';
     }

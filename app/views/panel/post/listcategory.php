@@ -8,6 +8,12 @@ if (!empty($_GET['msg'])) {
         else if ($value == "Delete Category failed!") {
             echo '<div class="alert alert-danger" id="danger-alert">';
         }
+        else if ($value == "Update Category successfully!") {
+            echo '<div class="alert alert-success" id="success-alert">';
+        }
+        else if ($value == "Update Category failed!") {
+            echo '<div class="alert alert-danger" id="danger-alert">';
+        }
             echo '<strong>' . $value . '</strong>';
             echo '</div>';
         } 

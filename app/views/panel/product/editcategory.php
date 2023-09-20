@@ -1,96 +1,72 @@
 <style>
-         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
-        
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    h4 {
+        text-align: center;
+        padding: 10px;
+    }
 
-        h1 {
-            text-align: center;
-        }
+    .form-group {
+        padding: 5px 0;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
+    .form-group label {
+        padding: 10px 0;
+        font-size: large;
+    }
 
-        input[type="text"],
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-            form-group {
-                margin: 0 auto;
-            }
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: red;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-        textarea {
-            width: 100%;
-        }
-        .btn-default {
-            background-color: red;
-        }
-
+    .form-check {
+        padding-top: 10px;
+    }
     
+    p {
+        padding-top: 10px;
+    }
+
+    .image {
+        object-fit: cover;
+        border-radius: 5%;
+        box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 </style>
+
 <?php
-    if(isset($_GET['msg']) && !empty($_GET['msg'])){
-        $msg = unserialize(urldecode($_GET['msg']));
-     
-            foreach ($msg as $key => $value){
-                echo '<span style="color:blue; font-weight:bold">'.$value.'</span>';
-            }
-        
+if (!empty($_GET['msg'])) {
+    $msg = unserialize(urldecode($_GET['msg']));
+    foreach ($msg as $key => $value) {
+        if ($value == "Update category product successfully!") {
+            echo '<div class="alert alert-success" id="success-alert">';
         }
-    
-    ?>
+        else if ($value == "Update category product failed!") {
+            echo '<div class="alert alert-danger" id="danger-alert">';
+        }
+            echo '<strong>' . $value . '</strong>';
+            echo '</div>';
+        } 
+}
+?>
 
-    <h3 style="text-align: center;">Cập nhật danh mục sản phẩm</h3>
-
-<div class="col-md-6">
+<div class="container-form-update-article">
+    <h4>Edit Category Product</h4>
     <?php
     foreach($categorybyid as $key => $cate) {
         ?> 
-        
-    <form action="<?php echo BASE_URL ?>/product/update_category_product/<?php echo $cate['id_category_product'] ?>" method="POST"> 
+    <form action="<?php echo BASE_URL ?>/product/updateCategoryProduct/<?php echo $cate['id_category_product'] ?>" method="post">
         <div class="form-group">
-            <label for="email">Tên danh mục</label>
+            <label for="nameCategory">Name Category Product</label>
             <input type="text" value="<?php echo $cate['title_category_product'] ?>" name="title_category_product" class=" form-control" >
         </div>
-
         <div class="form-group">
-            <label for="pwd">Miêu tả danh mục</label>
-            <input type="text" value="<?php echo $cate['desc_category_product'] ?>" name="desc_category_product" class=" form-control" >
+            <label for="describeArticle">Describe Category Product</label>
+            <textarea type="text" value="<?php echo $cate['desc_category_product'] ?>" name="desc_category_product" class=" form-control" ></textarea>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Category Product</button>
+    </form>
+    <?php
+    } ?>
+</div>
 
-</div>
-            <button type="submit" class="btn btn-default"> Cập nhật danh mục sản phẩm</button>
-</form>
-<?php
-} ?>
-</div>
+
+    

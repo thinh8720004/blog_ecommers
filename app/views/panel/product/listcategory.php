@@ -47,7 +47,7 @@ if (!empty($_GET['msg'])) {
     <tr>
         <td><?php echo $i ?></td>
         <td><?php echo $cate['title_category_product'] ?></td> 
-        <td><?php echo $cate['describe_category_product'] ?></td>
+        <td><?php echo $cate['desc_category_product'] ?></td>
         <td>
             <button type="button" class="btn btn-danger"><a href="<?php echo BASE_URL ?>product/deleteCategory/<?php echo $cate['id_category_product'] ?>">Delete</button> 
             <button type="button" class="btn btn-warning"><a href="<?php echo BASE_URL ?>product/editCategory/<?php echo $cate['id_category_product'] ?>">Update</a></button>

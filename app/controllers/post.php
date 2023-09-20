@@ -3,7 +3,6 @@ class post  extends Dcontrollers
 {
     public function __construct()
     {
-        Session::checkSession();
         parent::__construct();
     }
 
@@ -24,14 +23,12 @@ class post  extends Dcontrollers
         $title = $_POST['title_category_post'];
         $desc = $_POST['desc_category_post'];
         $table = 'tab_category_post';
-
         $data = array(
             'title_category_post' => $title,
             'desc_category_post' => $desc
         );
         $categorymodel = $this->load->model('categorymodel');
         $result = $categorymodel->insertCategoryPost($table, $data);
-
         if ($result == 1) {
             $message['msg'] = "Added Category successfully!";
             header('Location:' . BASE_URL . "post/addcategory?msg=" . urlencode(serialize($message)));
@@ -63,10 +60,10 @@ class post  extends Dcontrollers
         $result = $categorymodel->deleteCategoryPost($table, $cond);
         if ($result == 1) {
             $message['msg'] = "Delete Category successfully!";
-            header('Location:' . BASE_URL . "/post/listcategory?msg=" . urlencode(serialize($message)));
+            header('Location:' . BASE_URL . "post/listcategory?msg=" . urlencode(serialize($message)));
         } else {
             $message['msg'] = "Delete Category failed!";
-            header('Location:' . BASE_URL . "/post/listcategory?msg=" . urlencode(serialize($message)));
+            header('Location:' . BASE_URL . "post/listcategory?msg=" . urlencode(serialize($message)));
         }
     }
     public function editCategory($id)
@@ -79,10 +76,10 @@ class post  extends Dcontrollers
         $this->load->view('panel/menu');
         $this->load->view('panel/post/editcategory', $data);
         $this->load->view('panel/footer');
-        
     }
 
-    public function updateCategory($id)
+
+    public function updateCategoryPost($id)
     {
         $table = "tab_category_post";
         $cond = "id_category_post='$id'";
@@ -96,17 +93,17 @@ class post  extends Dcontrollers
         $categorymodel = $this->load->model('categorymodel');
         $result = $categorymodel->updateCategoryPost($table, $data, $cond);
         if ($result == 1) {
-            $message['msg'] = "Update Category successfully!";
+            $message['msg'] = "Update article successfully!";
             header('Location:' . BASE_URL . "post/editcategory?msg=" . urlencode(serialize($message)));
         } else {
-            $message['msg'] = "Update Category failed!";
+            $message['msg'] = "Update article failed!";
         }
         header('Location:' . BASE_URL . "post/editcategory?msg=" . urlencode(serialize($message)));
     }
 
+    // post
     public function addPost()
     {
-
         $this->load->view('panel/header');
         $this->load->view('panel/menu');
 
@@ -126,13 +123,13 @@ class post  extends Dcontrollers
         if (isset($_FILES['image_post']) && $_FILES['image_post']['error'] === UPLOAD_ERR_OK) {
             $image = $_FILES['image_post']['name'];
             $image_tmp = $_FILES['image_post']['tmp_name'];
-            $target_directory = "public/uploads/post/imagepost"; // Đường dẫn đến thư mục mục tiêu
+            $target_directory = "public/uploads/post/image_post"; // Đường dẫn đến thư mục mục tiêu
             if (!is_dir($target_directory)) {
                 mkdir($target_directory, 0777, true); // Tạo thư mục và tạo các thư mục cha nếu chưa tồn tại
             }
             move_uploaded_file($image_tmp, $target_directory . "/" . $image);
         } else {
-            echo "Please select an image file to upload!";
+            echo "Vui lòng chọn một tệp hình ảnh để tải lên.";
         }
 
         $category = $_POST['category_post'];
@@ -146,7 +143,7 @@ class post  extends Dcontrollers
             'id_category_post'  => $category
         );
         $postmodel = $this->load->model('postmodel');
-        $result =  $postmodel->insertpost($table, $data);
+        $result =  $postmodel->insertPost($table, $data);
         if ($result == 1) {
             // move_uploaded_file($tmp_image,$path_upload);
             $message['msg'] = "Added article successfully!";
@@ -156,7 +153,20 @@ class post  extends Dcontrollers
             header('Location:' . BASE_URL . "post/addpost?msg=" . urlencode(serialize($message)));
         }
     }
+    // public function delete_product($id){ 
+    //   $table = "tbl_product"; 
+    //   $cond = "id_product='$id'"; 
+    //   $categorymodel = $this->load->model('categorymodel');
+    //   $result = $categorymodel->deleteproduct($table, $cond); 
+    //   if($result ==1){
+    //   $message['msg'] = "Xóa sản phẩm thành công" ; 
+    //   header('Location:'.BASE_URL."/post/list_product?msg=".urlencode(serialize($message)));
+    //   }else{
+    //   $message['msg']= "Xóa sản phẩm thất bại";
+    //   header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
 
+    //   }
+    // }
     public function listPost()
     {
         $this->load->view('panel/header');
@@ -176,7 +186,7 @@ class post  extends Dcontrollers
         $table_post = "tab_post";
         $cond = "id_post = '$id'";
         $postmodel = $this->load->model('postmodel');
-        $result = $postmodel->datelepost($table_post, $cond);
+        $result = $postmodel->deletePost($table_post, $cond);
         if ($result == 1) {
             $message['msg'] = "Delete article successfully!";
             header('Location:' . BASE_URL . "post/listpost?msg=" . urlencode(serialize($message)));
@@ -196,7 +206,7 @@ class post  extends Dcontrollers
         $cond = "id_post = '$id'";
 
         $data['category'] = $postmodel->categoryPost($table);
-        $data['postbyid'] = $postmodel->postbyid($table_post, $cond);
+        $data['postbyid'] = $postmodel->postByID($table_post, $cond);
 
         $this->load->view('panel/post/editpost', $data);
         $this->load->view('panel/footer');
@@ -223,10 +233,10 @@ class post  extends Dcontrollers
             }
             move_uploaded_file($image_tmp, $target_directory . "/" . $image);
         } else {
-            echo "Please select an image file to upload!";
+            echo "Vui lòng chọn một tệp hình ảnh để tải lên.";
         }
         if ($image) {
-            $data['postbyid'] = $postmodel->postbyid($table, $cond);
+            $data['postbyid'] = $postmodel->postByID($table, $cond);
             unlink("public/uploads/post/imagepost/" . $data['postbyid'][0]['image_post']);
             $data = array(
                 'title_post' => $title,
@@ -245,15 +255,14 @@ class post  extends Dcontrollers
             );
         }
 
-
         $result =  $postmodel->updatePost($table, $data, $cond);
         if ($result == 1) {
             // move_uploaded_file($tmp_image,$path_upload);
             $message['msg'] = "Update article successfully!";
-            header('Location:' . BASE_URL . "post/editpost?msg=" . urlencode(serialize($message)));
+            header('Location:' . BASE_URL . "post/addpost?msg=" . urlencode(serialize($message)));
         } else {
             $message['msg'] = "Update article failed!";
-            header('Location:' . BASE_URL . "post/editpost?msg=" . urlencode(serialize($message)));
+            header('Location:' . BASE_URL . "post/addpost?msg=" . urlencode(serialize($message)));
         }
     }
 }
