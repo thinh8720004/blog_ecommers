@@ -102,7 +102,7 @@ if(isset($_GET['msg']) && !empty($_GET['msg'])){
             <input value="<?php echo $pro['quantity_product']?>" type="text" name="quantity_product" class="form-control" >
             
             <label>Miêu tả danh mục</label>
-            <textarea name="desc_product" name="" id="" rows="5" colums="12"><?php echo $pro['price_product']?></textarea>
+            <textarea name="desc_product" name="" id="" rows="5" colums="12"><?php echo $pro['desc  _product']?></textarea>
 
             <label >Danh mục sản phẩm :</label>
             <select name="category_product" id="">
