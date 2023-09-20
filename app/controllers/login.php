@@ -5,7 +5,6 @@ class login  extends Dcontrollers
     {
         $message = array();
         $data = array();
-        //Session::checkSession();
         parent::__construct();
     }
 
@@ -23,6 +22,7 @@ class login  extends Dcontrollers
     }
 
     public function dashboard(){
+        Session::checkSession();
         $this->load->view('panel/header');
         $this->load->view('panel/menu');
         $this->load->view('panel/dashboard');

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?php echo BASE_URL; ?>">Trang Chủ</a>
-        <a class="navbar-brand" href="#">Thông tin website</a>
+        <a class="navbar-brand" href="<?php echo BASE_URL; ?>">Home Page</a>
+        <a class="navbar-brand" href="#">Website information</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,47 +9,47 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Bài viết
+                        Article category
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post">Add Article Category</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/listCategory">List Article Category</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Danh mục bài viết
+                        Category
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Thêm bài viết</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê bài viết</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/addPost">Add Category</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post/listPost">List Category</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Danh mục sản phẩm
+                        Product Portfolio
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL;?>product">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>product/addCategory">Add Product Portfolio</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>product/listCategory">List Product Portfolio</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sản Phẩm
+                        Product
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Thêm sản phẩm</a></li>
-                        <li><a class="dropdown-item" href="#">Liệt kê sản phẩm</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>product/addProduct">Add Product</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>product/listProduct">List Product</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Đơn Hàng
+                        Order
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order/addorder">Thêm đơn hàng</a></li>
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order">Liệt kê đơn hàng</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order/addorder">Add Order</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order">List Order</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
