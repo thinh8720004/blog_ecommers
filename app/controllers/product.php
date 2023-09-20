@@ -1,5 +1,5 @@
 <?php
-class product  extends Dcontrollers
+class product extends Dcontrollers
 {
   public function __construct()
   {
@@ -139,8 +139,8 @@ class product  extends Dcontrollers
   {
     $title = $_POST['title_product'];
     $price = $_POST['price_product'];
-    $desc =  $_POST['desc_product'];
-    $quantity =  $_POST['quantity_product'];
+    $desc = $_POST['desc_product'];
+    $quantity = $_POST['quantity_product'];
     $image = $_FILES['image_product']['name'];
 
     if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
@@ -163,14 +163,14 @@ class product  extends Dcontrollers
 
     $data = array(
       'title_product' => $title,
-      'price_product'  => $price,
+      'price_product' => $price,
       'quantity_product' => $quantity,
-      'desc_product'  => $desc,
+      'desc_product' => $desc,
       'image_product' => $image,
-      'id_category_product'  => $category
+      'id_category_product' => $category
     );
     $categorymodel = $this->load->model('categorymodel');
-    $result =  $categorymodel->insertProduct($table, $data);
+    $result = $categorymodel->insertProduct($table, $data);
     if ($result == 1) {
       // move_uploaded_file($tmp_image,$path_upload);
       $message['msg'] = "Added product successfully!";
@@ -190,12 +190,12 @@ class product  extends Dcontrollers
 
     $title = $_POST['title_product'];
     $image = $_FILES['image_product']['name'];
-    $desc =  $_POST['desc_product'];
+    $desc = $_POST['desc_product'];
     $price = $_POST['price_product'];
-    $quantity =  $_POST['quantity_product'];
+    $quantity = $_POST['quantity_product'];
     $category = $_POST['category_product'];
 
-    if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['imageproduct']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
       $image = $_FILES['image_product']['name'];
       $image_tmp = $_FILES['image_product']['tmp_name'];
 
