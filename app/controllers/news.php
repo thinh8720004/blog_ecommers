@@ -1,5 +1,5 @@
 <?php
-class index extends Dcontrollers
+class news extends Dcontrollers
 {
     public function __construct()
     {
@@ -9,30 +9,22 @@ class index extends Dcontrollers
 
     public function index()
     {
-        $this->homepage();
+        $this->category();
     }
 
-
-    public function homepage()
-    {
-        $this->load->view('header');
-        $this->load->view('slider');
-
-        $this->load->view('home');
-        $this->load->view('footer');
-    }
     public function category()
     {
         $this->load->view('header');
-        // $this->load->view('slider');// trang category ko cần slider
-        $this->load->view('categoryproduct');
+        // $this->load->view('slider');
+
+        $this->load->view('categorypost');
         $this->load->view('footer');
     }
-    public function detailsProduct()
+    public function detailsNews($id)
     {
         $this->load->view('header');
         // $this->load->view('slider');// trang category ko cần slider
-        $this->load->view('detailsproduct');
+        $this->load->view('detailspost');
         $this->load->view('footer');
     }
 
