@@ -56,7 +56,7 @@ if (!empty($_GET['msg'])) {
             <tr>
                 <td><?php echo $i ?></td>
                 <td><?php echo $pro['title_product'] ?></td>
-                <td><img src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $pro['image_product'] ?>" height="100px" width="100px"></td>
+                <td><img class="image" src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $pro['image_product'] ?>" height="100px" width="100px"></td>
                 <td><?php echo $pro['title_category_product'] ?></td>
                 <td>
                     <?php

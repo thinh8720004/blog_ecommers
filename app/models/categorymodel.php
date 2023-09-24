@@ -11,6 +11,12 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
+    public function categoryHome($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
+        return $this->db->select($sql);
+    }
+
     public function categoryByID($table, $id)
     {
         $sql = "SELECT * FROM $table WHERE $id ";

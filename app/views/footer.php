@@ -1,129 +1,130 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="<?php echo BASE_URL;?>public/css/footer.css">
-<div class="container-footer">
-    <div class="top-container-footer">
-        <ul class="about-us">
-            <li class="main-content">VỀ CHÚNG TÔI</li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Giới thiệu</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Dịch vụ của Thịnh Tú</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Tuyển dụng</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Sơ đồ chỉ đường</a>
-            </li>
-        </ul>
-        <ul class="support-buying">
-            <li class="main-content">HỖ TRỢ MUA HÀNG</li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Bảo mật thông tin</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Chính sách bảo mật</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Quy định đổi trả</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Phương thức thanh toán</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Phương thức vận chuyển</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Hỗ trợ trả góp</a>
-            </li>
-        </ul>
-        <ul class="support-sell">
-            <li class="main-content">HỖ TRỢ BÁN HÀNG</li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Hỗ trợ bảo hành: 0901.945.455 - <br> 0901.994.469 - 0935.151.391 </a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Tư vấn mua hàng: 0935.194.469 - <br> 0901.945.455 - 0905.945.020 - <br> 0901.994.469 - 0935.151.391 </a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Dich vụ bọc lại sofa: 0901.945.455 - <br> 0901.994.469</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <a href="#">Phản ánh thái độ phục vụ: 0905.499.469</a>
-            </li>
-        </ul>
-        <ul class="connect">
-            <li class="main-content">KẾT NỐI VỚI THỊNH TÚ</li>
-            <li>
-                <a href="#"><img class="img-fanpage" src="https://ngaocontent.com/wp-content/uploads/2020/08/fanpage.jpg" alt="Fanpage Thịnh Tú"></a>
-            </li>
-        </ul>
+<footer>
+    <div class="footer_top_bootom">
+        <div class="bg_in">
+            <div class="footer footer_bottom">
+                <div class="footer-col">
+                    <h4>Thông tin công ty</h4>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><a href="chitiettin.php">Về chúng tôi</a></li>
+                            <li><a href="chitiettin.php">Tin tuyển dụng</a></li>
+                            <li><a href="chitiettin.php">Chương trình khuyến mãi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><a href="chitiettin.php">Hướng dẫn mua hàng</a></li>
+                            <li><a href="chitiettin.php">Chính sách bảo hành thiết bị</a></li>
+                            <li><a href="chitiettin.php">Chính sách bảo mật thông tin</a></li>
+                            <li><a href="chitiettin.php">Quy định và hình thức thanh toán</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="footer-col-content">
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fb"><img src="<?php echo BASE_URL ?>public/images/Fb.png">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="fb"><img src="<?php echo BASE_URL ?>public/images/Gg.png">Google</a>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Dịch vụ khách hàng</h4>
+                    <div class="footer-col-content">
+                        <ul class="icon_list">
+                            <li>
+                                <a href=".">
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    <p class="text_li">
+                                        <span class="phone_footer">Hotline: 0923-032-992</span>
+                                        <span class="text_small">(Từ 8h đến 20h tất cả các ngày)</span>
+                                    </p>
+                                </a>
+                            </li>
+                            <div class="clear"></div>
+                            <li><a><i class="fa fa-envelope" aria-hidden="true"></i> 3tphone@gmail.com</a></li>
+                            <li><a><i class="fa fa-mouse-pointer" aria-hidden="true"></i> https://3tphone.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
     </div>
-    <a href="#"><img class="img-DMCA" src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=9137689d-841a-40a4-b6e9-331d575d6ec7" alt="Image DMCA"></a>
-    <a href="#"><img class="img-logo-gov" src="https://sabohome.vn/wp-content/uploads/2021/04/logo-da-thong-bao-website-voi-bo-cong-thuong.png" alt="Image Logo GOV"></a>
-    <div class="between-container-footer">
-        <ul class="branch-1">
-            <li>
-                <i class="fa-solid fa-location-dot" id="location"></i>
-                <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 1</strong>
-            </li>
-            <li>Địa chỉ: TP. ĐÀ Nẵng</li>
-            <li>Hotline: 0901.994.496</li>
-            <li>Email: noithatthinhtu@gmail.com</li>
-        </ul>
-        <ul class="branch-2">
-            <li>
-                <i class="fa-solid fa-location-dot" id="location"></i>
-                <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 2</strong>
-            </li>
-            <li>Địa chỉ: TP. ĐÀ Nẵng</li>
-            <li>Hotline: 0901.994.496</li>
-            <li>Email: noithatthinhtu@gmail.com</li>
-        </ul>
-        <ul class="branch-3">
-            <li>
-                <i class="fa-solid fa-location-dot" id="location"></i>
-                <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 3</strong>
-            </li>
-            <li>Địa chỉ: TP. ĐÀ Nẵng</li>
-            <li>Hotline: 0901.994.496</li>
-            <li>Email: noithatthinhtu@gmail.com</li>
-        </ul>
-        <ul class="branch-4">
-            <li>
-                <i class="fa-solid fa-location-dot" id="location"></i>
-                <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 4</strong>
-            </li>
-            <li>Địa chỉ: TP. ĐÀ Nẵng</li>
-            <li>Hotline: 0901.994.496</li>
-            <li>Email: noithatthinhtu@gmail.com</li>
-        </ul>
-        <ul class="branch-5">
-            <li>
-                <i class="fa-solid fa-location-dot" id="location"></i>
-                <strong>SIÊU THỊ NỘI THẤT THỊNH TÚ 5</strong>
-            </li>
-            <li>Địa chỉ: TP. ĐÀ Nẵng</li>
-            <li>Hotline: 0901.994.496</li>
-            <li>Email: noithatthinhtu@gmail.com</li>
-        </ul>
+    <div class="clear"></div>
+    <div class="footer_top">
+        <div class="bg_in">
+            <div class="footer">
+                <div class="infor_company">
+                    <h3>CÔNG TY THIẾT KẾ WEBSITE WEBEXTRASITE.COM</h3>
+                    <a href=""><img src="<?php echo BASE_URL ?>public/images/da-dang-ky-voi-bo-cong-thuong.png" alt="da-dang-ky-voi-bo-cong-thuong.png" class="cangiua" /></a>
+                    <p class="note_mst">GPĐKKD số: 7777777. Cấp lần 1: 10/10/2015. Thay đổi: 10/10/2010. Nơi cấp: Phòng đăng ký kinh doanh Sở kế hoạch đầu tư TP Hồ Chí Minh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>TRỤ SỞ CHÍNH</h4>
+                    <div class="infor_footer">
+                        <address>
+                            <address>Địa Chỉ : 151 Lý Thái Tổ, P. 9, Q. 10, TP. Hồ Chí Minh <br />
+                                Điện thoại: 0923-032-992<br />
+                                Email: sales@webextrasite.com
+                            </address>
+                        </address>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>VĂN PHÒNG ĐẠI DIỆN</h4>
+                    <div class="infor_footer">
+                        <address>
+                            <address>Địa Chỉ : 151 Lý Thái Tổ, P. 9, Q. 10, TP. Hồ Chí Minh <br />
+                                Điện thoại: 0923-032-992<br />
+                                Email: sales@webextrasite.com
+                            </address>
+                        </address>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
+    <div class="clear"></div>
+    <div class="copyright">
+        <h4 class="tkw9999">&copy; © Bản quyền thuộc về Webextrasite. Designed by <a href="http://webextrasite.com/" rel="dofollow" target="_blank">Thiet Ke Web</a> Bởi <a href="http://webextrasite.com/">Webextrasite.com</a></h4>
+    </div>
+</footer>
+<div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon">
+    <a href="tel:0923-032-992" title="Gọi ngay cho chúng tôi">
+        <div class="coccoc-alo-ph-circle"></div>
+        <div class="coccoc-alo-ph-circle-fill"></div>
+        <div class="coccoc-alo-ph-img-circle"></div>
+    </a>
 </div>
-<div class="bottom-container-footer">
-    Công ty TNHH thiết kế và thi công nội thất Thịnh Tú | Mã số thuế: 0401826361
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script defer type="text/javascript" src="<?php echo BASE_URL ?>public/js/sweet-alert.js"></script>
+<script defer type="text/javascript" src="<?php echo BASE_URL ?>public/js/bootstrap.js"></script>
+<script defer type="text/javascript" src="<?php echo BASE_URL ?>public/js/jquery.flexslider-min.js"></script>
+<script defer src="<?php echo BASE_URL ?>public/js/owl.carousel.min.js" type="text/javascript"></script>
+<script defer src="<?php echo BASE_URL ?>public/js/jquery.lazyload.min.js" type="text/javascript"></script>
+<script defer type="text/javascript" src="<?php echo BASE_URL ?>public/js/script_ex.js"></script>
+<script defer type="text/javascript" src="<?php echo BASE_URL ?>public/js/script_menu.js"></script>
+
+<link rel="stylesheet" href="<?php echo BASE_URL ?>public/css/font-awesome.min.css" type="text/css">
+
+<link async rel="stylesheet" href="<?php echo BASE_URL ?>public/css/cssfooter.css" />
+<div style="height: 1840px;position: fixed;width: 100%;top: 0px;left: 0px;right: 0px;bottom: 0px;z-index: 1001;background: #000 none repeat scroll 0% 0%;opacity: 0.3;display: none;text-align:center" id="khungnen"></div>
+<div style="display: none;left: 70%;margin-left: -309px;z-index: 1002;position: fixed;top: 40%;margin-top: 0px;" id="loadding">
+    <img src="<?php echo BASE_URL ?>public/images/loader.gif" />
 </div>
+</body>
+
+</html>

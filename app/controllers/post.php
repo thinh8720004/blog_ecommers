@@ -1,5 +1,5 @@
 <?php
-class post  extends Dcontrollers
+class post extends Dcontrollers
 {
     public function __construct()
     {
@@ -78,6 +78,30 @@ class post  extends Dcontrollers
         $this->load->view('panel/footer');
     }
 
+    public function updateCategory($id)
+    {
+        $table = "tab_category_post";
+        $cond = "id_category_post='$id'";
+
+        $title = $_POST['title_category_post'];
+        $desc = $_POST['desc_category_post'];
+
+        $data = array(
+            'title_category_post' => $title,
+            'desc_category_post' => $desc
+        );
+        $categorymodel = $this->load->model('categorymodel');
+        $result = $categorymodel->updateCategory($table, $data, $cond);
+
+        if ($result == 1) {
+            $message['msg'] = "Update article category successfully!";
+            header('Location:' . BASE_URL . "post/addcategory?msg=" . urlencode(serialize($message)));
+        } else {
+            $message['msg'] = "Update article category failed!";
+            header('Location:' . BASE_URL . "post/addcategory?msg=" . urlencode(serialize($message)));
+        }
+    }
+
 
     public function updateCategoryPost($id)
     {
@@ -118,12 +142,12 @@ class post  extends Dcontrollers
     public function insertPost()
     {
         $title = $_POST['title_post'];
-        $content =  $_POST['content_post'];
+        $content = $_POST['content_post'];
         $image = $_FILES['image_post']['name'];
         if (isset($_FILES['image_post']) && $_FILES['image_post']['error'] === UPLOAD_ERR_OK) {
             $image = $_FILES['image_post']['name'];
             $image_tmp = $_FILES['image_post']['tmp_name'];
-            $target_directory = "public/uploads/post/image_post"; // Đường dẫn đến thư mục mục tiêu
+            $target_directory = "public/uploads/post/imagepost"; // Đường dẫn đến thư mục mục tiêu
             if (!is_dir($target_directory)) {
                 mkdir($target_directory, 0777, true); // Tạo thư mục và tạo các thư mục cha nếu chưa tồn tại
             }
@@ -138,12 +162,12 @@ class post  extends Dcontrollers
 
         $data = array(
             'title_post' => $title,
-            'content_post'  => $content,
+            'content_post' => $content,
             'image_post' => $image,
-            'id_category_post'  => $category
+            'id_category_post' => $category
         );
         $postmodel = $this->load->model('postmodel');
-        $result =  $postmodel->insertPost($table, $data);
+        $result = $postmodel->insertPost($table, $data);
         if ($result == 1) {
             // move_uploaded_file($tmp_image,$path_upload);
             $message['msg'] = "Added article successfully!";
@@ -153,20 +177,7 @@ class post  extends Dcontrollers
             header('Location:' . BASE_URL . "post/addpost?msg=" . urlencode(serialize($message)));
         }
     }
-    // public function delete_product($id){ 
-    //   $table = "tbl_product"; 
-    //   $cond = "id_product='$id'"; 
-    //   $categorymodel = $this->load->model('categorymodel');
-    //   $result = $categorymodel->deleteproduct($table, $cond); 
-    //   if($result ==1){
-    //   $message['msg'] = "Xóa sản phẩm thành công" ; 
-    //   header('Location:'.BASE_URL."/post/list_product?msg=".urlencode(serialize($message)));
-    //   }else{
-    //   $message['msg']= "Xóa sản phẩm thất bại";
-    //   header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
 
-    //   }
-    // }
     public function listPost()
     {
         $this->load->view('panel/header');
@@ -220,7 +231,7 @@ class post  extends Dcontrollers
         $postmodel = $this->load->model('postmodel');
 
         $title = $_POST['title_post'];
-        $content =  $_POST['content_post'];
+        $content = $_POST['content_post'];
         $image = $_FILES['image_post']['name'];
         $category = $_POST['category_post'];
 
@@ -240,22 +251,22 @@ class post  extends Dcontrollers
             unlink("public/uploads/post/imagepost/" . $data['postbyid'][0]['image_post']);
             $data = array(
                 'title_post' => $title,
-                'content_post'  => $content,
+                'content_post' => $content,
                 'image_post' => $image,
-                'id_category_post'  => $category
+                'id_category_post' => $category
             );
             //   move_uploaded_file($image_tmp, $target_directory . "/" . $image);
 
         } else {
             $data = array(
                 'title_post' => $title,
-                'content_post'  => $content,
+                'content_post' => $content,
                 // 'image_post' => $image,
-                'id_category_post'  => $category
+                'id_category_post' => $category
             );
         }
 
-        $result =  $postmodel->updatePost($table, $data, $cond);
+        $result = $postmodel->updatePost($table, $data, $cond);
         if ($result == 1) {
             // move_uploaded_file($tmp_image,$path_upload);
             $message['msg'] = "Update article successfully!";
