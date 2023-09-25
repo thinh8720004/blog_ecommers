@@ -29,39 +29,39 @@
                     </div>
                     <div class="content_text">
                         <ul class="list_ul">
-
+                            <?php
+                                foreach ($post_by_id as $key => $post){
+                            ?>
                             <li class="lists">
                                 <div class="img-list">
                                     <a href="<?php echo BASE_URL ?>news/detailsNews/14">
-                                        <img src="<?php echo BASE_URL ?>public/image/iphone.png" alt="NAS Synology là gì? - Một số ứng dụng của NAS Synology" class="img-list-in">
+                                        <img src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post']; ?>" 
+                                        alt="<?php echo $post['title_post']; ?>" class="img-list-in">
                                     </a>
                                 </div>
                                 <div class="content-list">
                                     <div class="content-list_inm">
                                         <div class="title-list">
                                             <h3>
-                                                <a href="<?php echo BASE_URL ?>news/detailsNews/14">NAS
-                                                    Synology là gì? - Một số ứng dụng của NAS Synology</a>
+                                                <a href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>"><?php echo $post['title_post']; ?></a>
                                             </h3>
                                             <p class="list-news-status-p">
-                                                <a title="Thiết bị văn phòng">Thiết bị văn phòng</a> | <a title="26-12-2017">26-12-2017</a>
+                                            <?php echo $post['content_post']; ?>
                                             </p>
                                         </div>
                                         <div class="content-list-in">
-                                            <p><strong>NAS (Network Attached Storage)</strong> có thể được định nghĩa là
-                                                <strong><em>thiết bị lưu trữ mạng</em></strong> có&nbsp;nhiệm vụ lưu trữ
-                                                các dữ liệu cần thiết, ngoài ra NAS còn được tích hợp các tính năng hữu
-                                                ích như ghi và lưu trữ phim,&nbsp;hình ảnh, tải dữ liệu di động, máy chủ
-                                                FTP, máy chủ đa phương tiện,...
+                                            <p><strong><?php echo $post['title_post']; ?></strong> <?php echo $post['content_post']; ?>
                                             </p>
                                         </div>
-                                        <div class="xt"><a href="tin-tuc/nas-synology-la-gi-mot-so-ung-dung-cua-nas-synology-314.html">Xem
-                                                thêm</a>
+                                        <div class="xt"><a href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>">See more >></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
                             </li>
+                            <?php 
+                                }
+                            ?>
                         </ul>
                         <div class="clear"></div>
                         <div class="wp_page">

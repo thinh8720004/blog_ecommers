@@ -97,7 +97,7 @@
                                                 ?>
                                                     <li class='active has-sub'>
                                                         <a href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
-                                                        <span><?php echo $cate['title_category_product'] ?></span></a>
+                                                            <span><?php echo $cate['title_category_product'] ?></span></a>
                                                     </li>
                                                 <?php
                                                 }
@@ -112,37 +112,40 @@
                             <div id='cssmenu'>
                                 <ul>
                                     <li class='active'><a href='<?php echo BASE_URL; ?>'>Home page</a></li>
-                                    <li class=''><a href='<?php echo BASE_URL; ?>contact'>Introdeuce</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL; ?>contact'>Introduce</a></li>
                                     <li class=''>
 
                                         <a href='<?php echo BASE_URL; ?>index/category'>Product</a>
-                                         <ul>
-                                            
+                                        <ul>
+
                                             <?php foreach ($category as $key => $cate) {
-                                                ?>
+                                            ?>
                                                 <li>
-                                                <a href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
+                                                    <a href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
                                                         <span><?php echo $cate['title_category_product'] ?></span></a>
                                                 </li>
-                                                <?php
+                                            <?php
                                             }
-                                                ?>
-                                            
-                                         </ul>
-                                        
+                                            ?>
+
+                                        </ul>
+
                                     </li>
 
                                     <li class=''><a href='<?php echo BASE_URL; ?>'>News</a>
-                                    <ul>
-                                            
-              
+                                        <ul>
+                                            <?php foreach ($category_post as $key => $cate_post) {
+                                            ?>
+
                                                 <li>
-                                                <a href='#'><span><?php echo $cate['title_category_product'] ?></span></a>
+                                                    <a href='<?php echo BASE_URL; ?>news/category/<?php echo $cate_post['id_category_post'] ?>'><span><?php echo $cate_post['title_category_post'] ?></span></a>
                                                 </li>
-                                        
-                                            
-                                         </ul>
-                                </li>
+                                            <?php
+                                            }
+                                            ?>
+
+                                        </ul>
+                                    </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Cart</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Contact</a></li>
                                 </ul>

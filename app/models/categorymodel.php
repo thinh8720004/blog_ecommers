@@ -11,6 +11,13 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
+    public function categoryByIDHome($table, $table_product, $id)
+    {
+        $sql = "SELECT * FROM $table, $table_product WHERE $table.id_category_product = $table_product.id_category_product
+        AND $table_product.id_category_product = '$id' ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
+
     public function categoryHome($table)
     {
         $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
@@ -52,6 +59,19 @@ class categorymodel extends Dmodels
     {
         $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
         return $this->db->SELECT($sql);
+    }
+
+    public function categoryPostHome($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
+        return $this->db->select($sql);
+    }
+
+    public function postByIDHome($table_category_post, $table_post, $id)
+    {
+        $sql = "SELECT * FROM $table_category_post, $table_post WHERE $table_category_post.id_category_post = $table_post.id_category_post
+        AND $table_post.id_category_post = '$id' ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
     }
 
     public function deleteCategoryPost($table, $cond)

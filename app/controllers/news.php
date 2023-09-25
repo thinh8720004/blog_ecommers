@@ -12,12 +12,20 @@ class news extends Dcontrollers
         $this->category();
     }
 
-    public function category()
+    public function category($id)
     {
-        $this->load->view('header');
+        $table = 'tab_category_product';
+        $table_category_post = 'tab_category_post';
+        $table_post = 'tab_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($table_category_post);
+        $data['post_by_id'] = $categorymodel->postByIDHome($table_category_post, $table_post, $id);
+
+        $this->load->view('header', $data);
         // $this->load->view('slider');
 
-        $this->load->view('categorypost');
+        $this->load->view('categorypost', $data);
         $this->load->view('footer');
     }
     public function detailsNews($id)

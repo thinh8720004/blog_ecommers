@@ -14,8 +14,10 @@ class index  extends Dcontrollers
     public function homepage()
     {
         $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
         $categorymodel = $this->load->model('categorymodel');
         $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
 
         $this->load->view('header', $data);
         $this->load->view('slider');
@@ -42,8 +44,10 @@ class index  extends Dcontrollers
     public function contact()
     {
         $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
         $categorymodel = $this->load->model('categorymodel');
         $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
 
         $this->load->view('header', $data);
         $this->load->view('contact');
@@ -52,8 +56,10 @@ class index  extends Dcontrollers
 
     public function notFound(){
         $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
         $categorymodel = $this->load->model('categorymodel');
         $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
 
         $this->load->view('header', $data);
         $this->load->view('404');
