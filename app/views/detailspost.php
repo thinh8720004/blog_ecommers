@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div class="name-pro-right">
-                                        <a href="<?php echo BASE_URL ?>/index/detailsProduct/18">
+                                        <a href="<?php echo BASE_URL ?>/index/detailsProduct/14 ?>">
                                             <h3>Iphone X 64GB</h3>
                                         </a>
                                     </div>

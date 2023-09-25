@@ -34,7 +34,7 @@
                             ?>
                             <li class="lists">
                                 <div class="img-list">
-                                    <a href="<?php echo BASE_URL ?>news/detailsNews/14">
+                                    <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']?>">
                                         <img src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post']; ?>" 
                                         alt="<?php echo $post['title_post']; ?>" class="img-list-in">
                                     </a>
@@ -53,7 +53,7 @@
                                             <p><strong><?php echo $post['title_post']; ?></strong> <?php echo $post['content_post']; ?>
                                             </p>
                                         </div>
-                                        <div class="xt"><a href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>">See more >></a>
+                                        <div class="xt"><a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']; ?>">See more >></a>
                                         </div>
                                     </div>
                                 </div>
