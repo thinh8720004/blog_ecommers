@@ -78,6 +78,30 @@ class post extends Dcontrollers
         $this->load->view('panel/footer');
     }
 
+    public function updateCategory($id)
+    {
+        $table = "tab_category_post";
+        $cond = "id_category_post='$id'";
+
+        $title = $_POST['title_category_post'];
+        $desc = $_POST['desc_category_post'];
+
+        $data = array(
+            'title_category_post' => $title,
+            'desc_category_post' => $desc
+        );
+        $categorymodel = $this->load->model('categorymodel');
+        $result = $categorymodel->updateCategory($table, $data, $cond);
+
+        if ($result == 1) {
+            $message['msg'] = "Update article category successfully!";
+            header('Location:' . BASE_URL . "post/addcategory?msg=" . urlencode(serialize($message)));
+        } else {
+            $message['msg'] = "Update article category failed!";
+            header('Location:' . BASE_URL . "post/addcategory?msg=" . urlencode(serialize($message)));
+        }
+    }
+
 
     public function updateCategoryPost($id)
     {
@@ -153,20 +177,7 @@ class post extends Dcontrollers
             header('Location:' . BASE_URL . "post/addpost?msg=" . urlencode(serialize($message)));
         }
     }
-    // public function delete_product($id){ 
-    //   $table = "tbl_product"; 
-    //   $cond = "id_product='$id'"; 
-    //   $categorymodel = $this->load->model('categorymodel');
-    //   $result = $categorymodel->deleteproduct($table, $cond); 
-    //   if($result ==1){
-    //   $message['msg'] = "Xóa sản phẩm thành công" ; 
-    //   header('Location:'.BASE_URL."/post/list_product?msg=".urlencode(serialize($message)));
-    //   }else{
-    //   $message['msg']= "Xóa sản phẩm thất bại";
-    //   header('Location:'.BASE_URL."/product/list_product?msg=".urlencode(serialize($message)));
 
-    //   }
-    // }
     public function listPost()
     {
         $this->load->view('panel/header');

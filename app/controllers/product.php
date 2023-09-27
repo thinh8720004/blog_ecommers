@@ -230,13 +230,13 @@ class product extends Dcontrollers
       );
     }
 
-    $result = $categorymodel->updateproduct($table, $data, $cond);
+    $result = $categorymodel->updateProduct($table, $data, $cond);
     if ($result == 1) {
-      $message['msg'] = "Cập nhật sản phẩm thành công";
-      header('Location:' . BASE_URL . "product/listproduct?msg=" . urlencode(serialize($message)));
+      $message['msg'] = "Update product successfully!";
+      header('Location:' . BASE_URL . "product/addproduct?msg=" . urlencode(serialize($message)));
     } else {
-      $message['msg'] = "Cập nhật sản phẩm sản phẩm thất bại";
-      header('Location:' . BASE_URL . "product/listproduct?msg=" . urlencode(serialize($message)));
+      $message['msg'] = "Update product failed!";
+      header('Location:' . BASE_URL . "product/addproduct?msg=" . urlencode(serialize($message)));
     }
   }
 
@@ -257,10 +257,10 @@ class product extends Dcontrollers
 
     if ($result == 1) {
       $message['msg'] = "Update category product successfully!";
-      header('Location:' . BASE_URL . "product/listcategory?msg=" . urlencode(serialize($message)));
+      header('Location:' . BASE_URL . "product/addcategory?msg=" . urlencode(serialize($message)));
     } else {
       $message['msg'] = "Update category product failed!";
-      header('Location:' . BASE_URL . "product/listcategory?msg=" . urlencode(serialize($message)));
+      header('Location:' . BASE_URL . "product/addcategory?msg=" . urlencode(serialize($message)));
     }
   }
 }

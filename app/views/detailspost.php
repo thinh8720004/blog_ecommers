@@ -6,13 +6,13 @@
                     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href=".">
-                                <span itemprop="name">Trang chủ</span></a>
+                                <span itemprop="name">Home page</span></a>
                             <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <span itemprop="item">
                                 <strong itemprop="name">
-                                    Giới thiệu
+                                    Introduce
                                 </strong>
                             </span>
                             <meta itemprop="position" content="2" />
@@ -113,7 +113,7 @@
                                         </div>
                                     </div>
                                     <div class="name-pro-right">
-                                        <a href="<?php echo BASE_URL ?>/index/detailsProduct/18">
+                                        <a href="<?php echo BASE_URL ?>/detailsProduct/18">
                                             <h3>Iphone X 64GB</h3>
                                         </a>
                                     </div>

@@ -12,14 +12,15 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="<?php echo BASE_URL ?>/public/image/banner3.jpg" alt="Siêu khuyến mãi">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL ?>/public/image/banner3.jpg" alt="Siêu khuyến mãi">
+                        <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
                     </div>
 
                     <div class="item">
-                        <img src="<?php echo BASE_URL ?>/public/image/banner3.jpg" alt="Siêu khuyến mãi">
+                        <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
+                    </div>
+
+                    <div class="item">
+                        <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
                     </div>
                 </div>
 
@@ -41,45 +42,41 @@
                     <div class="panel-body scrollable-panel">
                         <div class="row">
                             <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>/public/image/iphone.png">
+                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
                             </div>
                             <div class="col-md-8 col-xs-8 col-sm-8">
                                 <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>/public/image/iphone.png">
+                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
                             </div>
                             <div class="col-md-8 col-xs-8 col-sm-8">
                                 <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>/public/image/iphone.png">
+                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
                             </div>
                             <div class="col-md-8 col-xs-8 col-sm-8">
                                 <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>/public/image/iphone.png">
+                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
                             </div>
                             <div class="col-md-8 col-xs-8 col-sm-8">
                                 <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                             </div>
                         </div>
                         <hr>

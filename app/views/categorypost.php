@@ -1,72 +1,92 @@
+<?php
+$name = 'The category has no news yet';
+
+foreach ($post_by_id as $key => $post) {
+    $name = $post['title_category_post'];
+} ?>
+
 <section>
     <div class="bg_in">
         <div class="wrapper_all_main">
             <div class="wrapper_all_main_right">
-
                 <!--breadcrumbs-->
                 <div class="breadcrumbs">
                     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                            <a itemprop="item" href=".">
-                                <span itemprop="name">Trang chủ</span></a>
+                            <a itemprop="item" href="<?php echo BASE_URL ?>">
+                                <span itemprop="name">Home Page</span></a>
                             <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <span itemprop="item">
                                 <strong itemprop="name">
-                                    Sản phẩm
+                                    <?php echo $name ?>
+
                                 </strong>
                             </span>
                             <meta itemprop="position" content="2" />
                         </li>
+
                     </ol>
                 </div>
                 <!--breadcrumbs-->
                 <div class="content_page">
                     <div class="box-title">
                         <div class="title-bar">
-                            <h1>Tin tức</h1>
+                            <?php
+                            $name = 'The category has no news yet';
+
+                            foreach ($post_by_id as $key => $post_name) {
+                                $name = $post_name['title_category_post'];
+                            } ?>
+                            <h1>
+                                <?php echo $name ?>
+                            </h1>
                         </div>
                     </div>
                     <div class="content_text">
                         <ul class="list_ul">
-
-                            <li class="lists">
-                                <div class="img-list">
-                                    <a href="<?php echo BASE_URL ?>/news/detailsNews/14">
-                                        <img src="<?php echo BASE_URL ?>/public/image/iphone.png"
-                                            alt="NAS Synology là gì? - Một số ứng dụng của NAS Synology"
-                                            class="img-list-in">
-                                    </a>
-                                </div>
-                                <div class="content-list">
-                                    <div class="content-list_inm">
-                                        <div class="title-list">
-                                            <h3>
-                                                <a href="<?php echo BASE_URL ?>/news/detailsNews/14">NAS
-                                                    Synology là gì? - Một số ứng dụng của NAS Synology</a>
-                                            </h3>
-                                            <p class="list-news-status-p">
-                                                <a title="Thiết bị văn phòng">Thiết bị văn phòng</a> | <a
-                                                    title="26-12-2017">26-12-2017</a>
-                                            </p>
-                                        </div>
-                                        <div class="content-list-in">
-                                            <p><strong>NAS (Network Attached Storage)</strong> có thể được định nghĩa là
-                                                <strong><em>thiết bị lưu trữ mạng</em></strong> có&nbsp;nhiệm vụ lưu trữ
-                                                các dữ liệu cần thiết, ngoài ra NAS còn được tích hợp các tính năng hữu
-                                                ích như ghi và lưu trữ phim,&nbsp;hình ảnh, tải dữ liệu di động, máy chủ
-                                                FTP, máy chủ đa phương tiện,...
-                                            </p>
-                                        </div>
-                                        <div class="xt"><a
-                                                href="tin-tuc/nas-synology-la-gi-mot-so-ung-dung-cua-nas-synology-314.html">Xem
-                                                thêm</a>
+                            <?php
+                            foreach ($post_by_id as $key => $post) {
+                                ?>
+                                <li class="lists">
+                                    <div class="img-list">
+                                        <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post'] ?>">
+                                            <img src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post']; ?>"
+                                                alt="<?php echo $post['title_post']; ?>" class="img-list-in">
+                                        </a>
+                                    </div>
+                                    <div class="content-list">
+                                        <div class="content-list_inm">
+                                            <div class="title-list">
+                                                <h3>
+                                                    <a
+                                                        href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>">
+                                                        <?php echo $post['title_post']; ?>
+                                                    </a>
+                                                </h3>
+                                                <p class="list-news-status-p">
+                                                    <?php echo $post['content_post']; ?>
+                                                </p>
+                                            </div>
+                                            <div class="content-list-in">
+                                                <p><strong>
+                                                        <?php echo $post['title_post']; ?>
+                                                    </strong>
+                                                    <?php echo $post['content_post']; ?>
+                                                </p>
+                                            </div>
+                                            <div class="xt"><a
+                                                    href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']; ?>">See
+                                                    more >></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="clear"></div>
-                            </li>
+                                    <div class="clear"></div>
+                                </li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                         <div class="clear"></div>
                         <div class="wp_page">

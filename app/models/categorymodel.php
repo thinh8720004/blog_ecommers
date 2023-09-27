@@ -11,6 +11,19 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
+    public function categoryByIDHome($table, $table_product, $id)
+    {
+        $sql = "SELECT * FROM $table, $table_product WHERE $table.id_category_product = $table_product.id_category_product
+        AND $table_product.id_category_product = '$id' ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
+
+    public function categoryHome($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
+        return $this->db->select($sql);
+    }
+
     public function categoryByID($table, $id)
     {
         $sql = "SELECT * FROM $table WHERE $id ";
@@ -48,6 +61,19 @@ class categorymodel extends Dmodels
         return $this->db->SELECT($sql);
     }
 
+    public function categoryPostHome($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
+        return $this->db->select($sql);
+    }
+
+    public function postByIDHome($table_category_post, $table_post, $id)
+    {
+        $sql = "SELECT * FROM $table_category_post, $table_post WHERE $table_category_post.id_category_post = $table_post.id_category_post
+        AND $table_post.id_category_post = '$id' ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
+    }
+
     public function deleteCategoryPost($table, $cond)
     {
         return $this->db->delete($table, $cond);
@@ -65,6 +91,11 @@ class categorymodel extends Dmodels
     }
 
     // product
+    public function listProductHome($table_product)
+    {
+        $sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
     public function deleteCategoryProduct($table, $cond)
     {
         return $this->db->delete($table, $cond);
@@ -94,7 +125,7 @@ class categorymodel extends Dmodels
     {
         return $this->db->delete($table, $cond);
     }
-    
+
     public function product($table_product, $table_category)
     {
         $sql = "SELECT * FROM $table_product,$table_category WHERE $table_product.id_category_product = $table_category.id_category_product

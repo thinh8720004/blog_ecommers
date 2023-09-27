@@ -5,8 +5,9 @@
                 <div class="title-bar">
                     <h1>Sản phẩm HOT</h1>
                     <a class="read_more" href="<?php BASE_URL ?>/index/category">
-                        Xem thêm
-                    </a>
+                        <a class="read_more" href="sanpham.php">
+                            Xem thêm
+                        </a>
                 </div>
             </div>
             <div class="pro_all_gird">
@@ -119,7 +120,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
@@ -162,7 +162,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>

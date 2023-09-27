@@ -27,6 +27,11 @@ if (!empty($_GET['msg'])) {
         } else if ($value == "Add product failed!") {
             echo '<div class="alert alert-danger" id="danger-alert">';
         }
+        else if ($value == "Update product successfully!") {
+            echo '<div class="alert alert-success" id="success-alert">';
+        } else if ($value == "Update product failed!") {
+            echo '<div class="alert alert-danger" id="danger-alert">';
+        }
         echo '<strong>' . $value . '</strong>';
         echo '</div>';
     }
@@ -47,6 +52,7 @@ if (!empty($_GET['msg'])) {
         <div class="row g-3">
             <div class="col">
                 <label for="describeCategory">Price Product</label>
+<<<<<<< HEAD
                 <input type="text" class="form-control" placeholder="Enter price product " name="price_product"
                     required>
             </div>
@@ -54,6 +60,13 @@ if (!empty($_GET['msg'])) {
                 <label for="describeCategory">Number of products</label>
                 <input type="text" class="form-control" placeholder="Enter the number of products"
                     name="quantity_product" required>
+=======
+                <input type="text" class="form-control" placeholder="Enter price product " name="price_product" required>
+            </div>
+            <div class="col">
+                <label for="describeCategory">Number of products</label>
+                <input type="text" class="form-control" placeholder="Enter the number of products" name="quantity_product" required>
+>>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
             </div>
             <div class="col">
                 <label>Category Product :</label>
