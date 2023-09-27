@@ -378,11 +378,7 @@
                 <script type="text/javascript">
                     CloudZoom.quickStart();
 
-<<<<<<< HEAD
                     jQuery(function ($) {
-=======
-                    jQuery(function($) {
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
 
                         var $userName = $('.name');
 
@@ -399,10 +395,6 @@
                         }
 
                     });
-<<<<<<< HEAD
-
-=======
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                 </script>
                 <div class="clear"></div>
                 <div class="dmsub">
@@ -588,21 +580,13 @@
         <div class="clear"></div>
     </div>
     <script>
-<<<<<<< HEAD
         jQuery(document).ready(function () {
-=======
-        jQuery(document).ready(function() {
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
 
 
 
             var div_fixed = jQuery('.product_detail_info').offset().top;
 
-<<<<<<< HEAD
             jQuery(window).scroll(function () {
-=======
-            jQuery(window).scroll(function() {
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
 
                 if (jQuery(window).scrollTop() > div_fixed) {
 
@@ -616,11 +600,7 @@
 
             });
 
-<<<<<<< HEAD
             jQuery(window).load(function () {
-=======
-            jQuery(window).load(function() {
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
 
                 if (jQuery(window).scrollTop() > div_fixed) {
 
@@ -631,9 +611,5 @@
             });
 
         });
-<<<<<<< HEAD
-
-=======
->>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
     </script>
 </section>

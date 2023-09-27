@@ -27,14 +27,14 @@ foreach ($category_by_id as $value => $pro) {
         <div class="module_pro_all">
             <div class="box-title">
                 <div class="title-bar">
-                        <?php
-                        $name = 'The category has no news yet';
+                    <?php
+                    $name = 'The category has no news yet';
 
-                        foreach ($category_by_id as $value => $product) {
-                            $name = $pro['title_category_post'];
-                        }
+                    foreach ($category_by_id as $value => $product) {
+                        $name = $product['title_category_product'];
+                    }
 
-                        ?>
+                    ?>
                     <h1>
                         Danh Mục:
                         <?php echo $name ?>
@@ -92,11 +92,13 @@ foreach ($category_by_id as $value => $pro) {
                                         </div>
                                     </div>
                                 </div>
-                                <?php
+
+                            </div>
+
+                        </div>
+                        <?php
                     }
                     ?>
-                        </div>
-                    </div>
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
