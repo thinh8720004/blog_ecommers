@@ -58,7 +58,7 @@ class products extends Dcontrollers
         $data['details_product'] = $categorymodel->detailsProductHome($table, $table_product, $cond);
         $this->load->view('header', $data);
 
-        //$this->load->view('slider');
+        // $this->load->view('slider');
         $this->load->view('detailsproduct', $data);
         $this->load->view('footer');
     }

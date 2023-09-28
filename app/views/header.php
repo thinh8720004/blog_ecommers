@@ -34,6 +34,12 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . "public/css/style.css"; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . "public/css/product.css"; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/product.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>/public/css/font-awesome.min.css" type="text/css" />
 </head>
 
 <body>
