@@ -908,7 +908,7 @@ li.parent.display_none_more strong {
 }
 .btn_menu_search {
     background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
- background-blend-mode: multiply;
+    background-blend-mode: multiply;
     margin: 0 auto;
     width: 100%;
     position: relative;
@@ -1139,7 +1139,7 @@ position: absolute;
     top: 5px;
     right: 6px;
     font-style: italic;
-    background: #ffbf00;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
     padding: 3px 5px;
     color: #fff;
     font-size: 14px;
@@ -1154,7 +1154,7 @@ content: "";
     height: 0;
     left: 15px;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #ffbf00;
+    border-left: 15px solid #ff5858;
     border-right: 0 solid transparent;
     border-top: 0 solid transparent;
 }

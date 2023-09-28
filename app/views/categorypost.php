@@ -43,7 +43,7 @@
                                     <div class="content-list_inm">
                                         <div class="title-list">
                                             <h3>
-                                                <a href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>"><?php echo $post['title_post']; ?></a>
+                                                <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']; ?>"><?php echo $post['title_post']; ?></a>
                                             </h3>
                                             <p class="list-news-status-p">
                                             <?php echo $post['content_post']; ?>

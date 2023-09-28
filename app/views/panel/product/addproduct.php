@@ -16,6 +16,10 @@
     .form-check {
         padding-top: 10px;
     }
+
+    .col {
+        padding: 10px;
+    }
 </style>
 
 <?php
@@ -49,7 +53,7 @@ if (!empty($_GET['msg'])) {
             <label for="nameCategory">Image Product</label>
             <input type="file" class="form-control" name="image_product" required>
         </div>
-        <div class="row g-3">
+        <div class="row g-2">
             <div class="col">
                 <label for="describeCategory">Price Product</label>
                 <input type="text" class="form-control" placeholder="Enter price product " name="price_product" required>
@@ -57,6 +61,15 @@ if (!empty($_GET['msg'])) {
             <div class="col">
                 <label for="describeCategory">Number of products</label>
                 <input type="text" class="form-control" placeholder="Enter the number of products" name="quantity_product" required>
+            </div>            
+        </div>
+        <div class="row g-2">
+        <div class="col">
+                <label>Hot Product :</label>
+                <select name="product_hot" id="">                   
+                    <option class="option" value="0">No</option>
+                    <option class="option" value="1">Yes</option>
+                </select>
             </div>
             <div class="col">
                 <label>Category Product :</label>
@@ -70,7 +83,6 @@ if (!empty($_GET['msg'])) {
                     <?php } ?>
                 </select>
             </div>
-        </div>
         <div class="form-group">
             <label for="describeCategory">Describe Product</label>
             <textarea type="text" class="form-control" placeholder="Enter describe product here ..." name="desc_product"

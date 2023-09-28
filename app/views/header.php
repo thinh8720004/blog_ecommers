@@ -2,7 +2,7 @@
 <html lang="en-CA">
 
 <head>
-    <title>My Website</title>
+    <title>Blog Ecommers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -30,7 +30,8 @@
     <meta name="ICBM" content="10.823099, 106.629664" />
     <link rel="icon" type="image/png" href="template/Default/img/favicon.png">
     <!--tkw-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . "public/css/style.css"; ?>">
 </head>
@@ -40,8 +41,8 @@
         <div class="info_top">
             <div class="bg_in">
                 <p class="p_infor">
-                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sales@3tmobile.gmail</span>
-                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0923-032-992</span>
+                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: interiorthinhtu@gmail.com</span>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0123.456.789</span>
                 </p>
             </div>
         </div>
@@ -50,7 +51,9 @@
                 <div class="header_top">
                     <div class="bg_in">
                         <div class="logo">
-                            <a href="<?php echo BASE_URL ?>"><img src="<?php echo BASE_URL ?>public/images/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
+                            <a href="<?php echo BASE_URL ?>"><img
+                                    src="<?php echo BASE_URL ?>public/images/logohere.jpeg" width="250" height="100"
+                                    alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">
@@ -63,16 +66,16 @@
                         <div class="cart_wrapper">
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Trụ sở chính</b></span>
+                                    <span><b>Headquarters</b></span>
                                     <br />
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Da Nang, Viet Nam</span>
                                 </div>
                             </div>
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Văn phòng chi nhánh</b></span>
+                                    <span><b>Branch offices</b></span>
                                     <br />
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Da Nang, Viet Nam</span>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -88,18 +91,21 @@
                             <div class="">
                                 <div class="menu" id="menu_cate">
                                     <div class="menu_left">
-                                        <i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm
+                                        <i class="fa fa-bars" aria-hidden="true"></i> PRODUCT CATEGORY
                                     </div>
                                     <div class="cate_pro">
                                         <div id='cssmenu_flyout' class="display_destop_menu">
                                             <ul>
                                                 <?php foreach ($category as $key => $cate) {
-                                                ?>
+                                                    ?>
                                                     <li class='active has-sub'>
-                                                        <a href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
-                                                            <span><?php echo $cate['title_category_product'] ?></span></a>
+                                                        <a
+                                                            href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
+                                                            <span>
+                                                                <?php echo $cate['title_category_product'] ?>
+                                                            </span></a>
                                                     </li>
-                                                <?php
+                                                    <?php
                                                 }
                                                 ?>
                                             </ul>
@@ -115,16 +121,19 @@
                                     <li class=''><a href='<?php echo BASE_URL; ?>contact'>Introduce</a></li>
                                     <li class=''>
 
-                                        <a href='<?php echo BASE_URL; ?>index/category'>Product</a>
+                                        <a href='<?php echo BASE_URL; ?>products/categoryAll'>Product</a>
                                         <ul>
 
                                             <?php foreach ($category as $key => $cate) {
-                                            ?>
+                                                ?>
                                                 <li>
-                                                    <a href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
-                                                        <span><?php echo $cate['title_category_product'] ?></span></a>
+                                                    <a
+                                                        href='<?php echo BASE_URL; ?>products/category/<?php echo $cate['id_category_product'] ?>'>
+                                                        <span>
+                                                            <?php echo $cate['title_category_product'] ?>
+                                                        </span></a>
                                                 </li>
-                                            <?php
+                                                <?php
                                             }
                                             ?>
 
@@ -132,15 +141,18 @@
 
                                     </li>
 
-                                    <li class=''><a href='<?php echo BASE_URL; ?>'>News</a>
+                                    <li class=''><a href='<?php echo BASE_URL ?>/news/newsAll'>News</a>
                                         <ul>
                                             <?php foreach ($category_post as $key => $cate_post) {
-                                            ?>
+                                                ?>
 
                                                 <li>
-                                                    <a href='<?php echo BASE_URL; ?>news/category/<?php echo $cate_post['id_category_post'] ?>'><span><?php echo $cate_post['title_category_post'] ?></span></a>
+                                                    <a
+                                                        href='<?php echo BASE_URL; ?>news/category/<?php echo $cate_post['id_category_post'] ?>'><span>
+                                                            <?php echo $cate_post['title_category_post'] ?>
+                                                        </span></a>
                                                 </li>
-                                            <?php
+                                                <?php
                                             }
                                             ?>
 

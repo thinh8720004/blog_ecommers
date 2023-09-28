@@ -28,11 +28,35 @@ class products  extends Dcontrollers
         $this->load->view('footer');
     }
 
-    public function productDetails()
+    public function categoryAll()
     {
-        $this->load->view('header');
+        $table = 'tab_category_product';
+        $table_product = 'tab_product';
+        $table_post = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($table_post);
+        $data['list_product'] = $categorymodel->listProductHome($table_product);
+
+        $this->load->view('header', $data);
         //$this->load->view('slider');
-        $this->load->view('detailsproduct');
+        $this->load->view('listproduct', $data);
+        $this->load->view('footer');
+    }
+
+    public function productDetails($id)
+    {
+        $table = 'tab_category_product';
+        $table_product = 'tab_product';
+        $table_post = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($table_post);
+        $data['list_product'] = $categorymodel->listProductHome($table_product);
+
+        $this->load->view('header', $data);
+        //$this->load->view('slider');
+        $this->load->view('detailsproduct', $data);
         $this->load->view('footer');
     }
 }

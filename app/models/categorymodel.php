@@ -67,6 +67,19 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
+    public function detailsPostHome($table_category_post, $table_post, $cond)
+    {
+        $sql = "SELECT * FROM $table_category_post, $table_post
+        WHERE $cond ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
+    }
+
+    public function relatedPostHome($table_category_post, $table_post, $related_cond){
+        $sql = "SELECT * FROM $table_category_post, $table_post
+        WHERE $related_cond ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
+    }
+
     public function postByIDHome($table_category_post, $table_post, $id)
     {
         $sql = "SELECT * FROM $table_category_post, $table_post WHERE $table_category_post.id_category_post = $table_post.id_category_post
@@ -91,6 +104,18 @@ class categorymodel extends Dmodels
     }
 
     // product
+    public function listProductHome($table_product)
+    {
+        $sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
+
+    public function listProductIndex($table_product)
+    {
+        $sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
+
     public function deleteCategoryProduct($table, $cond)
     {
         return $this->db->delete($table, $cond);
@@ -120,7 +145,7 @@ class categorymodel extends Dmodels
     {
         return $this->db->delete($table, $cond);
     }
-    
+
     public function product($table_product, $table_category)
     {
         $sql = "SELECT * FROM $table_product,$table_category WHERE $table_product.id_category_product = $table_category.id_category_product

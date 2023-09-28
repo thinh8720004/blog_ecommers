@@ -142,6 +142,7 @@ class product extends Dcontrollers
     $desc = $_POST['desc_product'];
     $quantity = $_POST['quantity_product'];
     $image = $_FILES['image_product']['name'];
+    $product_hot = $_POST['product_hot'];
 
     if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
       $image = $_FILES['image_product']['name'];
@@ -167,7 +168,8 @@ class product extends Dcontrollers
       'quantity_product' => $quantity,
       'desc_product' => $desc,
       'image_product' => $image,
-      'id_category_product' => $category
+      'id_category_product' => $category, 
+      'product_hot' => $product_hot
     );
     $categorymodel = $this->load->model('categorymodel');
     $result = $categorymodel->insertProduct($table, $data);
@@ -194,6 +196,7 @@ class product extends Dcontrollers
     $price = $_POST['price_product'];
     $quantity = $_POST['quantity_product'];
     $category = $_POST['category_product'];
+    $product_hot = $_POST['product_hot'];
 
     if (isset($_FILES['imageproduct']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
       $image = $_FILES['image_product']['name'];
@@ -219,6 +222,7 @@ class product extends Dcontrollers
         'price_product' => $price,
         'quantity_product' => $quantity,
         'id_category_product' => $category,
+        'product_hot' => $product_hot
       );
     } else {
       $data = array(
@@ -227,6 +231,7 @@ class product extends Dcontrollers
         'price_product' => $price,
         'quantity_product' => $quantity,
         'id_category_product' => $category,
+        'product_hot' => $product_hot
       );
     }
 

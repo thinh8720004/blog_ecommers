@@ -1,18 +1,16 @@
 <section>
     <div class="bg_in">
-        <div class="wrapper_all_main">
-            <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
-
+        <div class="wrapper_all_main">        
                 <div class="breadcrumbs">
                     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href=".">
-                                <span itemprop="name">Trang chủ</span></a>
+                                <span itemprop="name">Home Page</span></a>
                             <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a itemprop="item" href="sanpham.php">
-                                <span itemprop="name">Sản phẩm</span></a>
+                                <span itemprop="name">Product</span></a>
                             <meta itemprop="position" content="2" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -171,7 +169,7 @@
                                 <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                                 <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                                 <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                <!--<div class="sup-item item1">
+                                <div class="sup-item item1">
                                  <div>
                                  
                                   <span class="title-support">Chat với chúng tôi:</span>
@@ -212,8 +210,8 @@
                                  
                                  <a class="email-text" href="mailto:thietbivanphong.123corp@gmail.com" title="Email hỗ trợ"><font color="#0092db">thietbivanphong.123corp@gmail.com</font></a></div>
                                  
-                                 -->
-                            </div>
+                                 
+                             </div>
                         </div>
                         <div class="clear"></div>
                     </div>
