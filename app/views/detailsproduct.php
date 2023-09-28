@@ -33,33 +33,28 @@
                         <div class="slider-galery ">
                             <div id="sync1" class="owl-carousel owl-theme">
                                 <div class="item">
-                                    <<<<<<< HEAD <img src="<?php echo BASE_URL ?>/public/image/iphone.png" width="100%">
+                                    <img src="<?php echo BASE_URL ?>/public/image/iphone.png" width="100%">
                                 </div>
                                 <div class="item">
                                     <img src="<?php echo BASE_URL ?>/public/image/iphone1.jpg" width="100%">
-                                    =======
                                     <img src="<?php echo BASE_URL ?>/public/images/iphone.png" width="100%">
                                 </div>
                                 <div class="item">
                                     <img src="<?php echo BASE_URL ?>/public/images/iphone1.jpg" width="100%">
-                                    >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                                 </div>
 
 
 
 
                                 <div class="item">
-                                    <<<<<<< HEAD <img src="<?php echo BASE_URL ?>/public/image/iphonex.png"
-                                        width="100%">
-                                        =======
-                                        <img src="<?php echo BASE_URL ?>/public/images/iphonex.png" width="100%">
-                                        >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
+                                    <img src="<?php echo BASE_URL ?>/public/image/iphonex.png" width="100%">
+                                    <img src="<?php echo BASE_URL ?>/public/images/iphonex.png" width="100%">
                                 </div>
                             </div>
 
                             <div id="sync2" class="owl-carousel owl-theme">
                                 <div class="item">
-                                    <<<<<<< HEAD <img src="<?php echo BASE_URL ?>/public/image/iphone.png" width="100%">
+                                    <img src="<?php echo BASE_URL ?>/public/image/iphone.png" width="100%">
                                 </div>
                                 <div class="item">
                                     <img src="<?php echo BASE_URL ?>/public/image/iphone1.jpg" width="100%">
@@ -67,7 +62,7 @@
 
                                 <div class="item">
                                     <img src="<?php echo BASE_URL ?>/public/image/iphonex.png" width="100%">
-                                    =======
+
                                     <img src="<?php echo BASE_URL ?>/public/images/iphone.png" width="100%">
                                 </div>
                                 <div class="item">
@@ -76,7 +71,6 @@
 
                                 <div class="item">
                                     <img src="<?php echo BASE_URL ?>/public/images/iphonex.png" width="100%">
-                                    >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                                 </div>
 
                             </div>
@@ -87,12 +81,10 @@
                                 <div class="pro-des-sum">
                                     <div class="price">
                                         <p class="code_skin" style="margin-bottom:10px">
-                                            <<<<<<< HEAD <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương
+                                            <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương
                                                 hiệu: <a href="">Comrack</a></span>
-                                                =======
-                                                <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a
-                                                        href="">Comrack</a></span>
-                                                >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
+                                            <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a
+                                                    href="">Comrack</a></span>
                                         </p>
                                         <div class="status_pro">
                                             <span><b>Trạng thái:</b> Còn hàng</span>
@@ -127,36 +119,32 @@
                             <div class="ct">
                                 <div class="number_price">
                                     <div class="custom pull-left">
-                                        <<<<<<< HEAD <button
+                                        <button
                                             onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;"
                                             class="reduced items-count" type="button">-</button>
-                                            <input type="text" class="input-text qty" title="Qty" value="1"
-                                                maxlength="12" id="qty" name="qty">
-                                            <button
-                                                onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
-                                                class="increase items-count" type="button">+</button>
-                                            =======
-                                            <button
-                                                onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;"
-                                                class="reduced items-count" type="button">-</button>
-                                            <input type="text" class="input-text qty" title="Qty" value="1"
-                                                maxlength="12" id="qty" name="qty">
-                                            <button
-                                                onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
-                                                class="increase items-count" type="button">+</button>
-                                            >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
-                                            <div class="clear"></div>
+                                        <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12"
+                                            id="qty" name="qty">
+                                        <button
+                                            onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
+                                            class="increase items-count" type="button">+</button>
+                                        <button
+                                            onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;"
+                                            class="reduced items-count" type="button">-</button>
+                                        <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12"
+                                            id="qty" name="qty">
+                                        <button
+                                            onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;"
+                                            class="increase items-count" type="button">+</button>
+                                        <div class="clear"></div>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
                                 <div class="wp_a">
                                     <a onclick="return giohang(579);" class="view_duan">
-                                        <<<<<<< HEAD <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
-                                                class="text-mobile-buy">Mua hàng</span>
-                                            =======
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
-                                                class="text-mobile-buy">Mua hàng</span>
-                                            >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+                                            class="text-mobile-buy">Mua hàng</span>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+                                            class="text-mobile-buy">Mua hàng</span>
                                     </a>
                                     <a href="tel:090 66 99 038" class="view_duan">
                                         <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi
@@ -213,28 +201,25 @@
                             <div class="bx-contact">
                                 <span class="title-cnt">Bạn cần hỗ trợ?</span>
                                 <p>Chat với chúng tôi :</p>
-                                <<<<<<< HEAD <p><img alt="icon skype "
-                                        src="<?php echo BASE_URL ?>/public/image/icon skype.png"
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/image/icon skype.png"
                                         style="height:24px; width:24px" />&nbsp;<a
                                         href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/image/icon skype.png"
-                                            style="height:24px; width:24px" />&nbsp;<a
-                                            href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/image/icon skype.png"
-                                            style="height:24px; width:24px" />&nbsp;<a
-                                            href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    =======
-                                    <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
-                                            style="height:24px; width:24px" />&nbsp;<a
-                                            href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
-                                            style="height:24px; width:24px" />&nbsp;<a
-                                            href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
-                                            style="height:24px; width:24px" />&nbsp;<a
-                                            href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                                    >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
-                                    <!--<div class="sup-item item1">
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/image/icon skype.png"
+                                        style="height:24px; width:24px" />&nbsp;<a
+                                        href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/image/icon skype.png"
+                                        style="height:24px; width:24px" />&nbsp;<a
+                                        href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
+                                        style="height:24px; width:24px" />&nbsp;<a
+                                        href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
+                                        style="height:24px; width:24px" />&nbsp;<a
+                                        href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                                <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png"
+                                        style="height:24px; width:24px" />&nbsp;<a
+                                        href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                                <!--<div class="sup-item item1">
                                  <div>
                                  
                                   <span class="title-support">Chat với chúng tôi:</span>
@@ -288,23 +273,21 @@
                         <div id="nav-anchor"></div>
                         <nav class="nav-tabs">
                             <ul>
-                                <<<<<<< HEAD <li><a href="#productDetail"><i class="fa fa-info-circle"
-                                            aria-hidden="true"></i> <span class="text-mobile">Chi tiết sản
+                                <li><a href="#productDetail"><i class="fa fa-info-circle" aria-hidden="true"></i> <span
+                                            class="text-mobile">Chi tiết sản
                                             phẩm</span></a></li>
-                                    <li><a href="#inforProduct"><i class="fa fa-file-text-o"
-                                                aria-hidden="true"></i><span class="text-mobile"> Thông số kỹ
-                                                thuật</span></a></li>
-                                    <li><a href="#Comment"><i class="fa fa-comment-o" aria-hidden="true"></i><span
-                                                class="text-mobile"> Bình luận</span></a></li>
-                                    =======
-                                    <li><a href="#productDetail"><i class="fa fa-info-circle" aria-hidden="true"></i>
-                                            <span class="text-mobile">Chi tiết sản phẩm</span></a></li>
-                                    <li><a href="#inforProduct"><i class="fa fa-file-text-o"
-                                                aria-hidden="true"></i><span class="text-mobile"> Thông số kỹ
-                                                thuật</span></a></li>
-                                    <li><a href="#Comment"><i class="fa fa-comment-o" aria-hidden="true"></i><span
-                                                class="text-mobile"> Bình luận</span></a></li>
-                                    >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
+                                <li><a href="#inforProduct"><i class="fa fa-file-text-o" aria-hidden="true"></i><span
+                                            class="text-mobile"> Thông số kỹ
+                                            thuật</span></a></li>
+                                <li><a href="#Comment"><i class="fa fa-comment-o" aria-hidden="true"></i><span
+                                            class="text-mobile"> Bình luận</span></a></li>
+                                <li><a href="#productDetail"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        <span class="text-mobile">Chi tiết sản phẩm</span></a></li>
+                                <li><a href="#inforProduct"><i class="fa fa-file-text-o" aria-hidden="true"></i><span
+                                            class="text-mobile"> Thông số kỹ
+                                            thuật</span></a></li>
+                                <li><a href="#Comment"><i class="fa fa-comment-o" aria-hidden="true"></i><span
+                                            class="text-mobile"> Bình luận</span></a></li>
                             </ul>
                             <div class="name-product">
                                 Iphone X
@@ -313,12 +296,11 @@
                             <div class="ct btn-wp">
                                 <div class="wp_a">
                                     <a onclick="return giohang(371);" class="view_duan">
-                                        <<<<<<< HEAD <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
-                                                class="text-mobile-buy">Mua hàng</span>
-                                            =======
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
-                                                class="text-mobile-buy">Mua hàng</span>
-                                            >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+                                            class="text-mobile-buy">Mua hàng</span>
+
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span
+                                            class="text-mobile-buy">Mua hàng</span>
                                     </a>
                                     <a href="tel:090 66 99 038" class="view_duan">
                                         <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi
@@ -428,14 +410,10 @@
                                         <div class="img-right-pro">
 
                                             <a href="sanpham.php">
-                                                <<<<<<< HEAD <img class="lazy img-pro content-image"
-                                                    src="<?php echo BASE_URL ?>/public/image/iphone.png"
-                                                    data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                =======
+
                                                 <img class="lazy img-pro content-image"
                                                     src="<?php echo BASE_URL ?>/public/image/iphone.png"
                                                     data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                                             </a>
 
                                             <div class="content-overlay"></div>
@@ -476,14 +454,10 @@
                                         <div class="img-right-pro">
 
                                             <a href="sanpham.php">
-                                                <<<<<<< HEAD <img class="lazy img-pro content-image"
-                                                    src="<?php echo BASE_URL ?>/public/image/iphone.png"
-                                                    data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                =======
+
                                                 <img class="lazy img-pro content-image"
                                                     src="<?php echo BASE_URL ?>/public/image/iphone.png"
                                                     data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                                             </a>
 
                                             <div class="content-overlay"></div>
@@ -524,14 +498,10 @@
                                         <div class="img-right-pro">
 
                                             <a href="sanpham.php">
-                                                <<<<<<< HEAD <img class="lazy img-pro content-image"
-                                                    src="<?php echo BASE_URL ?>/public/image/iphone.png"
-                                                    data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                =======
+
                                                 <img class="lazy img-pro content-image"
                                                     src="<?php echo BASE_URL ?>/public/image/iphone.png"
                                                     data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                                                >>>>>>> e46cbe8e12f398555ab215fd8e5e37f27e57a39d
                                             </a>
 
                                             <div class="content-overlay"></div>
@@ -575,7 +545,6 @@
             </div>
 
             <!--end:left-->
-            <div class="clear"></div>
         </div>
         <div class="clear"></div>
     </div>

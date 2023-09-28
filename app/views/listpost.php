@@ -45,7 +45,7 @@
                                             <div class="title-list">
                                                 <h3>
                                                     <a
-                                                        href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>">
+                                                        href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post'] ?>">
                                                         <?php echo $post['title_post']; ?>
                                                     </a>
                                                 </h3>
@@ -62,15 +62,16 @@
                                     </div>
                                     <div class="clear"></div>
                                 </li>
-                                <?php
+
+                            </ul>
+                            <div class="clear"></div>
+                            <div class="wp_page">
+                                <div class="page">
+                                </div>
+                            </div>
+                            <?php
                             }
                             ?>
-                        </ul>
-                        <div class="clear"></div>
-                        <div class="wp_page">
-                            <div class="page">
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

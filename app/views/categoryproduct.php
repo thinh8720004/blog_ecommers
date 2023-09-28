@@ -51,11 +51,12 @@ foreach ($category_by_id as $value => $pro) {
                             <div class="grids_in">
                                 <div class="content">
                                     <div class="img-right-pro">
-                                        <a href="<?php BASE_URL ?>/index/category">
+                                        <a
+                                            href="<?php echo BASE_URL ?>/products/productDetails/<?php echo $product['id_product'] ?>">
                                             <img class="lazy img-pro content-image"
                                                 src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $product['image_product'] ?>"
                                                 data-original="<?php echo $product['image_product'] ?>"
-                                                alt="<?php echo $product['title_product'] ?>" />
+                                                alt="<?php echo $product['title_product'] ?>">
                                         </a>
                                         <div class="content-overlay"></div>
                                         <div class="content-details fadeIn-top">
@@ -99,8 +100,10 @@ foreach ($category_by_id as $value => $pro) {
                         <?php
                     }
                     ?>
-                    <div class="clear"></div>
                 </div>
+
+                <div class="clear"></div>
+
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
