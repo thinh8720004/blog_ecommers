@@ -237,7 +237,7 @@ foreach ($details_product as $key => $value) {
                         </div>
                     </div>
                 <?php
-            }
+                    }
                 ?>
                 <!-- <div class="content-brank">
                      <p><strong>Apple </strong>tự hảo<strong>&nbsp;</strong>là thương hiệu Việt Nam về sản phẩm tủ rack 19", tủ cửa lưới, tủ treo tường, bảo vệ thiết bị mạng an toàn, dễ dàng quản lý và vận hành.</p>

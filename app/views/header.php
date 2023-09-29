@@ -2,7 +2,7 @@
 <html lang="en-CA">
 
 <head>
-    <title>Blog Ecommers</title>
+    <title>Blog Ecommer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -33,8 +33,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . "public/css/style.css"; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . "public/css/product.css"; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/product.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>/public/css/font-awesome.min.css" type="text/css" />
 </head>
 
 <body>
@@ -42,8 +46,8 @@
         <div class="info_top">
             <div class="bg_in">
                 <p class="p_infor">
-                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: interiorthinhtu@gmail.com</span>
-                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0123.456.789</span>
+                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sales@3tmobile.gmail</span>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0923-032-992</span>
                 </p>
             </div>
         </div>
@@ -67,16 +71,16 @@
                         <div class="cart_wrapper">
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Headquarters</b></span>
+                                    <span><b>Trụ sở chính</b></span>
                                     <br />
-                                    <span class="red">Da Nang, Viet Nam</span>
+                                    <span class="red">Nguyễn văn Luông</span>
                                 </div>
                             </div>
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Branch offices</b></span>
+                                    <span><b>Văn phòng chi nhánh</b></span>
                                     <br />
-                                    <span class="red">Da Nang, Viet Nam</span>
+                                    <span class="red">Nguyễn văn Luông</span>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -92,7 +96,7 @@
                             <div class="">
                                 <div class="menu" id="menu_cate">
                                     <div class="menu_left">
-                                        <i class="fa fa-bars" aria-hidden="true"></i> PRODUCT CATEGORY
+                                        <i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm
                                     </div>
                                     <div class="cate_pro">
                                         <div id='cssmenu_flyout' class="display_destop_menu">
