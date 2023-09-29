@@ -50,12 +50,20 @@ class products extends Dcontrollers
         $table_post = 'tab_category_post';
 
         $cond = " $table_product.id_category_product = $table.id_category_product AND $table_product.id_product = '$id'";
-
         $categorymodel = $this->load->model('categorymodel');
         $data['category'] = $categorymodel->categoryHome($table);
         $data['category_post'] = $categorymodel->categoryPostHome($table_post);
-
         $data['details_product'] = $categorymodel->detailsProductHome($table, $table_product, $cond);
+
+        foreach ($data['details_product'] as $key => $cate) {
+            $id_cate = $cate['id_category_product'];
+        }
+        $cond_related = " $table_product.id_category_product = $table.id_category_product
+         AND $table.id_category_product = '$id_cate'
+      AND $table_product.id_product NOT IN ('$id')";
+        $data['related'] = $categorymodel->relatedProductHome($table, $table_product, $cond_related);
+
+
         $this->load->view('header', $data);
 
         // $this->load->view('slider');

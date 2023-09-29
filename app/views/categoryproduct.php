@@ -47,6 +47,7 @@ foreach ($category_by_id as $value => $pro) {
                     <?php
                     foreach ($category_by_id as $value => $product) {
                         ?>
+
                         <div class="grids">
                             <div class="grids_in">
                                 <div class="content">

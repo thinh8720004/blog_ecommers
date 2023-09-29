@@ -144,4 +144,10 @@ class categorymodel extends Dmodels
         $sql = "SELECT * FROM $table_product,$table WHERE $cond";
         return $this->db->select($sql);
     }
+
+    public function relatedProductHome($table, $table_product, $cond_related)
+    {
+        $sql = "SELECT * FROM $table,$table_product WHERE $cond_related";
+        return $this->db->select($sql);
+    }
 }
