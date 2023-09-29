@@ -116,6 +116,13 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
+    public function hotProduct($table_product)
+    {
+        $sql = "SELECT * FROM $table_product WHERE $table_product.product_hot = 1 ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
+
+
     public function deleteCategoryProduct($table, $cond)
     {
         return $this->db->delete($table, $cond);
@@ -156,6 +163,18 @@ class categorymodel extends Dmodels
     public function productByID($table, $cond)
     {
         $sql = "SELECT * FROM $table WHERE $cond";
+        return $this->db->select($sql);
+    }
+
+    public function detailsProductHome($table, $table_product, $cond)
+    {
+        $sql = "SELECT * FROM $table_product,$table WHERE $cond";
+        return $this->db->select($sql);
+    }
+
+    public function relatedProductHome($table, $table_product, $cond_related)
+    {
+        $sql = "SELECT * FROM $table,$table_product WHERE $cond_related";
         return $this->db->select($sql);
     }
 }

@@ -570,7 +570,7 @@ button {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
 }
-.btn {
+/* .btn {
     border: 0;
     background: #0087cc;
     box-shadow: 0 5px 0 #006599;
@@ -587,7 +587,7 @@ button {
     -webkit-transition: all .05s linear;
     -ms-transition: all .05s linear;
     -o-transition: all .05s linear;
-}
+} */
 .title_hidden {
     width: 100%;
     white-space: nowrap;
