@@ -4,10 +4,10 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1>Sản phẩm HOT</h1>
-                    <a class="read_more" href="<?php BASE_URL ?>/index/category">
-                        <a class="read_more" href="sanpham.php">
-                            Xem thêm
-                        </a>
+                    <a class="read_more" href="<?php echo BASE_URL ?>/products/categoryAll">
+
+                        Xem thêm
+                    </a>
                 </div>
             </div>
             <div class="pro_all_gird">
@@ -19,8 +19,8 @@
 
                                     <a href="<?php BASE_URL ?>/index/category">
                                         <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>/public/image/iphone.png"
-                                            data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                            src="<?php echo BASE_URL ?>/public/images/iphone.png"
+                                            data-original="images/iphone.png" alt="Máy in Canon MF229DW" />
                                     </a>
 
                                     <div class="content-overlay"></div>
@@ -70,7 +70,7 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1>Macbook mới</h1>
-                    <a class="read_more" href="<?php BASE_URL ?>/index/category">
+                    <a class="read_more" href="<?php echo BASE_URL ?>/products/categoryAll">
                         Xem thêm
                     </a>
                 </div>
@@ -84,8 +84,8 @@
 
                                     <a href="<?php BASE_URL ?>/index/category">
                                         <img class="lazy img-pro content-image"
-                                            src="<?php echo BASE_URL ?>/public/image/mac.jpg"
-                                            data-original="image/mac.jpg" alt="Máy in Canon MF229DW" />
+                                            src="<?php echo BASE_URL ?>/public/images/mac.jpg"
+                                            data-original="images/mac.jpg" alt="Máy in Canon MF229DW" />
                                     </a>
 
                                     <div class="content-overlay"></div>
@@ -130,7 +130,7 @@
             <div class="box-title">
                 <div class="title-bar">
                     <h1>Phụ kiện</h1>
-                    <a class="read_more" href="<?php BASE_URL ?>/index/category">
+                    <a class="read_more" href="<?php echo BASE_URL ?>/products/categoryAll">
                         Xem thêm
                     </a>
                 </div>
@@ -141,8 +141,8 @@
                         <div class="grids_in">
                             <div class="img-right-pro">
                                 <a href="<?php BASE_URL ?>/index/category">
-                                    <img class="lazy img-pro" src="<?php echo BASE_URL ?>/public/image/phukien.jpg"
-                                        data-original="image/phukien.jpg" alt="Máy in Canon MF229DW" />
+                                    <img class="lazy img-pro" src="<?php echo BASE_URL ?>/public/images/phukien.jpg"
+                                        data-original="images/phukien.jpg" alt="Máy in Canon MF229DW" />
                                 </a>
                             </div>
                             <div class="name-pro-right">

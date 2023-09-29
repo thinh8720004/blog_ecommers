@@ -27,9 +27,11 @@
                     <h4>Kết nối với chúng tôi</h4>
                     <div class="footer-col-content">
                         <ul class="social">
-                            <li><a href="" class="fb"><img src="<?php echo BASE_URL ?>/public/image/Fb.png">Facebook</a>
+                            <li><a href="" class="fb"><img
+                                        src="<?php echo BASE_URL ?>/public/images/Fb.png">Facebook</a>
                             </li>
-                            <li><a href="#2" class="fb"><img src="<?php echo BASE_URL ?>/public/image/Fb.png">Google</a>
+                            <li><a href="#2" class="fb"><img
+                                        src="<?php echo BASE_URL ?>/public/images/gg.png">Google</a>
                             </li>
                         </ul>
                         <div class="clear"></div>
@@ -66,7 +68,7 @@
             <div class="footer">
                 <div class="infor_company">
                     <h3>CÔNG TY THIẾT KẾ WEBSITE WEBEXTRASITE.COM</h3>
-                    <a href=""><img src="<?php echo BASE_URL ?>/public/image/da-dang-ky-voi-bo-cong-thuong.png"
+                    <a href=""><img src="<?php echo BASE_URL ?>/public/images/da-dang-ky-voi-bo-cong-thuong.png"
                             alt="da-dang-ky-voi-bo-cong-thuong.png" class="cangiua" /></a>
                     <p class="note_mst">GPĐKKD số: 7777777. Cấp lần 1: 10/10/2015. Thay đổi: 10/10/2010. Nơi cấp: Phòng
                         đăng ký kinh doanh Sở kế hoạch đầu tư TP Hồ Chí Minh</p>
