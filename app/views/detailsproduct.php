@@ -55,8 +55,12 @@ foreach ($details_product as $key => $value) {
                                 <div id="sync1" class="owl-carousel owl-theme">
 
                                     <div class="item">
-
                                         <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/<?php echo $details['image_product'] ?>"
+                                            width="100%">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/Bed.jpg"
                                             width="100%">
                                     </div>
 
@@ -67,12 +71,15 @@ foreach ($details_product as $key => $value) {
                                 <div id="sync2" class="owl-carousel owl-theme">
 
 
-
-
-
                                     <div class="item">
 
                                         <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/<?php echo $details['image_product'] ?>"
+                                            width="100%">
+                                    </div>
+
+
+                                    <div class="item">
+                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/Bed.jpg"
                                             width="100%">
                                     </div>
 

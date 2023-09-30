@@ -114,7 +114,7 @@
         <div class="coccoc-alo-ph-img-circle"></div>
     </a>
 </div>
-<link async rel="stylesheet" href="css/cssfooter.css" />
+<link async rel="stylesheet" href="<?php echo BASE_URL ?>/public/css/cssfooter.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script defer type="text/javascript" src="<?php echo BASE_URL ?>/public/js/sweet-alert.js"></script>
 <script defer type="text/javascript" src="<?php echo BASE_URL ?>/public/js/jquery.flexslider-min.js"></script>
