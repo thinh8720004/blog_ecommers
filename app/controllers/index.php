@@ -1,5 +1,5 @@
 <?php
-class index  extends Dcontrollers
+class index extends Dcontrollers
 {
     public function __construct()
     {
@@ -7,43 +7,63 @@ class index  extends Dcontrollers
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
         $this->homepage();
+    }
+
+    public function homepage()
+    {
+        $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
+
+        $this->load->view('header', $data);
+        $this->load->view('slider');
+        $this->load->view('home');
+        $this->load->view('footer');
     }
 
     // public function category()
     // {
     //     $this->load->view('header');
-    //     $homemodel = $this->load->model('homemodel');
-
-    //     $table_category_product = 'tbl_category_product';
-    //     $data['category'] = $homemodel->category( $table_category_product);
-
-    //     $this->load->view('category', $data);
+    //     // $this->load->view('slider');// trang category ko cần slider
+    //     $this->load->view('categoryproduct');
     //     $this->load->view('footer');
     // }
 
-    // public function catebyid()
+    // public function detailsProduct()
     // {
     //     $this->load->view('header');
-    //     $homemodel = $this->load->model('homemodel');
-    //     $id = 2;
-    //     $table_category_product = 'tbl_category_product';
-    //     $data['categorybyid'] = $homemodel->categorybyid($table_category_product,$id);
-
-    //     $this->load->view('categorybyid', $data);
+    //     // $this->load->view('slider');// trang category ko cần slider
+    //     $this->load->view('detailsproduct');
     //     $this->load->view('footer');
     // }
 
-    public function homepage()
+    public function contact()
     {
-        $this->load->view('header');
-        $this->load->view('home');
+        $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
+
+        $this->load->view('header', $data);
+        $this->load->view('contact');
         $this->load->view('footer');
     }
 
-    public function notFound(){
-        $this->load->view('header');
+    public function notFound()
+    {
+        $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
+
+        $this->load->view('header', $data);
         $this->load->view('404');
         $this->load->view('footer');
     }
