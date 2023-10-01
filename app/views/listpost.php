@@ -30,9 +30,15 @@
                     </div>
                     <div class="content_text">
                         <ul class="list_ul">
+                            <style>
+                                .img-list img {
+                                    height: 230px;
+                                }
+                            </style>
                             <?php
                             foreach ($list_post as $key => $post) {
                                 ?>
+
                                 <li class="lists">
                                     <div class="img-list">
                                         <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post'] ?>">
@@ -50,7 +56,7 @@
                                                     </a>
                                                 </h3>
                                                 <p class="list-news-status-p">
-                                                    <?php echo $post['content_post']; ?>
+                                                    <?php echo substr($post['content_post'], 0, 100) ?>
                                                 </p>
                                             </div>
                                             <!-- -->
@@ -69,6 +75,7 @@
                                 <div class="page">
                                 </div>
                             </div>
+                            <hr>
                             <?php
                             }
                             ?>

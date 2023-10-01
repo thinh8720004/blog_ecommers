@@ -74,8 +74,8 @@ if (!empty($_GET['msg'])) {
         </div>
         <div class="form-group">
             <label for="describeCategory">Describe Product</label>
-            <textarea type="text" class="form-control" placeholder="Enter describe product here ..." name="desc_product"
-                required></textarea>
+            <textarea id="editor1" type="text" class="form-control" placeholder="Enter describe product here ..."
+                name="desc_product" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Add new product</button>
     </form>

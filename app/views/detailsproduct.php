@@ -59,10 +59,7 @@ foreach ($details_product as $key => $value) {
                                             width="100%">
                                     </div>
 
-                                    <div class="item">
-                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/Bed.jpg"
-                                            width="100%">
-                                    </div>
+
 
 
 
@@ -78,10 +75,7 @@ foreach ($details_product as $key => $value) {
                                     </div>
 
 
-                                    <div class="item">
-                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/Bed.jpg"
-                                            width="100%">
-                                    </div>
+
 
                                 </div>
 

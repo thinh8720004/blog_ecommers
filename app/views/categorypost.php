@@ -61,28 +61,22 @@ foreach ($post_by_id as $key => $post) {
                                             <div class="title-list">
                                                 <h3>
                                                     <a
-                                                        href="<?php echo BASE_URL ?>news/detailsNews/<?php $post['id_post'] ?>">
+                                                        href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']; ?>">
                                                         <?php echo $post['title_post']; ?>
                                                     </a>
                                                 </h3>
                                                 <p class="list-news-status-p">
-                                                    <?php echo $post['content_post']; ?>
+                                                    <?php echo substr($post['content_post'], 0, 300) ?>
+
                                                 </p>
                                             </div>
-                                            <div class="content-list-in">
-                                                <p><strong>
-                                                        <?php echo $post['title_post']; ?>
-                                                    </strong>
-                                                    <?php echo $post['content_post']; ?>
-                                                </p>
-                                            </div>
+
                                             <div class="xt"><a
                                                     href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post']; ?>">See
                                                     more >></a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="clear"></div>
+                                        <div class="clear"></div>
                                 </li>
                                 <?php
                             }
