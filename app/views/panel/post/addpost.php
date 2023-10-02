@@ -26,11 +26,9 @@ if (!empty($_GET['msg'])) {
             echo '<div class="alert alert-success" id="success-alert">';
         } else if ($value == "Add article failed!") {
             echo '<div class="alert alert-danger" id="danger-alert">';
-        }
-        else if ($value == "Update article successfully!") {
+        } else if ($value == "Update article successfully!") {
             echo '<div class="alert alert-success" id="success-alert">';
-        }
-        else if ($value == "Update article failed!") {
+        } else if ($value == "Update article failed!") {
             echo '<div class="alert alert-danger" id="danger-alert">';
         }
         echo '<strong>' . $value . '</strong>';
@@ -51,21 +49,23 @@ if (!empty($_GET['msg'])) {
             <input type="file" class="form-control" name="image_post" required>
         </div>
         <div class="form-group">
-            <label for="nameCategory">Describe Article:</label>
-            <textarea type="text" class="form-control" placeholder="Enter describe article ..." name="content_post" required></textarea>
+            <label>Describe Article:</label>
+            <textarea id="editor1" type="text" class="form-control" placeholder="Enter describe article ..."
+                name="content_post" required></textarea>
         </div>
         <div class="form-group">
-        <label for="category">Article Category:</label>
+            <label for="category">Article Category:</label>
             <select name="category_post" id="">
                 <?php
                 foreach ($category as $key => $cate) {
-                ?>
-                <option class="option" value="<?php echo $cate['id_category_post'] ?>">
-            <?php echo $cate['title_category_post'] ?> </option>
+                    ?>
+                    <option class="option" value="<?php echo $cate['id_category_post'] ?>">
+                        <?php echo $cate['title_category_post'] ?>
+                    </option>
 
-                    <?php } ?>
+                <?php } ?>
             </select>
-            </div>
+        </div>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -73,5 +73,3 @@ if (!empty($_GET['msg'])) {
         <button type="submit" class="btn btn-primary">Add new article</button>
     </form>
 </div>
-
- 

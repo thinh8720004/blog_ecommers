@@ -54,7 +54,8 @@ class login  extends Dcontrollers
 
     public function logout(){
         Session::init();
-        Session::destroy();
+        // Session::destroy();
+        unset($_SESSION['login']);
         header("Location:".BASE_URL."login"); 
     }
 }

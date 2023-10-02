@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo BASE_URL; ?>">Home Page</a>
         <a class="navbar-brand" href="#">Website information</a>
+        <a class="navbar-brand" href="<?php echo BASE_URL ?>/login/logout">Logout</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
