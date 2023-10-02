@@ -24,7 +24,7 @@
                 <div class="content_page">
                     <div class="box-title">
                         <div class="title-bar">
-                            <h1>Tin tức</h1>
+                            <h1>News</h1>
                         </div>
                     </div>
                     <div class="content_text">

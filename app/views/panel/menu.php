@@ -47,8 +47,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Order
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order/addorder">Add Order</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">             
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order">List Order</a></li>
                     </ul>
                 </li>

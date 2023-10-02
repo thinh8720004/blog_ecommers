@@ -24,6 +24,21 @@
                 </div>
             </div>
 
+            <?php
+            if (!empty($_GET['msg'])) {
+                $msg = unserialize(urldecode($_GET['msg']));
+                foreach ($msg as $key => $value) {
+                    if ($value == "Order Success!") {
+                        echo '<div class="alert alert-success" id="success-alert">';
+                    } else if ($value == "Order failed!") {
+                        echo '<div class="alert alert-danger" id="danger-alert">';
+                    } 
+                    echo '<strong>' . $value . '</strong>';
+                    echo '</div>';
+                }
+            }
+            ?>
+
             <div class="content_text">
                 <div class="container_table">
                     <table class="table table-hover table-condensed">
@@ -38,16 +53,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
-                                if (isset($_SESSION["shopping_cart"])) {
-                                    $total = 0;
-                                    ?>
-                            <form action='<?php echo BASE_URL?>cart/updateCart' method="post">
-                                <?php
+                            <?php
+                            if (isset($_SESSION["shopping_cart"])) {
+                                $total = 0;
+                            ?>
+                                <form action='<?php echo BASE_URL ?>cart/updateCart' method="post">
+                                    <?php
                                     foreach ($_SESSION["shopping_cart"] as $key => $value) {
                                         $subIntoMoney = $value['quantity_product'] * $value['price_product'];
                                         $total += $subIntoMoney;
-                                ?>
+                                    ?>
                                         <tr class="tr">
                                             <td data-th="Image">
                                                 <div class="col_table_image col_table_hidden-xs">
@@ -71,26 +86,32 @@
                                                 <div class="clear"></div>
                                             </td>
                                             <td data-th="Into Money" class="text_center"><span class="color_red font_money"><?php echo number_format($subIntoMoney, 0, ',', '.') . 'đ' ?></span></td>
-                                            <td class="actions aligncenter">             
+                                            <td class="actions aligncenter">
                                                 <button class="btn btn-danger" style="box-shadow: none;" type="submit" value="<?php echo $value['id_product'] ?>" name="delete_cart">Delete</button>
 
                                                 <button class="btn btn-warning" style="box-shadow: none; margin-top: 5px;" type="submit" value="<?php echo $value['id_product'] ?>" name="update_cart">Update</button>
                                             </td>
                                         </tr>
-                                <?php
-                                    }                              
-                                ?>
-                            </form>
-                            <tr>
-                                <td colspan="7" class="textright_text">
-                                    <div class="sum_price_all">
-                                        <span class="text_price">Total payment amount</span>:
-                                        <span class="text_price color_red"><?php echo number_format($total, 0, ',', '.') . 'đ' ?></span>
-                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </form>
+                                <tr>
+                                    <td colspan="7" class="textright_text">
+                                        <div class="sum_price_all">
+                                            <span class="text_price">Total payment amount</span>:
+                                            <span class="text_price color_red"><?php echo number_format($total, 0, ',', '.') . 'đ' ?></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php
+                            } else {
+                            ?>
+                                <td colspan="7">
+                                    <b>Cart is empty!</b>
                                 </td>
-                            </tr>
-                            <?php 
-                                }
+                            <?php
+                            }
                             ?>
                         </tbody>
                         <tfoot>
@@ -126,12 +147,12 @@
                     <div class="contact_right">
                         <div class="form_contact_in">
                             <div class="box_contact">
-                                <form name="FormDatHang" method="post" action="gio-hang/">
+                                <form name="FormDatHang" method="post" autocomplete="off" action="<?php echo BASE_URL ?>cart/order">
                                     <div class="content-box_contact">
                                         <div class="row">
                                             <div class="input">
                                                 <label>First and last name: <span style="color:red;">*</span></label>
-                                                <input type="text" name="txtHoTen" required class="clsip">
+                                                <input type="text" name="name" required class="clsip">
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -139,7 +160,7 @@
                                         <div class="row">
                                             <div class="input">
                                                 <label>Phone: <span style="color:red;">*</span></label>
-                                                <input type="text" name="txtDienThoai" required onkeydown="return checkIt(event)" class="clsip">
+                                                <input type="text" name="phone" required onkeydown="return checkIt(event)" class="clsip">
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -147,7 +168,7 @@
                                         <div class="row">
                                             <div class="input">
                                                 <label>Address: <span style="color:red;">*</span></label>
-                                                <input type="text" name="txtDiaChi" required class="clsip">
+                                                <input type="text" name="address" required class="clsip">
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -155,7 +176,7 @@
                                         <div class="row">
                                             <div class="input">
                                                 <label>Email: <span style="color:red;">*</span></label>
-                                                <input type="text" name="txtEmail" onchange="return KiemTraEmail(this);" required class="clsip">
+                                                <input type="text" name="email" onchange="return KiemTraEmail(this);" required class="clsip">
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -163,7 +184,7 @@
                                         <div class="row">
                                             <div class="input">
                                                 <label>Content: <span style="color:red;">*</span></label>
-                                                <textarea type="text" name="txtNoiDung" class="clsipa"></textarea>
+                                                <textarea type="text" name="content" class="clsipa"></textarea>
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -171,7 +192,7 @@
                                         <div class="row btnclass">
                                             <div class="input ipmaxn ">
                                                 <input type="submit" class="btn-gui" name="frmSubmit" id="frmSubmit" value="Submit order">
-                                                <input type="reset" class="btn-gui" value="Retype">
+                                                <input type="reset" class="btn-gui" value="Reset">
                                             </div>
                                             <div class="clear"></div>
                                         </div>

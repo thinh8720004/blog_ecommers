@@ -18,7 +18,7 @@ foreach ($details_product as $key => $value) {
                         <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                                 <a itemprop="item" href="<?php echo BASE_URL; ?>">
-                                    <span itemprop="name">Trang chủ</span></a>
+                                    <span itemprop="name">Home Page</span></a>
                                 <meta itemprop="position" content="1" />
                             </li>
                             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -52,13 +52,13 @@ foreach ($details_product as $key => $value) {
 
                                     <div class="item">
 
-                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/<?php echo $details['image_product'] ?>" width="100%">
+                                        <img src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct/<?php echo $details['image_product'] ?>" width="100%">
                                     </div>
                                 </div>
 
                                 <div id="sync2" class="owl-carousel owl-theme">
                                     <div class="item">
-                                        <img src="<?php echo BASE_URL ?>/public/uploads//product/imageproduct/<?php echo $details['image_product'] ?>" width="100%">
+                                        <img src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct/<?php echo $details['image_product'] ?>" width="100%">
                                     </div>
                                 </div>
                             </div>
@@ -67,22 +67,22 @@ foreach ($details_product as $key => $value) {
                                     <div class="pro-des-sum">
                                         <div class="price">
                                             <p class="code_skin" style="margin-bottom:10px">
-                                                <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a href="">Comrack</a></span>
+                                                <span>ID Product: <a href="chitietsp.php">CRW-W06</a> | Brand: <a href="">Comrack</a></span>
                                             </p>
                                             <div class="status_pro">
-                                                <span><b>Trạng thái:</b> Còn hàng</span>
+                                                <span><b>Status:</b> Còn hàng</span>
                                             </div>
-                                            <div class="status_pro"><span><b>Xuất xứ:</b> Việt Nam</span></div>
+                                            <div class="status_pro"><span><b>Origin:</b> Việt Nam</span></div>
                                         </div>
                                         <div class="color_price">
-                                            <span class="title_price bg_green">Giá bán</span>
+                                            <span class="title_price bg_green">New Price</span>
                                             <?php echo number_format($details['price_product'], 0, ',', '.') ?>
-                                            <span>vnđ</span>.
+                                            <span>đ</span>.
                                             (GIÁ CHƯA VAT)
                                             <div class="clear"></div>
                                         </div>
                                         <div class="color_price">
-                                            <span class="title_price">Giá cũ</span>
+                                            <span class="title_price">Old Price</span>
                                             <del>18,360,000 <span>vnđ</span></del>
                                         </div>
                                     </div>
@@ -107,11 +107,10 @@ foreach ($details_product as $key => $value) {
                                     <div class="wp_a">
                                         <a onclick="return giohang(579);" class="view_duan">
 
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Order</span>
                                         </a>
                                         <a href="tel:090 66 99 038" class="view_duan">
-                                            <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi
-                                                ngay</span>
+                                            <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Call Now</span>
                                         </a>
                                         <div class="clear"></div>
                                     </div>
@@ -139,31 +138,27 @@ foreach ($details_product as $key => $value) {
                             <div class="content-des-pro-suport">
                                 <div class="box-setup">
                                     <div class="title-setup">
-                                        <i class="fa fa-tasks" aria-hidden="true"></i> Dịch vụ &amp; Chú ý
+                                        <i class="fa fa-tasks" aria-hidden="true"></i> Service &amp; Attention
                                     </div>
                                     <div class="info-setup">
                                         <div class="row-setup">
-                                            <p style="text-align:justify">Quý khách vui lòng liên hệ với nhân viên bán hàng
-                                                theo số điện thoại Hotline sau :</p>
-                                            <p><span style="color:#d50100">0932 023 992</span>&nbsp;để biết thêm chi tiết về
-                                                Phụ kiện sản phẩm.</p>
+                                            <p style="text-align:justify">Please contact sales staff at the following Hotline phone number:</p>
+                                            <p><span style="color:#d50100">0123 456 789</span>&nbsp; for more details about Product accessories.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="info-prod prod-price freeship">
                                     <span class="title">
                                         <p>
-                                            <!-- <img alt="chuyển hàng miễn phí tại thietbivanphong123.com" src="/data/upload/ship-hang-mien-phi.png" style="height:33px; width:60px" /> -->
-                                            Bạn sẽ được giao hàng miễn phí trong khu vực nội thành TPHCM khi mua sản phẩm
-                                            này.
+                                            You will receive free delivery within the inner city area of ​​Da NangNang City when purchasing this product.
                                         </p>
                                     </span>
-                                    <span class="row more"><a href="" title="">Xem thêm</a>
+                                    <span class="row more"><a href="" title="">See more</a>
                                     </span>
                                 </div>
                                 <div class="bx-contact">
-                                    <span class="title-cnt">Bạn cần hỗ trợ?</span>
-                                    <p>Chat với chúng tôi :</p>
+                                    <span class="title-cnt">Do you need support?</span>
+                                    <p>Have a chat with us: </p>
 
                                     <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                                     <p><img alt="icon skype " src="<?php echo BASE_URL ?>/public/images/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
@@ -227,10 +222,10 @@ foreach ($details_product as $key => $value) {
                             <div class="tab_link">
                                 <h3 class="title_tab_link">TAGS: </h3>
                                 <div class="content_tab_link">
-                                    <a href="tag/">Iphone x</a>
-                                    <a href="tag/">Iphone 10</a>
-                                    <a href="tag/">Iphone 11</a>
-                                    <a href="tag/">Iphone Like New</a>
+                                    <a href="tag/">Sản phẩm nội thất</a>
+                                    <a href="tag/">Sản phẩm nội thất</a>
+                                    <a href="tag/">Sản phẩm nội thất</a>
+                                    <a href="tag/">Sản phẩm nội thất</a>
 
                                 </div>
                             </div>
@@ -245,7 +240,7 @@ foreach ($details_product as $key => $value) {
                 <div class="module_pro_all">
                     <div class="box-title">
                         <div class="title-bar">
-                            <h3>Sản phẩm liên quan</h3>
+                            <h3>Related ProductProduct</h3>
                         </div>
                     </div>
                     <div class="pro_all_gird">
@@ -260,7 +255,8 @@ foreach ($details_product as $key => $value) {
 
                                                 <a href="sanpham.php">
 
-                                                    <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                                    <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" 
+                                                    data-original="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" alt="<?php echo $relate['title_product'] ?>" />
                                                 </a>
 
                                                 <div class="content-overlay"></div>
@@ -275,9 +271,7 @@ foreach ($details_product as $key => $value) {
                                                 </a>
                                             </div>
                                             <div class="add_card">
-                                                <a onclick="return giohang(579);">
-                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                                                </a>
+                                            <input type="submit" style="box-shadow: none;" class="btn btn-info" value="Order">
                                             </div>
                                             <div class="price_old_new">
                                                 <div class="price">

@@ -2,7 +2,7 @@
 <html lang="en-CA">
 
 <head>
-    <title>Blog Ecommer</title>
+    <title>Interior Thinh Tu</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -25,7 +25,7 @@
     <meta property="fb:app_id" content="1639622432921466" />
     <meta vary="User-Agent" />
     <meta name="geo.region" content="VN-SG" />
-    <meta name="geo.placename" content="Ho Chi Minh City" />
+    <meta name="geo.placename" content="Da Nang City" />
     <meta name="geo.position" content="10.823099;106.629664" />
     <meta name="ICBM" content="10.823099, 106.629664" />
     <link rel="icon" type="image/png" href="template/Default/img/favicon.png">
@@ -46,8 +46,8 @@
         <div class="info_top">
             <div class="bg_in">
                 <p class="p_infor">
-                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sales@3tmobile.gmail</span>
-                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0923-032-992</span>
+                    <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: interiorthinhtu@gmail.com</span>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0123-456-789</span>
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">
-                                <input class="searchTerm" name="search" placeholder="Nhập từ cần tìm..." />
+                                <input class="searchTerm" name="search" placeholder="Enter the word you want to search..." />
                                 <button class="searchButton" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
@@ -71,16 +71,16 @@
                         <div class="cart_wrapper">
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Trụ sở chính</b></span>
+                                    <span><b>Headquarters</b></span>
                                     <br />
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Da Nang</span>
                                 </div>
                             </div>
                             <div class="cols_50">
                                 <div class="hot_line_top">
-                                    <span><b>Văn phòng chi nhánh</b></span>
+                                    <span><b>Branch offices</b></span>
                                     <br />
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Da Nang</span>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -96,7 +96,7 @@
                             <div class="">
                                 <div class="menu" id="menu_cate">
                                     <div class="menu_left">
-                                        <i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm
+                                        <i class="fa fa-bars" aria-hidden="true"></i> Category Product
                                     </div>
                                     <div class="cate_pro">
                                         <div id='cssmenu_flyout' class="display_destop_menu">

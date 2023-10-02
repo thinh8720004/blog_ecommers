@@ -31,11 +31,18 @@
                     <?php
                     foreach ($list_product as $value => $product) {
                         ?>
+                        <form action="<?php echo BASE_URL ?>cart/addCart" method="POST">
+
+                            <input type="hidden" value="<?php echo $product['id_product'] ?>" name="id_product">
+                            <input type="hidden" value="<?php echo $product['title_product'] ?>" name="title_product">
+                            <input type="hidden" value="<?php echo $product['image_product'] ?>" name="image_product">
+                            <input type="hidden" value="<?php echo $product['price_product'] ?>" name="price_product">
+                            <input type="hidden" value="1" name="quantity_product">
                         <div class="grids grids_list_product">
                             <div class="grids_in">
                                 <div class="content">
                                     <div class="img-right-pro">
-                                        <a href="<?php BASE_URL ?>/index/category">
+                                        <a href="<?php echo BASE_URL ?>products/productDetails/<?php echo $product['id_product'] ?>">
                                             <img class="lazy img-pro content-image"
                                                 src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $product['image_product'] ?>"
                                                 data-original="<?php echo $product['image_product'] ?>"
@@ -76,6 +83,7 @@
 
                             </div>
                         </div>
+                        </form>
                         <?php
                     }
                     ?>

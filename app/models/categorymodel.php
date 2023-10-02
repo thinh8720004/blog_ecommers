@@ -61,6 +61,12 @@ class categorymodel extends Dmodels
         return $this->db->SELECT($sql);
     }
 
+    public function postIndex($table)
+    {
+        $sql = "SELECT * FROM $table ORDER BY id_category_post DESC LIMIT 5";
+        return $this->db->SELECT($sql);
+    }
+
     public function categoryPostHome($table)
     {
         $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
