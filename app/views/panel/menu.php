@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo BASE_URL; ?>">Home Page</a>
+        <a class="navbar-brand" href="#">Website information</a>
         <a class="navbar-brand" href="<?php echo BASE_URL ?>/login/logout">Logout</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +12,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Article category
+                        Article Category
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>post">Add Article Category</a></li>
@@ -32,7 +33,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Product Portfolio
+                        Product Category
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>product/addCategory">Add Product
@@ -59,7 +60,6 @@
                         Order
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order/addorder">Add Order</a></li>
                         <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>order">List Order</a></li>
                     </ul>
                 </li>

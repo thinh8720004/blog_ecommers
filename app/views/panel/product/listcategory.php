@@ -51,7 +51,7 @@ if (!empty($_GET['msg'])) {
                     <?php echo $cate['title_category_product'] ?>
                 </td>
                 <td>
-                    <?php echo $cate['describe_category_product'] ?>
+                    <?php echo $cate['desc_category_product'] ?>
                 </td>
                 <td>
                     <button type="button" class="btn btn-danger"><a

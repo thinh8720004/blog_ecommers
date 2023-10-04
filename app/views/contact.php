@@ -5,11 +5,11 @@
                <div class="ch-contacts-details">
                   <ul class="contact-list">
                      <li class="addr">
-                        <strong class="title">Địa chỉ của chúng tôi</strong>
+                        <strong class="title">Our address</strong>
                         <p>
-                           <em><strong>3t phone</strong></em><br />
-                           <em> 333B Minh Phụng, Phường 2, Quận 11, HCM<br />
-                              Điện thoại : 0932 023 992<br />
+                           <em><strong>Interior Thinh Tu</strong></em><br />
+                           <em> Da Nang, Viet Nam<br />
+                              Phone : 0123 456 789<br />
                               <!--   <strong>Điện thoại: <span style="color:#FF0000"></span></strong></em> -->
                         </p>
                      </li>
@@ -31,7 +31,7 @@
                         <div class="content-box_contact">
                            <div class="row">
                               <div class="input">
-                                 <label>Họ và tên: <span style="color:red;">*</span></label>
+                                 <label>First and last name: <span style="color:red;">*</span></label>
                                  <input type="text" name="txtHoTen" required class="clsip">
                               </div>
                               <div class="clear"></div>
@@ -39,7 +39,7 @@
                            <!---row---->
                            <div class="row">
                               <div class="input">
-                                 <label>Số điện thoại: <span style="color:red;">*</span></label>
+                                 <label>Phone: <span style="color:red;">*</span></label>
                                  <input type="text" name="txtDienThoai" required onkeydown="return checkIt(event)" class="clsip">
                               </div>
                               <div class="clear"></div>
@@ -47,7 +47,7 @@
                            <!---row---->
                            <div class="row">
                               <div class="input">
-                                 <label>Địa chỉ: <span style="color:red;">*</span></label>
+                                 <label>Address: <span style="color:red;">*</span></label>
                                  <input type="text" name="txtDiaChi" required class="clsip">
                               </div>
                               <div class="clear"></div>
@@ -63,7 +63,7 @@
                            <!---row---->
                            <div class="row">
                               <div class="input">
-                                 <label>Nội dung: <span style="color:red;">*</span></label>
+                                 <label>Content: <span style="color:red;">*</span></label>
                                  <textarea type="text" name="txtNoiDung" class="clsipa"></textarea>
                               </div>
                               <div class="clear"></div>
@@ -72,7 +72,7 @@
                            <div class="row btnclass">
                               <div class="input ipmaxn ">
                                  <input type="submit" class="btn-gui" name="frmSubmit" id="frmSubmit" value="Send the contact">
-                                 <input type="reset" class="btn-gui" value="Nhập lại">
+                                 <input type="reset" class="btn-gui" value="Retype">
                               </div>
                               <div class="clear"></div>
                            </div>

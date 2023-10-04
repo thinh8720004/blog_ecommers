@@ -38,48 +38,24 @@
         <div class="col-md-4 col-xs-12 col-sm-12" style="padding: 0;margin-left:30px;margin-top:5px;">
             <div class="row">
                 <div class="panel  panel-warning panel-styling">
-                    <div class="panel-heading">Tin tức cập nhật</div>
+                    <div class="panel-heading">Updated news</div>
                     <div class="panel-body scrollable-panel">
+                        <?php 
+                            foreach ($post_index as $key => $post) {
+                        ?>
                         <div class="row">
                             <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
+                                <img src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post'] ?>">
                             </div>
                             <div class="col-md-8 col-xs-8 col-sm-8">
-                                <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <h4><?php echo $post['title_post'] ?></h4>
+                                <p><?php echo substr($post['content_post'], 0, 100); ?></p>
                             </div>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
-                            </div>
-                            <div class="col-md-8 col-xs-8 col-sm-8">
-                                <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
-                            </div>
-                            <div class="col-md-8 col-xs-8 col-sm-8">
-                                <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>public/images/iphone.png">
-                            </div>
-                            <div class="col-md-8 col-xs-8 col-sm-8">
-                                <h4>Sự kiện iphone 11 sắp ra mắt</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                            </div>
-                        </div>
-                        <hr>
+                        <hr>                   
+                        <?php 
+                            }
+                        ?>
                     </div>
                 </div>
             </div>

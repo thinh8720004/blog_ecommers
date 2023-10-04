@@ -42,6 +42,7 @@ if (!empty($_GET['msg'])) {
 
             <th>Price</th>
             <th>Quantity</th>
+            <th>Hot Product</th>
 
             <th>Describe</th>
             <th>Manager</th>
@@ -64,6 +65,8 @@ if (!empty($_GET['msg'])) {
                     ?>
                 </td>
                 <td><?php echo $pro['quantity_product'] ?></td>
+                <td><?php if($pro['product_hot'] == 1) echo 'Yes';
+                    else echo 'No'; ?></td>
                 <td><?php echo $pro['desc_product'] ?></td>
                 <td><button type="button" class="btn btn-danger"><a href="<?php echo BASE_URL ?>product/deleteProduct/<?php echo $pro['id_product'] ?>">Delete</button>
                     <button type="button" class="btn btn-warning"><a href="<?php echo BASE_URL ?>product/editProduct/<?php echo $pro['id_product'] ?>">Update</a></button>

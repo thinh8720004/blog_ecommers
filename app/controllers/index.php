@@ -14,15 +14,20 @@ class index extends Dcontrollers
 
     public function homepage()
     {
-        $table = 'tab_category_product';
-        $tablePost = 'tab_category_post';
+        $table_category_product = 'tab_category_product';
+        $table_category_post = 'tab_category_post';
+        $table_product = 'tab_product';
+        $table_post = 'tab_post';
+
         $categorymodel = $this->load->model('categorymodel');
-        $data['category'] = $categorymodel->categoryHome($table);
-        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
+        $data['category'] = $categorymodel->categoryHome($table_category_product);
+        $data['category_post'] = $categorymodel->categoryPostHome($table_category_post);
+        $data['product_home'] = $categorymodel->listProductIndex($table_product);
+        $data['post_index'] = $categorymodel->postIndex($table_post);
 
         $this->load->view('header', $data);
-        $this->load->view('slider');
-        $this->load->view('home');
+        $this->load->view('slider', $data);
+        $this->load->view('home', $data);
         $this->load->view('footer');
     }
 

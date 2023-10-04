@@ -195,7 +195,7 @@ class product extends Dcontrollers
     $quantity = $_POST['quantity_product'];
     $category = $_POST['category_product'];
 
-    if (isset($_FILES['imageproduct']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['image_product']) && $_FILES['image_product']['error'] === UPLOAD_ERR_OK) {
       $image = $_FILES['image_product']['name'];
       $image_tmp = $_FILES['image_product']['tmp_name'];
 
@@ -209,25 +209,17 @@ class product extends Dcontrollers
     } else {
       echo "Vui lòng chọn một tệp hình ảnh để tải lên.";
     }
+
+    $data = array(
+      'title_product' => $title,
+      'desc_product' => $desc,
+      'price_product' => $price,
+      'quantity_product' => $quantity,
+      'id_category_product' => $category,
+    );
+
     if ($image) {
-      $data['categorybyid'] = $categorymodel->categoryByID($table, $cond);
-      unlink("public/uploads/product/imageproduct/" . $data['categorybyid'][0]['image_product']);
-      $data = array(
-        'title_product' => $title,
-        'image_product' => $image,
-        'desc_product' => $desc,
-        'price_product' => $price,
-        'quantity_product' => $quantity,
-        'id_category_product' => $category,
-      );
-    } else {
-      $data = array(
-        'title_product' => $title,
-        'desc_product' => $desc,
-        'price_product' => $price,
-        'quantity_product' => $quantity,
-        'id_category_product' => $category,
-      );
+      $data['image_product'] = $image;
     }
 
     $result = $categorymodel->updateProduct($table, $data, $cond);
@@ -239,6 +231,7 @@ class product extends Dcontrollers
       header('Location:' . BASE_URL . "product/addproduct?msg=" . urlencode(serialize($message)));
     }
   }
+
 
   public function updateCategoryProduct($id)
   {

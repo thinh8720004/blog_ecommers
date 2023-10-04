@@ -38,7 +38,6 @@ class products extends Dcontrollers
         $data['category_by_id'] = $categorymodel->categoryByIDHome($table, $table_product, $id);
 
         $this->load->view('header', $data);
-        //$this->load->view('slider');
         $this->load->view('categoryproduct', $data);
         $this->load->view('footer');
     }

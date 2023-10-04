@@ -26,6 +26,14 @@
         border-radius: 5%;
         box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    .col {
+        padding: 10px;
+    }
+
+    #btn-submit {
+        width: 20%;
+    }
 </style>
 
 <?php
@@ -62,16 +70,36 @@ if (!empty($_GET['msg'])) {
                         src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $pro['image_product'] ?>"
                         height="100px" width="100px"></p>
             </div>
-            <div class="row g-3">
+            <div class="row g-2">
                 <div class="col">
                     <label for="describeCategory">Price Product</label>
-                    <input value="<?php echo $pro['price_product'] ?>" type="text" name="price_product" class="form-control"
+                    <input type="text" class="form-control" value="<?php echo $pro['price_product'] ?>" name="price_product"
                         required>
                 </div>
                 <div class="col">
                     <label for="describeCategory">Number of products</label>
-                    <input value="<?php echo $pro['quantity_product'] ?>" type="text" name="quantity_product"
-                        class="form-control" required>
+                    <input type="text" class="form-control" value="<?php echo $pro['quantity_product'] ?>"
+                        name="quantity_product" required>
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col">
+                    <label>Hot Product :</label>
+                    <select name="product_hot" id="">
+                        <?php
+                        if ($pro['product_hot'] == 0) {
+                            ?>
+                            <option selected value="0">No</option>
+                            <option value="1">Yes</option>
+                        <?php
+                        } else {
+                            ?>
+                            <option value="0">No</option>
+                            <option selected value="1">Yes</option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="col">
                     <label>Category Product :</label>
@@ -80,7 +108,7 @@ if (!empty($_GET['msg'])) {
                         foreach ($category as $key => $cate) {
                             ?>
                             <option <?php
-                            if ($cate['id_category_product'] == $pro['id_category_product']) {
+                            if ($pro['id_category_product'] == $cate['id_category_product']) {
                                 echo 'selected';
                             }
                             ?> value="<?php echo $cate['id_category_product'] ?>">
@@ -89,13 +117,12 @@ if (!empty($_GET['msg'])) {
                         <?php } ?>
                     </select>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="describeCategory">Describe Product</label>
-                <textarea id="editor1" type="text" name="desc_product" class="form-control"
-                    required><?php echo $pro['desc_product']; ?></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Update product</button>
+                <div class="form-group">
+                    <label for="describeCategory">Describe Product</label>
+                    <textarea id="editor1" type="text" name="desc_product" class="form-control"
+                        required><?php echo $pro['desc_product']; ?></textarea>
+                </div>
+                <button id="btn-submit" type="submit" class="btn btn-primary">Update product</button>
         </form>
     <?php } ?>
 </div>

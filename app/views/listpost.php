@@ -30,15 +30,9 @@
                     </div>
                     <div class="content_text">
                         <ul class="list_ul">
-                            <style>
-                                .img-list img {
-                                    height: 230px;
-                                }
-                            </style>
                             <?php
                             foreach ($list_post as $key => $post) {
                                 ?>
-
                                 <li class="lists">
                                     <div class="img-list">
                                         <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $post['id_post'] ?>">
@@ -56,7 +50,7 @@
                                                     </a>
                                                 </h3>
                                                 <p class="list-news-status-p">
-                                                    <?php echo substr($post['content_post'], 0, 100) ?>
+                                                    <?php echo substr($post['content_post'], 0, 200) ?>
                                                 </p>
                                             </div>
                                             <!-- -->
@@ -68,17 +62,15 @@
                                     </div>
                                     <div class="clear"></div>
                                 </li>
-
-                            </ul>
-                            <div class="clear"></div>
-                            <div class="wp_page">
-                                <div class="page">
-                                </div>
-                            </div>
-                            <hr>
-                            <?php
+                                <?php
                             }
                             ?>
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="wp_page">
+                            <div class="page">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
