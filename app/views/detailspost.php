@@ -38,7 +38,17 @@
                             <div class="title-bar">
                                 <h1><?php echo $post['title_post'] ?></h1>
                             </div>
+                        <div class="fb-share-button" data-href="<?php 
+                        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        echo $actual_link; ?>" data-layout="button_count" data-size="small">
+                            <a target="_blank" href="<?php echo $actual_link ?>&amp;src=sdkpreparse" 
+                            class="fb-xfbml-parse-ignore">Chia sẻ</a>
                         </div>
+                        </div>
+                        <div class="title-bar">
+                                <img style="width: 50%; object-fit: cover; border-radius: 5%; padding-top: 10px;" src="<?php echo BASE_URL ?>/public/uploads/post/imagepost/<?php echo $post['image_post'] ?>" alt="<?php echo $post['title_post'] ?>">
+                        </div>
+                        <div class="clear"></div>
                         <div class="content_text">
                             <?php echo $post['content_post'] ?>
                         </div>
@@ -65,7 +75,7 @@
                                     <div class="img-right-pro">
                                         <a href="<?php echo BASE_URL ?>news/detailsNews/<?php echo $relate['id_post']; ?>">
                                             <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/public/uploads/post/imagepost/<?php echo $relate['image_post'] ?>" 
-                                            data-original="image/iphone.png" alt="<?php echo $relate['title_post'] ?>" />
+                                          alt="<?php echo $relate['title_post'] ?>" />
                                         </a>
                                     </div>
                                     <div class="name-pro-right">

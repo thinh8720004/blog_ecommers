@@ -10,6 +10,14 @@ foreach ($details_product as $key => $value) {
     <?php
     foreach ($details_product as $key => $details) {
     ?>
+        <form action="<?php echo BASE_URL ?>cart/addCart" method="POST">
+
+            <input type="hidden" value="<?php echo $details['id_product'] ?>" name="id_product">
+            <input type="hidden" value="<?php echo $details['title_product'] ?>" name="title_product">
+            <input type="hidden" value="<?php echo $details['image_product'] ?>" name="image_product">
+            <input type="hidden" value="<?php echo $details['price_product'] ?>" name="price_product">
+            <input type="hidden" value="1" name="quantity_product">
+
         <div class="bg_in">
             <div class="wrapper_all_main">
                 <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
@@ -105,13 +113,15 @@ foreach ($details_product as $key => $value) {
                                         <div class="clear"></div>
                                     </div>
                                     <div class="wp_a">
-                                        <a onclick="return giohang(579);" class="view_duan">
-
-                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Order</span>
-                                        </a>
-                                        <a href="tel:090 66 99 038" class="view_duan">
-                                            <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Call Now</span>
-                                        </a>
+                                        <button type="submit" class="btn btn-success" style="font-weight: bold; font-size: 18px;"><span>Order</span></button>
+                                        <button type="button" class="btn btn-danger" style="font-weight: bold; font-size: 18px;">Call Now</button>
+                                        <p style="padding-top: 10px;">
+                                        <div class="fb-share-button" data-href="<?php
+                                            $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                                            echo $actual_link; ?>" data-layout="button_count" data-size="small">
+                                            <a target="_blank" href="<?php echo $actual_link ?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a>
+                                        </div>
+                                        </p>
                                         <div class="clear"></div>
                                     </div>
                                     <div class="clear"></div>
@@ -231,8 +241,9 @@ foreach ($details_product as $key => $value) {
                             </div>
                         </div>
                     </div>
+    </form>
                 <?php
-                    }
+            }
                 ?>
                 <!-- <div class="content-brank">
                      <p><strong>Apple </strong>tự hảo<strong>&nbsp;</strong>là thương hiệu Việt Nam về sản phẩm tủ rack 19", tủ cửa lưới, tủ treo tường, bảo vệ thiết bị mạng an toàn, dễ dàng quản lý và vận hành.</p>
@@ -255,8 +266,7 @@ foreach ($details_product as $key => $value) {
 
                                                 <a href="sanpham.php">
 
-                                                    <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" 
-                                                    data-original="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" alt="<?php echo $relate['title_product'] ?>" />
+                                                    <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" data-original="<?php echo BASE_URL ?>/public/uploads/product/imageproduct /<?php echo $relate['image_product'] ?>" alt="<?php echo $relate['title_product'] ?>" />
                                                 </a>
 
                                                 <div class="content-overlay"></div>
@@ -271,7 +281,7 @@ foreach ($details_product as $key => $value) {
                                                 </a>
                                             </div>
                                             <div class="add_card">
-                                            <input type="submit" style="box-shadow: none;" class="btn btn-info" value="Order">
+                                                <input type="submit" style="box-shadow: none;" class="btn btn-info" value="Order">
                                             </div>
                                             <div class="price_old_new">
                                                 <div class="price">

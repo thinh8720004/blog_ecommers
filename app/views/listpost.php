@@ -2,6 +2,11 @@
     <div class="bg_in">
         <div class="wrapper_all_main">
             <div class="wrapper_all_main_right">
+                <h5>
+                    <?php echo $this->title ?>
+                    <br>
+                    <?php echo $this->desc ?>
+                </h5>
                 <!--breadcrumbs-->
                 <div class="breadcrumbs">
                     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -17,6 +22,14 @@
                                 </strong>
                             </span>
                             <meta itemprop="position" content="2" />
+                        </li>
+                        <li>
+                        <div class="fb-share-button" data-href="<?php 
+                        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        echo $actual_link; ?>" data-layout="button_count" data-size="small">
+                            <a target="_blank" href="<?php echo $actual_link ?>&amp;src=sdkpreparse" 
+                            class="fb-xfbml-parse-ignore">Chia sẻ</a>
+                        </div>
                         </li>
                     </ol>
                 </div>
@@ -50,7 +63,7 @@
                                                     </a>
                                                 </h3>
                                                 <p class="list-news-status-p">
-                                                    <?php echo $post['content_post']; ?>
+                                                    <?php echo substr($post['content_post'], 0, 500); ?>
                                                 </p>
                                             </div>
                                             <!-- -->

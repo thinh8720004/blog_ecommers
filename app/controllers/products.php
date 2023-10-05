@@ -73,6 +73,10 @@ class products  extends Dcontrollers
 
         foreach ($data['details_product'] as $key => $cate) {
             $id_cate = $cate['id_category_product'];
+
+            $this->load->title = $cate['title_product'];
+            $this->load->desc = substr($cate['desc_product'], 0, 500);
+            $this->load->image = BASE_URL.'/public/uploads/product/imageproduct/'.$cate['image_product'];
         }
         $cond_related = " $table_product.id_category_product = $table.id_category_product
                         AND $table.id_category_product = '$id_cate'

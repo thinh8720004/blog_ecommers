@@ -877,7 +877,8 @@ li.parent.display_none_more strong {
     height: 40px;
     outline: none;
     padding: 5px 30px 5px 10px;
-    border: 1px solid #ffbf00;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 .searchButton {
     position: absolute;
@@ -886,12 +887,13 @@ li.parent.display_none_more strong {
     width: 40px;
     height: 34px;
     opacity: 1;
-    background: #ffbf00;
+    background: black;
     cursor: pointer;
     border: 0px;
     color: #fff;
     box-sizing: border-box;
     background-size: cover;
+    border-radius: 10px;
 }
 .search_categories {
     display: inline-block;
@@ -1346,7 +1348,7 @@ content: "";
 .info_top span i.fa {
     padding: 2px 5px;
     border-radius: 5px;
-    color: #ffbf00;
+    color: #d50100;
 }
 .info_top span {
     font-size: 14px;
@@ -2397,7 +2399,9 @@ h4.nomargin {
 }
 .info_top span {
     display: inline-block;
-    color: #ffbf00;
+    color: #d50100;
+    font-weight: bolder;
+    font-size: 16px;
 }
 .menu_left {
     font-size: 15px;
@@ -3083,13 +3087,13 @@ a:hover {
 }
 #cssmenu > ul > li > a {
     padding:17px 15px;
-    font-size:13px; font-weight:bold;
+    font-size:16px; 
+    font-weight:bold;
     letter-spacing:1px;
     text-decoration:none;
     color:#fff;
     font-family:arial;
    min-height:48px;
-    text-transform:uppercase;
 }
 #cssmenu > ul > li > a:after {
     content:"|";

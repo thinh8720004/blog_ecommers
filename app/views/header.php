@@ -11,18 +11,15 @@
     <meta name="Description" content="" />
     <meta name="Keywords" content="" />
     <!--rieng-->
-    <meta property='og:title' name="title" content='' />
-    <meta property='og:url' content='' />
-    <meta property='og:image' content='' />
-    <meta property='og:description' itemprop='description' name="description" content='' />
+    <meta property="og:url"                content="<?php 
+    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    echo $actual_link; ?>" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="<?php echo $this->title ?>" />
+    <meta property="og:description"        content="<?php echo $this->desc ?>" />
+    <meta property="og:image"              content="<?php echo $this->image ?>" />
     <!--rieng-->
     <!--tkw-->
-    <meta property="og:type" content="article" />
-    <meta property="article:section" content="" />
-    <meta property="og:site_name" content='' />
-    <meta property="article:publisher" content="" />
-    <meta property="article:author" content="" />
-    <meta property="fb:app_id" content="1639622432921466" />
     <meta vary="User-Agent" />
     <meta name="geo.region" content="VN-SG" />
     <meta name="geo.placename" content="Da Nang City" />
@@ -165,6 +162,8 @@
                                     </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Cart</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Contact</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>customer/login'>Login</a></li>
+                                    <li class=''><a href='<?php echo BASE_URL ?>customer/logout'>Logout</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -31,6 +31,16 @@ class news extends Dcontrollers
 
     public function newsAll()
     {
+        //seo
+
+        $this->load->title = 'All articles - link hosting ';
+
+        $this->load->desc = '"Interior Thinh Tu" is a great destination for those who are 
+        looking for perfection in interior design. We are proud to present a beautiful online 
+        space where you can explore unique and diverse interior design ideas to transform every 
+        corner of your home into a living work of art. ';
+
+        $this->load->image = BASE_URL.'public/images/logohere.jpeg';
         $table = 'tab_category_product';
         $table_category_post = 'tab_category_post';
         $table_post = 'tab_post';
@@ -41,6 +51,7 @@ class news extends Dcontrollers
         $data['category'] = $categorymodel->categoryHome($table);
         $data['category_post'] = $categorymodel->categoryPostHome($table_category_post);
         $data['list_post'] = $postmodel->listPostHome($table_post);
+        
 
         $this->load->view('header', $data);
         // $this->load->view('slider');
@@ -64,6 +75,10 @@ class news extends Dcontrollers
         
         foreach ($data['details_post'] as $key => $cate){
             $id_cate = $cate['id_category_post'];
+            
+            $this->load->title = $cate['title_post'];
+            $this->load->desc = substr($cate['content_post'], 0, 500);
+            $this->load->image = BASE_URL.'/public/uploads/post/imagepost/'.$cate['image_post'];
         }
         
         $related_cond = "$table_category_post.id_category_post = $table_post.id_category_post AND $table_post.id_category_post = '$id_cate'

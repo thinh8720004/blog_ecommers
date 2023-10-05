@@ -11,15 +11,15 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
+                    <div class="item">
+                        <img src="<?php echo BASE_URL ?>public/images/banner1.jpg" alt="Siêu khuyến mãi">
+                    </div>
+
+                    <div class="item">
+                        <img src="<?php echo BASE_URL ?>public/images/banner2.jpg" alt="Siêu khuyến mãi">
+                    </div>
+
                     <div class="item active">
-                        <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
-                    </div>
-
-                    <div class="item">
-                        <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
-                    </div>
-
-                    <div class="item">
                         <img src="<?php echo BASE_URL ?>public/images/banner3.jpg" alt="Siêu khuyến mãi">
                     </div>
                 </div>
