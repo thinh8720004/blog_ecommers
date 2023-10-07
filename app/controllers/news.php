@@ -14,6 +14,8 @@ class news extends Dcontrollers
 
     public function category($id)
     {
+        Session::init();
+
         $table = 'tab_category_product';
         $table_category_post = 'tab_category_post';
         $table_post = 'tab_post';
@@ -32,6 +34,7 @@ class news extends Dcontrollers
     public function newsAll()
     {
         //seo
+        Session::init();
 
         $this->load->title = 'All articles - link hosting ';
 
@@ -62,6 +65,8 @@ class news extends Dcontrollers
 
     public function detailsNews($id)
     {
+        Session::init();
+        
         $table = 'tab_category_product';
         $table_category_post = 'tab_category_post';
         $table_post = 'tab_post';

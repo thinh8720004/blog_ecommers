@@ -1,3 +1,8 @@
+<style>
+    .img-right-pro img {
+        height: 100%;
+    }
+</style>
 <section>
     <div class="bg_in">
         <div class="module_pro_all">

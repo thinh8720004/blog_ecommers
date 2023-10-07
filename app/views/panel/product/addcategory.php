@@ -49,7 +49,7 @@ if (!empty($_GET['msg'])) {
         </div>
         <div class="form-group">
             <label for="describeCategory">Describe Category Product</label>
-            <input type="textarea" class="form-control" placeholder="Enter describe category product here ..." name="desc_category_product" required>
+            <input type="textarea" id="editor1" class="form-control" placeholder="Enter describe category product here ..." name="desc_category_product" required>
         </div>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">

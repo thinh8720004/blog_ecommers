@@ -14,6 +14,8 @@ class products  extends Dcontrollers
 
     public function category($id)
     {
+        Session::init();
+
         $table = 'tab_category_product';
         $table_product = 'tab_product';
         $table_post = 'tab_category_post';
@@ -29,6 +31,8 @@ class products  extends Dcontrollers
 
     public function hotProduct()
     {
+        Session::init();
+
         $table = 'tab_category_product';
         $table_product = 'tab_product';
         $table_post = 'tab_category_post';
@@ -46,6 +50,8 @@ class products  extends Dcontrollers
 
     public function categoryAll()
     {
+        Session::init();
+
         $table = 'tab_category_product';
         $table_product = 'tab_product';
         $table_post = 'tab_category_post';
@@ -61,6 +67,8 @@ class products  extends Dcontrollers
 
     public function productDetails($id)
     {
+        Session::init();
+        
         $table = 'tab_category_product';
         $table_product = 'tab_product';
         $table_post = 'tab_category_post';

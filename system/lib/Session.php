@@ -30,7 +30,7 @@
         }
 
         public static function unset($key){
-            session_unset($key);
+            unset($_SESSION[$key]);
         }
     }
 ?>

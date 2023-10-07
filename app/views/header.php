@@ -29,7 +29,9 @@
     <!--tkw-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.carousel.min.css">
@@ -162,8 +164,19 @@
                                     </li>
                                     <li class=''><a href='<?php echo BASE_URL ?>cart'>Cart</a></li>
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Contact</a></li>
-                                    <li class=''><a href='<?php echo BASE_URL ?>customer/login'>Login</a></li>
-                                    <li class=''><a href='<?php echo BASE_URL ?>customer/logout'>Logout</a></li>
+                                    <?php
+                                    if (Session::get('customer') == true) {
+                                        ?>
+                                        <li class=''><a href='<?php echo BASE_URL ?>/customer/logout'>Logout</a></li>
+
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <li class=''><a href='<?php echo BASE_URL ?>/customer/login'>Login</a></li>
+
+                                        <?php
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>

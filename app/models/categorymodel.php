@@ -80,7 +80,8 @@ class categorymodel extends Dmodels
         return $this->db->select($sql);
     }
 
-    public function relatedPostHome($table_category_post, $table_post, $related_cond){
+    public function relatedPostHome($table_category_post, $table_post, $related_cond)
+    {
         $sql = "SELECT * FROM $table_category_post, $table_post
         WHERE $related_cond ORDER BY $table_post.id_post DESC";
         return $this->db->select($sql);
@@ -112,7 +113,14 @@ class categorymodel extends Dmodels
     // product
     public function listProductHome($table_product)
     {
-        $sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC";
+        $product_per_page = 20;
+        if (!isset($_GET['page'])) {
+            $page = 1;
+        } else {
+            $page = $_GET['page'];
+        }
+        $each_page = ($page - 1) * $product_per_page;
+        $sql = "SELECT * FROM $table_product ORDER BY $table_product.id_product DESC LIMIT $each_page, $product_per_page";
         return $this->db->select($sql);
     }
 
@@ -182,5 +190,13 @@ class categorymodel extends Dmodels
     {
         $sql = "SELECT * FROM $table,$table_product WHERE $cond_related";
         return $this->db->select($sql);
+    }
+
+    //pagination
+    public function getProductCount($table_product)
+    {
+        $sql = "SELECT COUNT(*) AS product_count FROM $table_product";
+        $result = $this->db->select($sql);
+        return $result[0]['product_count'];
     }
 }

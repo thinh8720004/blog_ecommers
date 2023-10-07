@@ -113,7 +113,7 @@ if (!empty($_GET['msg'])) {
             </div>
             <div class="form-group">
                 <label for="describeCategory">Describe Product</label>
-                <textarea type="text" name="desc_product" class="form-control" required><?php echo $pro['desc_product']; ?></textarea>
+                <textarea type="text" id="editor1" name="desc_product" class="form-control" required><?php echo $pro['desc_product']; ?></textarea>
             </div>
             <button id="btn-submit" type="submit" class="btn btn-primary">Update product</button>
         </form>

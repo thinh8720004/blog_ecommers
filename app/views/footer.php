@@ -126,8 +126,8 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" 
 src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0" nonce="HuK29rd7">
-
 </script>
+
 <script type="text/javascript">
     $(document).ready(function () {
 
