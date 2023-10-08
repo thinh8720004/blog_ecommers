@@ -199,4 +199,11 @@ class categorymodel extends Dmodels
         $result = $this->db->select($sql);
         return $result[0]['product_count'];
     }
+
+    public function searchProduct($table_product, $search)
+    {
+        $sql = "SELECT * FROM $table_product WHERE title_product LIKE '%$search%'";
+        return $this->db->select($sql);
+    }
+
 }

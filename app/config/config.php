@@ -1,3 +1,3 @@
-<?php 
-    define('BASE_URL', 'http://atudzx.com/blog_ecommers/');
+<?php
+define('BASE_URL', 'http://localhost/blog_ecommers/');
 ?>

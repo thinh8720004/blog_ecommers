@@ -11,13 +11,13 @@
     <meta name="Description" content="" />
     <meta name="Keywords" content="" />
     <!--rieng-->
-    <meta property="og:url"                content="<?php 
+    <meta property="og:url" content="<?php
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     echo $actual_link; ?>" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="<?php echo $this->title ?>" />
-    <meta property="og:description"        content="<?php echo $this->desc ?>" />
-    <meta property="og:image"              content="<?php echo $this->image ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<?php echo $this->title ?>" />
+    <meta property="og:description" content="<?php echo $this->desc ?>" />
+    <meta property="og:image" content="<?php echo $this->image ?>" />
     <!--rieng-->
     <!--tkw-->
     <meta vary="User-Agent" />
@@ -29,10 +29,10 @@
     <!--tkw-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL?>public/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/public/css/owl.theme.default.min.css">
@@ -60,8 +60,9 @@
                                     alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
-                            <form class="search_form" method="get" action="">
-                                <input class="searchTerm" name="search" placeholder="Enter the word you want to search..." />
+                            <form class="search_form" method="GET" action="<?php echo BASE_URL; ?>products/search">
+                                <input class="searchTerm" name="search"
+                                    placeholder="Enter the word you want to search..." />
                                 <button class="searchButton" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
