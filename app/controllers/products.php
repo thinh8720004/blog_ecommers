@@ -119,4 +119,44 @@ class products extends Dcontrollers
         $this->load->view('detailsproduct', $data);
         $this->load->view('footer');
     }
+
+    public function ranger()
+    {
+        Session::init();
+
+        if (isset($_GET['duoi2tr'])) {
+            $min_price = "0";
+            $max_price = "2000000";
+        }
+        if (isset($_GET['2-4tr'])) {
+            $min_price = "2000000";
+            $max_price = "4000000";
+        }
+        if (isset($_GET['4-10tr'])) {
+            $min_price = "4000000";
+            $max_price = "10000000";
+        }
+        if (isset($_GET['10-20tr'])) {
+            $min_price = "10000000";
+            $max_price = "20000000";
+        }
+        if (isset($_GET['20tr'])) {
+            $min_price = "20000000";
+            $max_price = "2000000000000000";
+        }
+
+        $table = 'tab_category_product';
+        $table_product = 'tab_product';
+        $table_post = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($table_post);
+        $data['list_product'] = $categorymodel->rangerProduct($table_product, $min_price, $max_price);
+
+
+
+        $this->load->view('header', $data);
+        $this->load->view('ranger', $data);
+        $this->load->view('footer');
+    }
 }

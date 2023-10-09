@@ -203,7 +203,16 @@ class categorymodel extends Dmodels
     public function searchProduct($table_product, $search)
     {
         $sql = "SELECT * FROM $table_product WHERE title_product LIKE '%$search%'";
+
         return $this->db->select($sql);
     }
+
+    public function rangerProduct($table_product, $min_price, $max_price)
+    {
+        $sql = "SELECT * FROM $table_product WHERE $min_price <= price_product AND price_product <= $max_price ORDER BY $table_product.price_product ASC";
+        return $this->db->select($sql);
+
+    }
+
 
 }

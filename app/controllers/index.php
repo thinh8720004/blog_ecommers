@@ -1,5 +1,5 @@
 <?php
-class index  extends Dcontrollers
+class index extends Dcontrollers
 {
     public function __construct()
     {
@@ -7,12 +7,15 @@ class index  extends Dcontrollers
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
         $this->homepage();
     }
 
     public function homepage()
     {
+        Session::init();
+
         $table_category_product = 'tab_category_product';
         $table_category_post = 'tab_category_post';
         $table_product = 'tab_product';
@@ -48,6 +51,8 @@ class index  extends Dcontrollers
 
     public function contact()
     {
+        Session::init();
+
         $table = 'tab_category_product';
         $tablePost = 'tab_category_post';
         $categorymodel = $this->load->model('categorymodel');
@@ -59,7 +64,8 @@ class index  extends Dcontrollers
         $this->load->view('footer');
     }
 
-    public function notFound(){
+    public function notFound()
+    {
         $table = 'tab_category_product';
         $tablePost = 'tab_category_post';
         $categorymodel = $this->load->model('categorymodel');

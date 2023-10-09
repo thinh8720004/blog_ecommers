@@ -1,8 +1,8 @@
-<?php 
-    $categoryModel = new CategoryModel();
-    
-    $productCount = $categoryModel->getProductCount('tab_product');
-    
+<?php
+$categoryModel = new CategoryModel();
+
+$productCount = $categoryModel->getProductCount('tab_product');
+
 ?>
 <style>
     #pagination {
@@ -46,7 +46,7 @@
                     $i = 1;
                     foreach ($list_product as $value => $product) {
                         $i++;
-                    ?>
+                        ?>
                         <form action="<?php echo BASE_URL ?>cart/addCart" method="POST">
 
                             <input type="hidden" value="<?php echo $product['id_product'] ?>" name="id_product">
@@ -58,8 +58,12 @@
                                 <div class="grids_in">
                                     <div class="content">
                                         <div class="img-right-pro">
-                                            <a href="<?php echo BASE_URL ?>products/productDetails/<?php echo $product['id_product'] ?>">
-                                                <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $product['image_product'] ?>" data-original="<?php echo $product['image_product'] ?>" alt="<?php echo $product['title_product'] ?>" />
+                                            <a
+                                                href="<?php echo BASE_URL ?>products/productDetails/<?php echo $product['id_product'] ?>">
+                                                <img class="lazy img-pro content-image"
+                                                    src="<?php echo BASE_URL ?>public/uploads/product/imageproduct/<?php echo $product['image_product'] ?>"
+                                                    data-original="<?php echo $product['image_product'] ?>"
+                                                    alt="<?php echo $product['title_product'] ?>" />
                                             </a>
                                             <div class="content-overlay"></div>
                                             <div class="content-details fadeIn-top">
@@ -71,7 +75,8 @@
                                             </div>
                                         </div>
                                         <div class="name-pro-right">
-                                            <a href="<?php echo BASE_URL ?>products/productDetails/<?php echo $product['id_product'] ?>">
+                                            <a
+                                                href="<?php echo BASE_URL ?>products/productDetails/<?php echo $product['id_product'] ?>">
                                                 <h3>
                                                     <?php
                                                     echo $product['title_product'];
@@ -80,7 +85,8 @@
                                             </a>
                                         </div>
                                         <div class="add_card">
-                                            <input type="submit" style="box-shadow: none;" class="btn btn-info" value="Order">
+                                            <input type="submit" style="box-shadow: none;" class="btn btn-info"
+                                                value="Order">
                                         </div>
                                         <div class="price_old_new">
                                             <div class="price">
@@ -96,7 +102,7 @@
                                 </div>
                             </div>
                         </form>
-                    <?php
+                        <?php
                     }
                     ?>
                     <div class="clear"></div>
@@ -104,21 +110,28 @@
 
                 <!-- pagination -->
                 <?php
-                $categoryModel = new CategoryModel();   
+                $categoryModel = new CategoryModel();
                 $all_product = $categoryModel->getProductCount('tab_product');
                 $product_page = ceil($all_product / 20);
                 ?>
                 <nav aria-label="..." id="pagination">
                     <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page=1' ?>">Previous</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page=1' ?>">Previous</a>
+                        </li>
                         <?php
                         for ($j = 1; $j <= $product_page; $j++) {
-                        ?>
-                            <li class="page-item"><a class="page-link" href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page='.$j ?>"><?php echo $j ?></a></li>
-                        <?php
+                            ?>
+                            <li class="page-item"><a class="page-link"
+                                    href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page=' . $j ?>">
+                                    <?php echo $j ?>
+                                </a></li>
+                            <?php
                         }
                         ?>
-                        <li class="page-item"><a class="page-link" href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page='.$product_page ?>">Last</a></li>
+                        <li class="page-item"><a class="page-link"
+                                href="<?php echo BASE_URL; ?>products/categoryAll<?php echo '?page=' . $product_page ?>">Last</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
