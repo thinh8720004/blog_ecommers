@@ -156,7 +156,7 @@ class products extends Dcontrollers
 
 
         $this->load->view('header', $data);
-        $this->load->view('ranger', $data);
+        $this->load->view('rangerproduct', $data);
         $this->load->view('footer');
     }
 }

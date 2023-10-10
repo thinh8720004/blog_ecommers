@@ -169,8 +169,12 @@
                                     if (Session::get('customer') == true) {
                                         ?>
                                         <li class=''><a href='<?php echo BASE_URL ?>/customer/logout'>Logout</a></li>
+                                        <li class=''><a href='<?php echo BASE_URL ?>'><i class="fa fa-user"
+                                                    aria-hidden="true"></i>
+                                            </a></li>
 
                                         <?php
+
                                     } else {
                                         ?>
                                         <li class=''><a href='<?php echo BASE_URL ?>/customer/login'>Login</a></li>

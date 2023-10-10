@@ -22,79 +22,113 @@
 
         }
         ?>
+        <style>
+            /* CSS cho nút */
+            .search_price button {
+                padding: 10px 20px;
+                background-color: #007BFF;
+                /* Màu nền */
+                color: #fff;
+                /* Màu chữ */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+                /* Hiệu ứng chuyển màu nền và chữ */
+                margin-right: 10px;
+            }
+
+            /* CSS khi hover */
+            .search_price button:hover {
+                background-color: #0056b3;
+                /* Màu nền khi hover */
+            }
+
+            /* CSS cho nút cuối cùng, để loại bỏ margin-right */
+            .search_price button:last-child {
+                margin-right: 0;
+
+            }
+
+            .search_price {
+                margin-top: 10px;
+                padding-left: 50%;
+
+            }
+
+            /* CSS để tùy chỉnh giao diện */
+            #priceOptions {
+                display: none;
+            }
+
+            #priceOptions.visible {
+                display: inline;
+            }
+
+            ul li {
+                display: inline;
+            }
+
+            button {
+
+                /* padding: 10px 20px; */
+                background-color: #007BFF;
+                /* Màu nền */
+                color: #fff;
+                /* Màu chữ */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+                /* Hiệu ứng chuyển màu nền và chữ */
+                /* margin-right: 10px; */
+            }
+
+            .list {
+                margin-left: 45%;
+                padding: 10px 20px;
+
+            }
+        </style>
+
         <div class="module_pro_all">
+
             <div class="box-title">
-                <style>
-                    /* CSS cho nút */
-                    .search_price button {
-                        padding: 10px 20px;
-                        background-color: #007BFF;
-                        /* Màu nền */
-                        color: #fff;
-                        /* Màu chữ */
-                        border: none;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        transition: background-color 0.3s, color 0.3s;
-                        /* Hiệu ứng chuyển màu nền và chữ */
-                        margin-right: 10px;
-                    }
 
-                    /* CSS khi hover */
-                    .search_price button:hover {
-                        background-color: #0056b3;
-                        /* Màu nền khi hover */
-                    }
-
-                    /* CSS cho nút cuối cùng, để loại bỏ margin-right */
-                    .search_price button:last-child {
-                        margin-right: 0;
-                    }
-
-                    .title-bar {
-                        display: flex;
-                        /* Sử dụng display flex để các phần tử nằm cùng một hàng */
-                        align-items: center;
-                        /* Canh giữa theo chiều dọc */
-                        justify-content: space-between;
-                        /* Các phần tử con tự căn đều trên hàng ngang */
-                    }
-
-                    .title-bar h1 {
-                        margin: 0;
-                        width: 40;
-                        /* Loại bỏ margin mặc định */
-                    }
-
-                    .search_price {
-                        display: flex;
-                        /* Sử dụng display flex để các nút nằm cùng một hàng */
-                    }
-
-                    .search_price button {
-                        margin-right: 10px;
-                        /* Khoảng cách giữa các nút */
-
-                    }
-                </style>
 
                 <div class="title-bar">
                     <h1>
                         <?php
                         echo $name ?>
                     </h1>
-                    <form class="search_price" method="GET" action="<?php echo BASE_URL ?>products/ranger">
-                        <button type="submit" name="duoi2tr">Dưới 2
-                            Triệu</button>
-                        <button type="submit" name="2-4tr">2-4
-                            Triệu</button>
-                        <button type="submit" name="4-10tr">4-10
-                            Triệu</button>
-                        <button type="submit" name="10-20tr">10-20
-                            Triệu</button>
-                        <button type="submit" name="20tr">Từ 20
-                            Triệu</button>
-                    </form>
+                    <button class="list">
+                        <p id="showPriceOptions">Choose the right price</p>
+                    </button>
+
+
+                </div>
+                <div id="priceOptions">
+                    <ul>
+                        <form class="search_price" method="GET" action="<?php echo BASE_URL ?>products/ranger">
+
+                            <li><button type="submit" name="duoi2tr">Dưới 2
+                                    Triệu</button></li>
+                            <li> <button type="submit" name="2-4tr">2-4
+                                    Triệu</button></li>
+                            <li> <button type="submit" name="4-10tr">4-10
+                                    Triệu</button></li>
+                            <li> <button type="submit" name="10-20tr">10-20
+                                    Triệu</button></li>
+                            <li> <button type="submit" name="20tr">Từ 20
+                                    Triệu</button></li>
+
+
+
+
+
+                        </form>
+
+                    </ul>
                 </div>
 
 
@@ -166,5 +200,14 @@
             </div>
             <div class="clear"></div>
         </div>
+        <script>
+            // JavaScript để thêm chức năng hiển thị các mức giá khi người dùng nhấn vào "Lựa chọn theo giá"
+            const showPriceOptionsButton = document.getElementById('showPriceOptions');
+            const priceOptions = document.getElementById('priceOptions');
+
+            showPriceOptionsButton.addEventListener('click', function () {
+                priceOptions.classList.toggle('visible');
+            });
+        </script>
 
 </section>

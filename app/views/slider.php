@@ -10,6 +10,11 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
+                <style>
+                    .carousel-inner {
+                        height: 359px;
+                    }
+                </style>
                 <div class="carousel-inner">
                     <div class="item active">
                         <img src="<?php echo BASE_URL ?>public/images/banner1.jpg" alt="Siêu khuyến mãi">
@@ -40,21 +45,26 @@
                 <div class="panel  panel-warning panel-styling">
                     <div class="panel-heading">Updated news</div>
                     <div class="panel-body scrollable-panel">
-                        <?php 
-                            foreach ($post_index as $key => $post) {
-                        ?>
-                        <div class="row">
-                            <div class="col-md-4 col-xs-4 col-sm-4">
-                                <img src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post'] ?>">
+                        <?php
+                        foreach ($post_index as $key => $post) {
+                            ?>
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4 col-sm-4">
+                                    <img
+                                        src="<?php echo BASE_URL ?>public/uploads/post/imagepost/<?php echo $post['image_post'] ?>">
+                                </div>
+                                <div class="col-md-8 col-xs-8 col-sm-8">
+                                    <h4>
+                                        <?php echo $post['title_post'] ?>
+                                    </h4>
+                                    <p>
+                                        <?php echo substr($post['content_post'], 0, 100); ?>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-md-8 col-xs-8 col-sm-8">
-                                <h4><?php echo $post['title_post'] ?></h4>
-                                <p><?php echo substr($post['content_post'], 0, 100); ?></p>
-                            </div>
-                        </div>
-                        <hr>                   
-                        <?php 
-                            }
+                            <hr>
+                            <?php
+                        }
                         ?>
                     </div>
                 </div>
