@@ -53,8 +53,12 @@ class customer extends Dcontrollers
     }
     public function loginCustomer()
     {
+        // global $username;
+// 
         $username = $_POST['username'];
         $password = md5($_POST['password']);
+
+        // $_SESSION['username'] = $username;
 
         $table_customer = 'tab_customers';
         $customermodel = $this->load->model('customermodel');
@@ -112,7 +116,7 @@ class customer extends Dcontrollers
         header('Location:' . BASE_URL . "customer/login?msg=" . urlencode(serialize($message)));
 
     }
-    
+
     public function notFound()
     {
         $table = 'tab_category_product';

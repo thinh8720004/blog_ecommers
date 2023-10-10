@@ -170,8 +170,11 @@
                                         ?>
                                         <li class=''><a href='<?php echo BASE_URL ?>/customer/logout'>Logout</a></li>
                                         <li class=''><a href='<?php echo BASE_URL ?>'><i class="fa fa-user"
-                                                    aria-hidden="true"></i>
+                                                    aria-hidden="true">
+                                                    <?php ?>
+                                                </i>
                                             </a></li>
+
 
                                         <?php
 

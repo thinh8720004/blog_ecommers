@@ -124,27 +124,56 @@ class products extends Dcontrollers
     {
         Session::init();
 
-        if (isset($_GET['duoi2tr'])) {
-            $min_price = "0";
-            $max_price = "2000000";
-        }
-        if (isset($_GET['2-4tr'])) {
-            $min_price = "2000000";
-            $max_price = "4000000";
-        }
-        if (isset($_GET['4-10tr'])) {
-            $min_price = "4000000";
-            $max_price = "10000000";
-        }
-        if (isset($_GET['10-20tr'])) {
-            $min_price = "10000000";
-            $max_price = "20000000";
-        }
-        if (isset($_GET['20tr'])) {
-            $min_price = "20000000";
-            $max_price = "2000000000000000";
-        }
+        // if (isset($_GET['price-range=4-10tr'])) {
+        //     $min_price = "0";
+        //     $max_price = "2000000";
+        // }
+        // if (isset($_GET['price-range=4-10tr'])) {
+        //     $min_price = "2000000";
+        //     $max_price = "4000000";
+        // }
+        // if (isset($_GET['price-range=4-10tr'])) {
+        //     $min_price = "4000000";
+        //     $max_price = "10000000";
+        // }
+        // if (isset($_GET['price-range=4-10tr'])) {
+        //     $min_price = "10000000";
+        //     $max_price = "20000000";
+        // }
+        // if (isset($_GET['20tr'])) {
+        //     $min_price = "20000000";
+        //     $max_price = "2000000000000000";
+        // }
 
+        if (isset($_GET['price-range'])) {
+            $price_range = $_GET['price-range'];
+
+            switch ($price_range) {
+                case 'duoi2tr':
+                    $min_price = "0";
+                    $max_price = "2000000";
+                    break;
+                case '2-4tr':
+                    $min_price = "2000000";
+                    $max_price = "4000000";
+                    break;
+                case '4-10tr':
+                    $min_price = "4000000";
+                    $max_price = "10000000";
+                    break;
+                case '10-20tr':
+                    $min_price = "10000000";
+                    $max_price = "20000000";
+                    break;
+                case '20tr':
+                    $min_price = "20000000";
+                    $max_price = "2000000000000000";
+                    break;
+                default:
+                    // Xử lý mặc định nếu không có lựa chọn hợp lệ
+                    break;
+            }
+        }
         $table = 'tab_category_product';
         $table_product = 'tab_product';
         $table_post = 'tab_category_post';
