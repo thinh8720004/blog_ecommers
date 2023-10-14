@@ -1,3 +1,8 @@
+<?php
+// extract($_SESSION['username']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-CA">
 
@@ -167,13 +172,40 @@
                                     <li class=''><a href='<?php echo BASE_URL ?>index/contact'>Contact</a></li>
                                     <?php
                                     if (Session::get('customer') == true) {
+                                        $username = $_SESSION['customer_name'];
+
                                         ?>
                                         <li class=''><a href='<?php echo BASE_URL ?>/customer/logout'>Logout</a></li>
                                         <li class=''><a href='<?php echo BASE_URL ?>'><i class="fa fa-user"
                                                     aria-hidden="true">
-                                                    <?php ?>
+                                                    <?php
+                                                    echo $username;
+                                                    // echo $username1;
+                                                
+                                                    ?>
                                                 </i>
-                                            </a></li>
+                                            </a>
+                                            <ul>
+
+                                                <li>
+                                                    <a href='<?php echo BASE_URL; ?>customer/changePassWord'><span>
+                                                            <?php echo 'Đổi Mật Khẩu' ?>
+                                                        </span></a>
+
+
+                                                </li>
+
+                                                <li>
+                                                    <a href='<?php echo BASE_URL; ?>news/category/<?php echo 888 ?>'><span>
+                                                            <?php echo 'Quên Mật Khẩu' ?>
+                                                        </span></a>
+
+
+                                                </li>
+
+
+                                            </ul>
+                                        </li>
 
 
                                         <?php

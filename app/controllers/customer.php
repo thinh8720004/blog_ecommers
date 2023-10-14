@@ -53,12 +53,12 @@ class customer extends Dcontrollers
     }
     public function loginCustomer()
     {
-        // global $username;
-// 
+        global $username;
+        // 
         $username = $_POST['username'];
         $password = md5($_POST['password']);
 
-        // $_SESSION['username'] = $username;
+        $_SESSION['username'] = $username;
 
         $table_customer = 'tab_customers';
         $customermodel = $this->load->model('customermodel');
@@ -73,7 +73,7 @@ class customer extends Dcontrollers
             Session::init();
             Session::set('customer', true);
             Session::set('customer_name', $result[0]['customer_name']);
-            Session::set('customer_id', $result[0]['customer_name']);
+            Session::set('customer_id', $result[0]['customer_id']);
             $message['msg'] = "Login OK";
 
             header('Location:' . BASE_URL . "customer/login?msg=" . urlencode(serialize($message)));
@@ -107,6 +107,8 @@ class customer extends Dcontrollers
             header('Location:' . BASE_URL . "customer/login?msg=" . urlencode(serialize($message)));
         }
     }
+
+
     public function logout()
     {
         Session::init();
@@ -115,6 +117,20 @@ class customer extends Dcontrollers
         $message['msg'] = "Logout successfully";
         header('Location:' . BASE_URL . "customer/login?msg=" . urlencode(serialize($message)));
 
+    }
+    public function changePassWord()
+    {
+        Session::init();
+
+        $table = 'tab_category_product';
+        $tablePost = 'tab_category_post';
+        $categorymodel = $this->load->model('categorymodel');
+        $data['category'] = $categorymodel->categoryHome($table);
+        $data['category_post'] = $categorymodel->categoryPostHome($tablePost);
+
+        $this->load->view('header', $data);
+        $this->load->view('changepassword');
+        $this->load->view('footer');
     }
 
     public function notFound()
